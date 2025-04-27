@@ -25,9 +25,33 @@ import numpy as np
 # f=np.linspace(0,1000,11)  #from to how many values you want, it will evenly make fractions
 
 '''NaN and Inf'''
-print(np.nan)   #nan = not a number and inf=infinity
-print(np.inf)
+# print(np.nan)   #nan = not a number and inf=infinity
+# print(np.inf)
 
-print(np.isnan(np.sqrt(-1)))
-print(np.isinf(np.array([10])/0))
+# print(np.isnan(np.sqrt(-1)))
+# print(np.isinf(np.array([10])/0))
 
+
+'''Mathematical operations'''
+
+l1=[1,2,3,4,5]
+l2=[6,7,8,9,0]
+
+a1=np.array(l1)
+a2=np.array(l2)
+
+print(l1*5)   #prints the list 5 times
+print(a1*5)   #prints the list with its items multiplied by 5
+print(a1+5)   #this is not possible in normal list
+print(a1-5)   
+
+print(l1+l2)  #concats the 2 lists
+print(a1+a2)  #adds the list items like a vector
+
+m1=np.array([1,2,3])
+m2=np.array([[1],[2]])
+print(m1+m2)            #adds 1 to each item in m1 and again adds 2 so retruns a 2*3 array
+print(np.sqrt(m1))      #square roots each item
+print(np.sin(m1))
+print(np.cos(m1))
+print(np.log10(m1))
