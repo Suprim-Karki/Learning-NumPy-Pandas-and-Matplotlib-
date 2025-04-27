@@ -18,5 +18,8 @@ import numpy as np
 a=np.full((2,3,4),9)      #fills a array of 2x3x4 shapearray with 9 
 print(a)         
 
-b=np.zeroes((3,5,2))      #fills array with zeroes
+b=np.zeros((3,5,2))      #fills array with zeroes
 c=b=np.ones((3,5,2))      #fills array with 1
+d=np.empty((3,5,2))       #fills the space without initializing the values
+e=np.arange(0, 100, 5)   #fill the array from=0 to=100 steps=5
+f=np.linspace(0,1000,11)  #from to how many values you want, it will evenly make fractions
