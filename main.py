@@ -72,14 +72,24 @@ import numpy as np
 # c=np.delete(b,1,1)    #deletes entire 1st column which is 2 and 5
 
 ''' Aggregate Functions '''
-a=np.array([[1,2,3,4,5,6],
-            [7,8,9,10,11,12],
-            [13,14,15,16,17,18],
-            [18,19,20,21,22,23]])
+# a=np.array([[1,2,3,4,5,6],
+#             [7,8,9,10,11,12],
+#             [13,14,15,16,17,18],
+#             [18,19,20,21,22,23]])
 
-print(a.min())
-print(a.max())
-print(a.mean())
-print(a.std())
-print(a.sum())
-print(np.median(a))
+# print(a.min())
+# print(a.max())
+# print(a.mean())
+# print(a.std())
+# print(a.sum())
+# print(np.median(a))
+
+''' Numpy randoms '''
+number=np.random.randint(100)
+number=np.random.randint(100, size=(2,3,4))       #min=0, max=100
+number=np.random.randint(90,100, size=(2,3,4))    #min=90,max=100
+
+numbers=np.random.binomial(10,p=0.5,size=(5,6))     #tries=10, probability=0.5, size of matrix(array)=5,6
+num=np.random.normal(loc=170,scale=15,size=(5,10))   #mean=170, std deviation=15
+nums=np.random.choice([10,20,30,40,50], size=(2,3))   #chooses a random number
+print(numbers)
