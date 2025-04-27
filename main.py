@@ -57,17 +57,29 @@ import numpy as np
 # print(np.log10(m1))
 
 ''' Array Methods'''
-a=np.array([1,2,3])
-a=np.append(a,[7,8,9])
-a=np.insert(a,3,[4,5,6])   #insert into array, position-1, what to insert
-print(a)
+# a=np.array([1,2,3])
+# a=np.append(a,[7,8,9])
+# a=np.insert(a,3,[4,5,6])   #insert into array, position-1, what to insert
+# print(a)
 
-b=np.array([[1,2,3],
-            [4,5,6]])
-b=np.delete(a,1)     #deletse element at index 1 which is 2
-b=np.delete(a,4)     #deletes element at index 1 which is 5
+# b=np.array([[1,2,3],
+#             [4,5,6]])
+# b=np.delete(a,1)     #deletse element at index 1 which is 2
+# b=np.delete(a,4)     #deletes element at index 1 which is 5
 
-c=np.delete(b,0,0)    #deletes entire 0th row, keep last parameter 0 to delete row
-c=np.delete(b,1,0)    #deletes entire 1st row which is 1,2,3
-c=np.delete(b,1,1)    #deletes entire 1st column which is 2 and 5
+# c=np.delete(b,0,0)    #deletes entire 0th row, keep last parameter 0 to delete row
+# c=np.delete(b,1,0)    #deletes entire 1st row which is 1,2,3
+# c=np.delete(b,1,1)    #deletes entire 1st column which is 2 and 5
 
+''' Aggregate Functions '''
+a=np.array([[1,2,3,4,5,6],
+            [7,8,9,10,11,12],
+            [13,14,15,16,17,18],
+            [18,19,20,21,22,23]])
+
+print(a.min())
+print(a.max())
+print(a.mean())
+print(a.std())
+print(a.sum())
+print(np.median(a))
