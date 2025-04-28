@@ -133,10 +133,14 @@ a1=np.array([[1,2,3,4,5],
 a2=np.array([[11,12,13,14,15],
              [15,17,18,19,20]])
 
-a=np.concatenate((a1,a2),axis=0)     #adds the rows
-print(a)
+# a=np.concatenate((a1,a2),axis=0)     #adds the rows
+# print(a)
 
-a=np.concatenate((a1,a2),axis=1)     #adds the elements in the columns
+# a=np.concatenate((a1,a2),axis=1)     #adds the elements in the columns
+
+a=np.stack((a1,a2))     #adds the elements in a new dimension
+a=np.vstack((a1,a2))    #same as concatenate at axis 0
+a=np.hstack((a1,a2))     ##same as concatenate at axis 1
 
 
 
