@@ -160,6 +160,9 @@ a=np.array([[1,2,3,4,5],
 np.save("myarray.npy",a)    #saves the array into file named my array
 b=np.load("myarray.npy")
 
+#you can also do it in csv
+np.savetxt("myarray.csv",a,delimiter=",")
+c=np.loadtxt("myarray.csv",delimiter=",")
 
 
 
