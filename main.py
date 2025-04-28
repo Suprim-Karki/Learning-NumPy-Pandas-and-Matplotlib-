@@ -85,11 +85,71 @@ import numpy as np
 # print(np.median(a))
 
 ''' Numpy randoms '''
-number=np.random.randint(100)
-number=np.random.randint(100, size=(2,3,4))       #min=0, max=100
-number=np.random.randint(90,100, size=(2,3,4))    #min=90,max=100
+# number=np.random.randint(100)
+# number=np.random.randint(100, size=(2,3,4))       #min=0, max=100
+# number=np.random.randint(90,100, size=(2,3,4))    #min=90,max=100
 
-numbers=np.random.binomial(10,p=0.5,size=(5,6))     #tries=10, probability=0.5, size of matrix(array)=5,6
-num=np.random.normal(loc=170,scale=15,size=(5,10))   #mean=170, std deviation=15
-nums=np.random.choice([10,20,30,40,50], size=(2,3))   #chooses a random number
-print(numbers)
+# numbers=np.random.binomial(10,p=0.5,size=(5,6))     #tries=10, probability=0.5, size of matrix(array)=5,6
+# num=np.random.normal(loc=170,scale=15,size=(5,10))   #mean=170, std deviation=15
+# nums=np.random.choice([10,20,30,40,50], size=(2,3))   #chooses a random number
+# print(numbers)
+
+''' Structuring methods '''
+
+a=np.array([[1,2,3,4,5],
+            [6,7,8,9,10],
+            [11,12,13,14,15],
+            [16,17,18,19,20]])
+
+print(a.shape)
+print(a.reshape((5,4)))
+print(a.reshape((20,)))     #reshapes into 1D 20 elements
+print(a.reshape((20,1)))     #reshapes into 20 rows and 1 column
+print(a.reshape((2,2,5)))    #2 collection of 2 list each of 5 collection each
+print(a.resize((2,2,5))) 
+
+#in reshape you need to return it to a value, i.e. a=a.reshape((5,4))
+#in resize you do not need to return it to a value, i.e. a.resize((5,4))
+
+print(a.flatten())    #flattens out the copy of array and doesn't affect the actual array when a variable is changed
+print(a.ravel())      #flattens out the array same as flattens but if element is changed, it also changes in the actual array
+
+#can also use
+var=[i for i in a.flat]
+print(var)
+
+print(a.transpose())  # transposes the matrix
+print(a.T)            # same as above but shorter
+
+#if the array is more than 2 Dimensions use swapaxes
+print(a.swapaxes(0,1))  #x and y axis
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
