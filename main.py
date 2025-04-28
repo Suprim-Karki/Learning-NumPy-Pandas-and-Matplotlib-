@@ -125,22 +125,54 @@ import numpy as np
 # print(a.swapaxes(0,1))  #x and y axis
   
 
-''' Concatenate, stacking, splitting'''
+''' Concatenate, stacking'''
 
-a1=np.array([[1,2,3,4,5],
-     [6,7,8,9,10]])
+# a1=np.array([[1,2,3,4,5],
+#      [6,7,8,9,10]])
 
-a2=np.array([[11,12,13,14,15],
-             [15,17,18,19,20]])
+# a2=np.array([[11,12,13,14,15],
+#              [15,17,18,19,20]])
 
 # a=np.concatenate((a1,a2),axis=0)     #adds the rows
 # print(a)
 
 # a=np.concatenate((a1,a2),axis=1)     #adds the elements in the columns
 
-a=np.stack((a1,a2))     #adds the elements in a new dimension
-a=np.vstack((a1,a2))    #same as concatenate at axis 0
-a=np.hstack((a1,a2))     ##same as concatenate at axis 1
+# a=np.stack((a1,a2))     #adds the elements in a new dimension
+# a=np.vstack((a1,a2))    #same as concatenate at axis 0
+# a=np.hstack((a1,a2))     ##same as concatenate at axis 1
+
+''' Splitting arrays '''
+a=np.array([[1,2,3,4,5],
+            [6,7,8,9,10],
+            [11,12,13,14,15],
+            [16,17,18,19,20]])
+print(np.split(a,2,axis=0))   #splits array a into 2, 1 from 1-10 and another from 11-20 forms 2 arrays with 2 rows each
+print(np.split(a,2,axis=1))   #splits into 2 arrays of same rows but column items are splitted into 2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
