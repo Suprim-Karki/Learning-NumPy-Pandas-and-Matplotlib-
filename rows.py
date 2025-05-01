@@ -25,10 +25,40 @@ print(df.info())
 print("Displaying the descriptive Statistics")
 print(df.describe())
 
-
-
 ''' Shape and columns '''
 
 print("Printing shape and columns")
 print(f"Shape: {df.shape}")             #gives (rows,columns)
 print(f"Shape: {df.columns}")           #gives column names
+
+
+
+''' Selecting a column '''
+#Selecting single column
+#variable=daraframe_name[column_name]
+
+name=df['name'] 
+print(name)
+
+#selecting multiple columns
+subset=df[['id','name']]
+print(subset)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
