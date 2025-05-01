@@ -10,16 +10,20 @@ import pandas as pd
                It consists rows and columns. 
 '''
 
-#read data from a csv file into a dataframe
-df=pd.read_csv("sales_data_sample.csv", encoding="latin1")   #use encoding utf-8 if latin1 doesn't work
+# #read data from a csv file into a dataframe
+# df=pd.read_csv("sales_data_sample.csv", encoding="latin1")   #use encoding utf-8 if latin1 doesn't work
 
-#read data from excel file
-df=pd.read_excel("SampleSuperstore.xlsx")    #pip install xlrd for it to work
+# #read data from excel file
+# df=pd.read_excel("SampleSuperstore.xlsx")    #pip install xlrd for it to work
 
 #read data from json file
 df=pd.read_json("sample_Data.json")
 
 print(df)
+
+# if data is stored in cloud such as google cloud use gcsfs library
+
+
 
 
 
