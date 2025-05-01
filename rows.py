@@ -21,3 +21,6 @@ df=pd.read_json("sample_Data.json")
 
 print("Displaying the info of data set")
 print(df.info())
+
+print("Displaying the descriptive Statistics")
+print(df.describe())
