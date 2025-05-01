@@ -44,6 +44,12 @@ print(name)
 subset=df[['id','name']]
 print(subset)
 
+'''Filtering'''
+
+#single filtering condition
+high_price=df[df['price']>500]
+print(high_price)
+
 
 
 
