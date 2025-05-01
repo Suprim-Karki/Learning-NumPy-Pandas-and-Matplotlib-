@@ -50,6 +50,9 @@ print(subset)
 high_price=df[df['price']>500]
 print(high_price)
 
+#multiple filtering conditions
+filtered=df[(df['price']>500) & (df['id']>10)]
+print(filtered)
 
 
 
