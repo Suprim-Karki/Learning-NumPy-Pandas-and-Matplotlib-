@@ -70,3 +70,9 @@ print(df)
 
 ''' Deleting a column/dropping '''
 print(df.drop('summary',axis=1))   #use (df=) at start to save the change in df
+
+''' To drop/fill Null/NaN values'''
+# print(df.dropna())
+print(df.fillna(0))  #fills the null values with 0
+
+df.price.fillna(df.price.mean())
