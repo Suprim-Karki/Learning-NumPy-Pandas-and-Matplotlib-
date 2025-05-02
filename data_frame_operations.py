@@ -33,3 +33,7 @@ print(df3+df4)
 df=pd.read_json("sample_Data.json")
 print(df.sample())
 print(df.sample(10))  #for 10 samples
+
+''' To display only n number of columns'''
+pd.options.display.max_columns=2
+print(df)
