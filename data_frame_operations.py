@@ -67,3 +67,6 @@ print(df.name.apply(myfunc2))
 ''' Adding new comumns'''
 df['summary']=df.apply(lambda row: f"Id={row['id']} , Price={row['price']}",axis=1)
 print(df)
+
+''' Deleting a column/dropping '''
+print(df.drop('summary',axis=1))   #use (df=) at start to save the change in df
