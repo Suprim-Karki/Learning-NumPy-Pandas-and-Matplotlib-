@@ -35,5 +35,12 @@ print(df.sample())
 print(df.sample(10))  #for 10 samples
 
 ''' To display only n number of columns'''
-pd.options.display.max_columns=2
-print(df)
+# pd.options.display.max_columns=2
+# print(df)
+
+''' To operate directly on the df '''
+df.price=df.price*2
+df.price=df.price**2
+df.id=df.id+2
+print(df['price'])
+print(df['id'])
