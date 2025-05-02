@@ -14,3 +14,16 @@ df2=pd.DataFrame({
 
 print(df1+df2)
 
+''' Adding data frames but with indexing'''
+#Here dataframes are added according to index 0 with 0 and so on
+
+df3=pd.DataFrame({
+    "a":[1,2,3]},index=[0,1,2]
+    )
+
+df4=pd.DataFrame({
+    "a":[10,20,30]},index=[1,2,0]
+    )
+
+print(df3+df4)
+
