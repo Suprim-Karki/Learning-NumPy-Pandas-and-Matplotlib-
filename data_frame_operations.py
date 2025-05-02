@@ -27,3 +27,9 @@ df4=pd.DataFrame({
 
 print(df3+df4)
 
+''' Sample '''
+
+#gives a random row as a sample
+df=pd.read_json("sample_Data.json")
+print(df.sample())
+print(df.sample(10))  #for 10 samples
