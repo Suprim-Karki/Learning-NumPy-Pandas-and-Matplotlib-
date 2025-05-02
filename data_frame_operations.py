@@ -14,5 +14,3 @@ df2=pd.DataFrame({
 
 print(df1+df2)
 
-
-

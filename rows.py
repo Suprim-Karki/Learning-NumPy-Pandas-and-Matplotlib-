@@ -58,6 +58,8 @@ print(filtered)
 df = df.set_index('id')
 print(df)
 
+df=df.reset_index() #To reset the set index
+
 
 
 
