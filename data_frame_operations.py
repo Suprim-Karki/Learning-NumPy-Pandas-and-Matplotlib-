@@ -63,3 +63,7 @@ def myfunc2(x):
     else:
         x
 print(df.name.apply(myfunc2))
+
+''' Adding new comumns'''
+df['summary']=df.apply(lambda row: f"Id={row['id']} , Price={row['price']}",axis=1)
+print(df)
