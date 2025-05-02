@@ -44,3 +44,22 @@ df.price=df.price**2
 df.id=df.id+2
 print(df['price'])
 print(df['id'])
+
+
+''' Using functions '''
+
+def myfunc(x):
+    if x%2==0:
+        return x*2
+    else:
+        return x+2
+    
+print(df.price.apply(myfunc))
+
+
+def myfunc2(x):
+    if x.endswith('r'):
+        return "Without Job"
+    else:
+        x
+print(df.name.apply(myfunc2))
