@@ -76,3 +76,6 @@ print(df.drop('summary',axis=1))   #use (df=) at start to save the change in df
 print(df.fillna(0))  #fills the null values with 0
 
 df.price.fillna(df.price.mean())
+
+'''notna method'''
+print(df.notna())  # provides true or false whether value is null or not
