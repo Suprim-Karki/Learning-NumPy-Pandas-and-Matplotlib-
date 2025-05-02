@@ -12,5 +12,7 @@ df=pd.DataFrame(data)
 print(df)
 
 df.to_csv("saved.csv",index=False)  #index=False is to remove 0,1,2 default index while saving
+
+
 # df.to_excel("saved.csv",index=False)
 # df.to_json("saved.csv",index=False)

@@ -54,6 +54,12 @@ print(high_price)
 filtered=df[(df['price']>500) & (df['id']>10)]
 print(filtered)
 
+#Use df.set_index('id') to set id as the index instead of 0 1 2 3
+df = df.set_index('id')
+print(df)
+
+
+
 
 
 
