@@ -81,9 +81,12 @@ df.price.fillna(df.price.mean())
 '''notna method'''
 print(df.notna())  # provides true or false whether value is null or not
 
+'''isnull() method'''
+print(df.isnull().sum())   # provides how manu null values in a column
+
 ''' Using insert '''
 # To insert new column and data in new column
 #df.insert(location, column_name, data)
 df.insert(0,"Year",[2025,2024,2025,2024,2025,2024,2025,2024,2025,2024,2025,2024,2025,2024,2025,2024,2025,2024,2025,2024])
 
-print(df)
+# print(df)
