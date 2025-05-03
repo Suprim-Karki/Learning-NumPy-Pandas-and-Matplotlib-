@@ -11,5 +11,8 @@ data={
 
 df=pd.DataFrame(data)
 
-df['salary']=df['salary'].interpolate(method='linear')
+df['salary']=df['salary'].interpolate(method=po)
 print(df)
+
+
+''' There are also polynomial, time and other interpolate methods'''
