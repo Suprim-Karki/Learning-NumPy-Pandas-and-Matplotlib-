@@ -14,3 +14,8 @@ print(df)
 df.sort_values(by=["price","id"],ascending=[True,False],inplace=True)
 print(df)
 
+'''Summary'''
+avg_price=df['price'].mean()      #you can also use max(), min(), sum()
+print(avg_price)
+
+
