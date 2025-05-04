@@ -22,3 +22,7 @@ print(avg_price)
 '''Grouping'''
 grouped=df.groupby("price")["id"].sum()
 print(grouped)
+
+'''Grouping multiple column'''
+grouped2=df.groupby(["price","name"])["id"].sum()
+print(grouped2)
