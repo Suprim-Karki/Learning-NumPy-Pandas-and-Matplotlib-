@@ -9,3 +9,8 @@ df=pd.read_json("sample_Data.json")
 
 df.sort_values(by="price",ascending=True,inplace=True)
 print(df)
+
+'''Sorting by multiple columns'''
+df.sort_values(by=["price","id"],ascending=[True,False],inplace=True)
+print(df)
+
