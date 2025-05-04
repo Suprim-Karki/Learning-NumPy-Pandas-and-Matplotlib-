@@ -26,3 +26,8 @@ print(df_outer)
 # left values are kept as it is and right values are put in accordance to left ones
 df_left=pd.merge(df_c,df_o,on="CustomerID",how="left")
 print(df_left)
+
+'''Right join'''
+# right values are kept as it is and left values are put in accordance to right ones
+df_right=pd.merge(df_c,df_o,on="CustomerID",how="right")
+print(df_right)
