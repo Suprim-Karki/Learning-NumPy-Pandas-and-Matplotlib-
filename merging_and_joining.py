@@ -21,3 +21,8 @@ print(df_inner)
 # joins all values
 df_outer=pd.merge(df_c,df_o,on="CustomerID",how="outer")
 print(df_outer)
+
+'''Left join'''
+# left values are kept as it is and right values are put in accordance to left ones
+df_left=pd.merge(df_c,df_o,on="CustomerID",how="left")
+print(df_left)
