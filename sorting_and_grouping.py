@@ -19,3 +19,6 @@ avg_price=df['price'].mean()      #you can also use max(), min(), sum()
 print(avg_price)
 
 
+'''Grouping'''
+grouped=df.groupby("price")["id"].sum()
+print(grouped)
