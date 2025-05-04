@@ -16,3 +16,8 @@ df_o = pd.DataFrame({
 # joins only the intersection(same) values
 df_inner=pd.merge(df_c,df_o,on="CustomerID",how="inner")
 print(df_inner)
+
+'''Outer join'''
+# joins all values
+df_outer=pd.merge(df_c,df_o,on="CustomerID",how="outer")
+print(df_outer)
