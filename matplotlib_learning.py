@@ -19,7 +19,11 @@ import matplotlib.pyplot as plt
 '''Customizing graph
 Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, marker=marker_symbol,label="label_name")
 '''
+x=[1,2,3,4]
+y=[10,20,15,30]
 
+plt.plot(x,y,color="red",linestyle="-",linewidth=2,marker="o",label="Chart")
+plt.show()
 
 
 
