@@ -25,6 +25,8 @@ y=[10,20,15,30]
 plt.plot(x,y,color="red",linestyle="--",linewidth=2,marker="o",label="2025 Sales")
 plt.legend(loc="upper left",fontsize=12)
 plt.grid(color="gray",linestyle=":",linewidth=1)
+plt.xlim(1,4)
+plt.ylim(1,40)
 plt.show()
 
 
