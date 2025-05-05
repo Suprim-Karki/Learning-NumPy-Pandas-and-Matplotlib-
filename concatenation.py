@@ -12,3 +12,25 @@ df_region2=pd.DataFrame({
     "ID":[3,4],
     "Name":["C","D"]
 })
+
+''' Concat vertically (row) '''
+df_v_concat=pd.concat([df_region1,df_region2], ignore_index=True)  #ignore index resets the index
+print(df_v_concat)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
