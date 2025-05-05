@@ -22,7 +22,8 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 x=[1,2,3,4]
 y=[10,20,15,30]
 
-plt.plot(x,y,color="red",linestyle="-",linewidth=2,marker="o",label="Chart")
+plt.plot(x,y,color="red",linestyle="--",linewidth=2,marker="o",label="2025 Sales")
+plt.legend(loc="upper left",fontsize=12)
 plt.show()
 
 
