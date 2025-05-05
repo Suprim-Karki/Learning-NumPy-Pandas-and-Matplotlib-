@@ -7,11 +7,34 @@ import matplotlib.pyplot as plt
 # plt.show()
 
 '''Title, xlabel, ylabel'''
-x=["Mon","Tue","Wed","Thu","Fri"]
-y=[18,7,10,25,4]
+# x=["Mon","Tue","Wed","Thu","Fri"]
+# y=[18,7,10,25,4]
 
-plt.plot(x,y)
-plt.title("Sales of the week")
-plt.xlabel("Days")
-plt.ylabel("Sales")
-plt.show()
+# plt.plot(x,y)
+# plt.title("Sales of the week")
+# plt.xlabel("Days")
+# plt.ylabel("Sales")
+# plt.show()
+
+'''Customizing graph
+Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, marker=marker_symbol,label="label_name")
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
