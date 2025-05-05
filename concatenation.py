@@ -17,6 +17,10 @@ df_region2=pd.DataFrame({
 df_v_concat=pd.concat([df_region1,df_region2], ignore_index=True)  #ignore index resets the index
 print(df_v_concat)
 
+''' Concat horizontally (column) '''
+df_h_concat=pd.concat([df_region1,df_region2], axis=1,ignore_index=True)  #ignore index resets the index
+print(df_h_concat)
+
 
 
 
