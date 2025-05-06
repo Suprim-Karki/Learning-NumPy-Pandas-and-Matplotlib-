@@ -19,16 +19,17 @@ import matplotlib.pyplot as plt
 '''Customizing graph
 Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, marker=marker_symbol,label="label_name")
 '''
-x=[1,2,3,4]
-y=[10,20,15,30]
+# x=[1,2,3,4]
+# y=[10,20,15,30]
 
-plt.plot(x,y,color="red",linestyle="--",linewidth=2,marker="o",label="2025 Sales")
-plt.legend(loc="upper left",fontsize=12)
-plt.grid(color="gray",linestyle=":",linewidth=1)
-plt.xlim(1,4)
-plt.ylim(1,40)
-plt.show()
+# plt.plot(x,y,color="red",linestyle="--",linewidth=2,marker="o",label="2025 Sales")
+# plt.legend(loc="upper left",fontsize=12)
+# plt.grid(color="gray",linestyle=":",linewidth=1)
+# plt.xlim(1,4)
+# plt.ylim(1,40)
+# plt.show()
 
+'''Bar Chart'''
 
 
 
