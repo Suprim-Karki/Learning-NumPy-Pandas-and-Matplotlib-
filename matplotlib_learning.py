@@ -43,7 +43,8 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 regions=["N","S","E","W"]
 revenue=[1000,1500,5000,3000]
 
-plt.pie(revenue,labels=regions)
+plt.pie(revenue,labels=regions, autopct="%1.1f%%",colors=["red","blue","yellow","green"],)
+plt.title("Revenue of each region")
 plt.show()
 
 
