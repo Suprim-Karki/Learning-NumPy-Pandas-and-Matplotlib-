@@ -49,8 +49,12 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 
 
 '''Histogram'''
-scores=[10,20,11,14,18,8,15]
-
+scores=[10,20,11,14,18,8,15,15,11,8,10,20,11,18]
+plt.hist(scores,color="purple",edgecolor="black")
+plt.xlabel("Score Range")
+plt.ylabel("Number of Students")
+plt.title("Score distribution of students")
+plt.show()
 
 
 
