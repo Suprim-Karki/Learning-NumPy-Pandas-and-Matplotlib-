@@ -30,7 +30,11 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 '''Bar Chart'''
+product=["A","B","C","D"]
+sales=[1000,5000,1500,3000]
 
+plt.bar(product,sales)
+plt.show()
 
 
 
