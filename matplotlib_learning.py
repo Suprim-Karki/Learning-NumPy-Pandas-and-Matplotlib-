@@ -30,14 +30,16 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 '''Bar Chart'''
-product=["A","B","C","D"]
-sales=[1000,5000,1500,3000]
+# product=["A","B","C","D"]
+# sales=[1000,5000,1500,3000]
 
-plt.barh(product,sales,color="cyan",label="Sales 2025")
-plt.xlabel(product)
-plt.ylabel(sales)
-plt.legend("2025")
-plt.show()
+# plt.barh(product,sales,color="cyan",label="Sales 2025")
+# plt.xlabel(product)
+# plt.ylabel(sales)
+# plt.legend("2025")
+# plt.show()
+
+'''Pie chart'''
 
 
 
