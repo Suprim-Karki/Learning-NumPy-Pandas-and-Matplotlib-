@@ -40,13 +40,16 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 '''Pie chart'''
-regions=["N","S","E","W"]
-revenue=[1000,1500,5000,3000]
+# regions=["N","S","E","W"]
+# revenue=[1000,1500,5000,3000]
 
-plt.pie(revenue,labels=regions, autopct="%1.1f%%",colors=["red","blue","yellow","green"],)
-plt.title("Revenue of each region")
-plt.show()
+# plt.pie(revenue,labels=regions, autopct="%1.1f%%",colors=["red","blue","yellow","green"],)
+# plt.title("Revenue of each region")
+# plt.show()
 
+
+'''Histogram'''
+scores=[10,20,11,14,18,8,15]
 
 
 
