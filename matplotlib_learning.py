@@ -40,7 +40,11 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 '''Pie chart'''
+regions=["N","S","E","W"]
+revenue=[1000,1500,5000,3000]
 
+plt.pie(revenue,labels=regions)
+plt.show()
 
 
 
