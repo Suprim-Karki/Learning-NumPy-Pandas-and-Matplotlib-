@@ -56,12 +56,14 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.title("Score distribution of students")
 # plt.show()
 
-scores=[1000,2000,1000,2000,3000,4000,5000,6000]
-plt.hist(scores,color="black",edgecolor="white")
-plt.xlabel("Price")
-plt.ylabel("Frequency")
-plt.title("Frequency of price")
-plt.show()
+# scores=[1000,2000,1000,2000,3000,4000,5000,6000]
+# plt.hist(scores,color="black",edgecolor="white")
+# plt.xlabel("Price")
+# plt.ylabel("Frequency")
+# plt.title("Frequency of price")
+# plt.show()
+
+'''Scatterplot'''
 
 
 
