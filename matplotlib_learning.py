@@ -72,6 +72,8 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 
 hours_studies=[1,2,3,4,5]
 exam_scores=[10,33,93,12,43]
+plt.xlabel("Hours studies")
+plt.ylabel("Exam scores")
 plt.scatter(hours_studies,exam_scores,marker="o",color="green")
 plt.show()
 
