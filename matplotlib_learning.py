@@ -64,11 +64,15 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 '''Scatterplot'''
-a=[10,20,40,20,12,34,53]
-b=[23,43,45,54,32,32,32]
+# a=[10,20,40,20,12,34,53]
+# b=[23,43,45,54,32,32,32]
 
-plt.scatter(a,b,marker="o",color="green")
-plt.show()
+# plt.scatter(a,b,marker="o",color="green")
+# plt.show()
+
+hours_studies=[1,2,3,4,5]
+exam_scores=[10,33,93,12,43]
+
 
 
 
