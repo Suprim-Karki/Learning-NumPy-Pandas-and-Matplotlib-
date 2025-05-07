@@ -65,9 +65,10 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 
 '''Scatterplot'''
 a=[10,20,40,20,12,34,53]
-b=[23,43,45,54,32,32]
+b=[23,43,45,54,32,32,32]
 
-
+plt.scatter(a,b,marker="o",color="green")
+plt.show()
 
 
 
