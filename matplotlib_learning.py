@@ -74,6 +74,8 @@ exam_scores=[10,33,93,12,43]
 plt.xlabel("Hours studies")
 plt.ylabel("Exam scores")
 plt.scatter(hours_studies,exam_scores,marker="o",color="red",label="class B")
+plt.legend()
+plt.grid(True)
 plt.show()
 
 
