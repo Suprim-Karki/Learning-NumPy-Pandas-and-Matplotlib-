@@ -79,9 +79,11 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 plt.scatter([1,2,3],[50,55,60],color="blue",label="class 1")
-plt.scatter([1,2,3],[55,40,65],color="blue",label="class 2")
+plt.scatter([1,2,3],[55,40,65],color="red",label="class 2")
 
-
+plt.title("Comparision of two classes")
+plt.legend()
+plt.show()
 
 
 
