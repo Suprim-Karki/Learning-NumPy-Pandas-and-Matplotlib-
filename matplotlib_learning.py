@@ -88,21 +88,23 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 
 '''Subplot: Plotting 2 or more graphs together'''
 
-x=[1,2,3,4]
-y=[10,20,15,25]
+# x=[1,2,3,4]
+# y=[10,20,15,25]
 
-plt.subplot(1,3,1)  #1 row 2 column 1st subplot
-plt.plot(x,y)
-plt.title("Line chart")
+# plt.subplot(1,3,1)  #1 row 2 column 1st subplot
+# plt.plot(x,y)
+# plt.title("Line chart")
 
-plt.subplot(1,3,2)  #1 row 2 column 2nd subplot
-plt.bar(x,y)
-plt.title("Bar chart")
+# plt.subplot(1,3,2)  #1 row 2 column 2nd subplot
+# plt.bar(x,y)
+# plt.title("Bar chart")
 
-plt.subplot(1,3,3)
-plt.scatter(x,y)
-plt.tight_layout()
-plt.show()
+# plt.subplot(1,3,3)
+# plt.scatter(x,y)
+# plt.tight_layout()
+# plt.show()
+
+'''Subplot with width and height'''
 
 
 
