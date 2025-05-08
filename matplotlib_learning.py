@@ -88,7 +88,13 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 
 '''Subplot: Plotting 2 or more graphs together'''
 
+x=[1,2,3,4]
+y=[10,20,15,25]
 
+plt.subplot(1,2,1)  #1 row 2 column 1st row
+plt.plot(x,y)
+plt.title("Line chart")
+plt.show()
 
 
 
