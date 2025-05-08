@@ -105,7 +105,7 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 '''Subplot with width and height'''
-
+Syntax: fig,ax=plt.subplots(nrows,ncols,figsize=(width,height))
 
 
 
