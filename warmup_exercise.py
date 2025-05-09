@@ -21,4 +21,7 @@ df=pd.DataFrame(dict1)
 # print(f"Number of columns= {df.shape[1]}")
 
 '''Q4: Get all information about the dataset'''
-print(df.info())
+# print(df.info())
+
+'''Q5: Check null values in the dataset'''
+print(df.isnull())
