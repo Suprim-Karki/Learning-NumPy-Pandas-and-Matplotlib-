@@ -136,7 +136,16 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 ''' Savefig '''
 # Syntax: savefig('filename.extension',dpi=value,bbox_inches='tight')  dpi=dots per inch, bbox_inches='tight' removes the blankspace
 
+x=[1,2,3,4]
+y=[10,20,15,25]
 
+plt.plot(x,y,color='red')
+plt.title('Eg of savefig')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+
+plt.savefig('save.png',dpi=300,bbox_inches='tight')
+plt.show()
 
 
 
