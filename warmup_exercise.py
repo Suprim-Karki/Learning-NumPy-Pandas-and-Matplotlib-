@@ -16,6 +16,9 @@ df=pd.DataFrame(dict1)
 # print(df.tail(3))
 
 '''Q3: Find the shape of the dataset (rows,columns)'''
-print(df.shape)
-print(f"Number of rows= {df.shape[0]}")
-print(f"Number of columns= {df.shape[1]}")
+# print(df.shape)
+# print(f"Number of rows= {df.shape[0]}")
+# print(f"Number of columns= {df.shape[1]}")
+
+'''Q4: Get all information about the dataset'''
+print(df.info())
