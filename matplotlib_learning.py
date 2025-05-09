@@ -144,7 +144,7 @@ plt.title('Eg of savefig')
 plt.xlabel('X Axis')
 plt.ylabel('Y Axis')
 
-plt.savefig('save.png',dpi=300,bbox_inches='tight')
+plt.savefig('save.png',dpi=300,bbox_inches='tight')  #alwaus savefig before show function
 plt.show()
 
 
