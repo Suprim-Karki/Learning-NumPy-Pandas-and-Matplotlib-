@@ -120,18 +120,20 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.tight_layout()
 # plt.show()
 
-fig,ax=plt.subplots(1,2,figsize=(10,5))
+# fig,ax=plt.subplots(1,2,figsize=(10,5))
 
-x=["A","B","C","D"]
-y=[999,13333,1000,2500]
+# x=["A","B","C","D"]
+# y=[999,13333,1000,2500]
 
-ax[0].plot(x,y)
-ax[0].set_title("Line plot")
+# ax[0].plot(x,y)
+# ax[0].set_title("Line plot")
 
-ax[1].bar(x,y)
-ax[1].set_title("Bar plot")
-plt.tight_layout()
-plt.show()
+# ax[1].bar(x,y)
+# ax[1].set_title("Bar plot")
+# plt.tight_layout()
+# plt.show()
+
+''' Savefig '''
 
 
 
