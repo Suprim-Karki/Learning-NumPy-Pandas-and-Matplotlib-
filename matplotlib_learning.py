@@ -134,6 +134,7 @@ Syntax: plt.plot(x,y,color="color_name",linestyle="linestyle,linewidth=value, ma
 # plt.show()
 
 ''' Savefig '''
+# Syntax: savefig('filename.extension',dpi=value,bbox_inches='tight')  dpi=dots per inch, bbox_inches='tight' removes the blankspace
 
 
 
