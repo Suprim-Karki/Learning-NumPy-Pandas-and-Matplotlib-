@@ -39,7 +39,10 @@ df=pd.DataFrame(dict1)
 # print(df['gender'].value_counts())
 
 '''Q10: Find the total number of students having marks between 90 and 100(inclusie)'''
-print(df['marks'].between(90,100))
+# print(df['marks'].between(90,100))
+
+'''Q11: Find average marks'''
+print(df['marks'].mean())
 
 
 
