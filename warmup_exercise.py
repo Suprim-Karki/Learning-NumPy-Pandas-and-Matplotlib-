@@ -42,10 +42,12 @@ df=pd.DataFrame(dict1)
 # print(df['marks'].between(90,100))
 
 '''Q11: Find average marks'''
-print(df['marks'].mean())
+# print(df['marks'].mean())
 
-
-
+'''Q12: Apply method for function'''
+def marks(x):
+    return x/2
+print(df['marks'].apply(marks))
 
 
 
