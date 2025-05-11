@@ -45,10 +45,12 @@ df=pd.DataFrame(dict1)
 # print(df['marks'].mean())
 
 '''Q12: Apply method for function'''
-def marks(x):
-    return x/2
-print(df['marks'].apply(marks))
+# def marks(x):
+#     return x/2
+# print(df['marks'].apply(marks))
 
+'''Q13: Map method'''
+print(df['gender'].map({"Male":1,"Female":0}))
 
 
 
