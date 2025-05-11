@@ -29,8 +29,11 @@ df=pd.DataFrame(dict1)
 '''Q6: Get overall statistics of the dataframe'''
 # print(df.describe())
 
-'''Q7: Find unique values from the gender column'''
-print(df['gender'].nunique())
+'''Q7: Find number of unique values from the gender column'''
+# print(df['gender'].nunique())
+
+'''Q8: Find unique values from the gender column'''
+print(df['gender'].unique())
 
 
 
