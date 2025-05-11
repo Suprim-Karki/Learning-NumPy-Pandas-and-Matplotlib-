@@ -36,9 +36,10 @@ df=pd.DataFrame(dict1)
 # print(df['gender'].unique())
 
 '''Q9: Display count of unique values from gender column'''
-print(df['gender'].value_counts())
+# print(df['gender'].value_counts())
 
-
+'''Q10: Find the total number of students having marks between 90 and 100(inclusie)'''
+print(df['marks'].between(90,100))
 
 
 
