@@ -59,7 +59,10 @@ df=pd.DataFrame(dict1)
 # print(df.columns)
 
 '''Q16: Print index'''
-print(df.index)
+# print(df.index)
+
+'''Q17: Sort the dataframe as per marks'''
+print(df.sort_values(by='marks'))
 
 
 
