@@ -70,11 +70,11 @@ df=pd.DataFrame(dict1)
 '''Q19: Display name and marks of female students'''
 # print(df[df['gender']=='Male'][['name','marks']])
 
-'''Q20: Use is in method'''
-print(df['gender'].isin(['female']))
+'''Q20: Use isin method'''
+# print(df['gender'].isin(['female']))
 
-
-
+'''Q21: Q19 but using isin method'''
+print(df[df['gender'].isin(['Female'])][['name','marks']])
 
 
 
