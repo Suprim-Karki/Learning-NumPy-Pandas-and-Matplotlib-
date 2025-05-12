@@ -64,6 +64,9 @@ df=pd.DataFrame(dict1)
 '''Q17: Sort the dataframe as per marks'''
 print(df.sort_values(by='marks'))
 
+'''Q17: Sort the dataframe as per marks descending'''
+print(df.sort_values(by='marks',ascending=False))
+
 
 
 
