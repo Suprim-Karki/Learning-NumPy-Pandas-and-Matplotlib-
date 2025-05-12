@@ -62,11 +62,13 @@ df=pd.DataFrame(dict1)
 # print(df.index)
 
 '''Q17: Sort the dataframe as per marks'''
-print(df.sort_values(by='marks'))
+# print(df.sort_values(by='marks'))
 
-'''Q17: Sort the dataframe as per marks descending'''
-print(df.sort_values(by='marks',ascending=False))
+'''Q18: Sort the dataframe as per marks descending'''
+# print(df.sort_values(by='marks',ascending=False))
 
+'''Q19: Display name and marks of female students'''
+print(df[df['gender']=='Male'][['name','marks']])
 
 
 
