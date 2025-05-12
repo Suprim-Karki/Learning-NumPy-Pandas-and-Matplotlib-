@@ -68,7 +68,10 @@ df=pd.DataFrame(dict1)
 # print(df.sort_values(by='marks',ascending=False))
 
 '''Q19: Display name and marks of female students'''
-print(df[df['gender']=='Male'][['name','marks']])
+# print(df[df['gender']=='Male'][['name','marks']])
+
+'''Q20: Use is in method'''
+print(df['gender'].isin(['female']))
 
 
 
