@@ -56,8 +56,10 @@ df=pd.DataFrame(dict1)
 # print(df.drop('marks'),axis=1)
 
 '''Q15: Print name of columns'''
-print(df.columns)
+# print(df.columns)
 
+'''Q16: Print index'''
+print(df.index)
 
 
 
