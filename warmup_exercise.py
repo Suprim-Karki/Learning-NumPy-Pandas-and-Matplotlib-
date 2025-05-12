@@ -50,7 +50,10 @@ df=pd.DataFrame(dict1)
 # print(df['marks'].apply(marks))
 
 '''Q13: Map method'''
-print(df['gender'].map({"Male":1,"Female":0}))
+# print(df['gender'].map({"Male":1,"Female":0}))
+
+'''Q14: Drop the column(s)'''
+print(df.drop('marks'),axis=1)
 
 
 
