@@ -53,7 +53,10 @@ df=pd.DataFrame(dict1)
 # print(df['gender'].map({"Male":1,"Female":0}))
 
 '''Q14: Drop the column(s)'''
-print(df.drop('marks'),axis=1)
+# print(df.drop('marks'),axis=1)
+
+'''Q15: Print name of columns'''
+print(df.columns)
 
 
 
