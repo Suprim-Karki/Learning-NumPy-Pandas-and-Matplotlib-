@@ -19,19 +19,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains('engineer',case=False)])
 
 '''Q6: Number of people who have the job title "Lawyer"'''
-print(df[df['Job']=='Lawyer'].count())
+# print(df[df['Job']=='Lawyer'].count())
 
-
-
-
-
-
-
-
-
-
-
-
+'''Q7: Email of the person with following ip address 132.207.160.22'''
+print(df[df['IP Address']=='132.207.160.22']['Email'])
 
 
 
