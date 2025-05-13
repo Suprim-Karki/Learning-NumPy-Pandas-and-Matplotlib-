@@ -51,4 +51,3 @@ print(df[df['Job'].str.contains('engineer',case=False)])
 
 
 
-
