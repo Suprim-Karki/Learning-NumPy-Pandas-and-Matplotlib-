@@ -6,5 +6,46 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df.isnull().sum())
 
 '''Q2: Highest and lowest purchase price'''
-print(df['Purchase Price'].max())
-print(df['Purchase Price'].min())
+# print(df['Purchase Price'].max())
+# print(df['Purchase Price'].min())
+
+'''Q3: Average purchase price'''
+print(df['Purchase Price'].mean())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
