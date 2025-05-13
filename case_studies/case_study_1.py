@@ -22,9 +22,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job']=='Lawyer'].count())
 
 '''Q7: Email of the person with following ip address 132.207.160.22'''
-print(df[df['IP Address']=='132.207.160.22']['Email'])
+# print(df[df['IP Address']=='132.207.160.22']['Email'])
 
-
+'''Q8: Number of people who have mastercard as their credit card provider and made a purchase above 50'''
+print(len(df[(df['CC Provider']=='Mastercard') & (df['Purchase Price']>50)]))
 
 
 
