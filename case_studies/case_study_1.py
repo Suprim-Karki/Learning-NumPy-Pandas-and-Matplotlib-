@@ -10,10 +10,13 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Purchase Price'].min())
 
 '''Q3: Average purchase price'''
-print(df['Purchase Price'].mean())
+# print(df['Purchase Price'].mean())
 
+'''Q4: Number of people with French (fr) as their language of choice'''
+# print(df[df['Language']=='fr'])
 
-
+'''Q5: Job title containing the word "engineer"'''
+print(df[df['Job'].str.contains('engineer',case=False)])
 
 
 
