@@ -16,9 +16,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Language']=='fr'])
 
 '''Q5: Job title containing the word "engineer"'''
-print(df[df['Job'].str.contains('engineer',case=False)])
+# print(df[df['Job'].str.contains('engineer',case=False)])
 
-
+'''Q6: Number of people who have the job title "Lawyer"'''
+print(df[df['Job']=='Lawyer'].count())
 
 
 
