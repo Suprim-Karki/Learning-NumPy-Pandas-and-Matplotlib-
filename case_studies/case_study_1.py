@@ -1,5 +1,6 @@
 import pandas as pd
 
-df=pd.read_csv("case_studies/Ecommerce Purchases")
+df=pd.read_csv("Ecommerce Purchases")
 
-print(df)
+'''Q1: Check null values in the dataset'''
+print(df.isnull().sum())
