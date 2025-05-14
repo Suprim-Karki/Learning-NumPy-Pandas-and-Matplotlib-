@@ -37,8 +37,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Credit Card']==4926535242672853]['Email'])
 
 '''Q12: Number of people who have a credit card that expires in December 2025'''
-print(len(df[df['CC Exp Date'].str.contains('12/25')]))
+# print(len(df[df['CC Exp Date'].str.contains('12/25')]))
 
+'''Q13: How many prople purchased during the AM and how many during PM?'''
+print(df['AM or PM'].value_counts())
 
 
 
