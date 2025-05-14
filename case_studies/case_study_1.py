@@ -31,9 +31,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['CC Exp Date'].str.contains('25')]))
 
 '''Q10: Number of people who made a purchase between $50.00 and $100.00'''
-print(len(df[(df['Purchase Price']>=50) & (df['Purchase Price']<=100)]))
+# print(len(df[(df['Purchase Price']>=50) & (df['Purchase Price']<=100)]))
 
-
+'''Q11: Find the email of the person with the following credit card number 4926535242672853'''
+print(df[df['Credit Card']==4926535242672853]['Email'])
 
 
 
