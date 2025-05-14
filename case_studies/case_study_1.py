@@ -25,9 +25,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['IP Address']=='132.207.160.22']['Email'])
 
 '''Q8: Number of people who have mastercard as their credit card provider and made a purchase above 50'''
-print(len(df[(df['CC Provider']=='Mastercard') & (df['Purchase Price']>50)]))
+# print(len(df[(df['CC Provider']=='Mastercard') & (df['Purchase Price']>50)]))
 
-
+'''Q9: Number of people who have a credit card that expires in 2025'''
+print(len(df[df['CC Exp Date'].str.contains('25')]))
 
 
 
