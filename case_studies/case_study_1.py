@@ -40,9 +40,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['CC Exp Date'].str.contains('12/25')]))
 
 '''Q13: How many prople purchased during the AM and how many during PM?'''
-print(df['AM or PM'].value_counts())
+# print(df['AM or PM'].value_counts())
 
-
+'''Q14: Top 5 most popular email providers'''
+print(df['Email'].str.split('@').str[1].value_counts().head(5))
 
 
 
