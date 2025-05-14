@@ -34,9 +34,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[(df['Purchase Price']>=50) & (df['Purchase Price']<=100)]))
 
 '''Q11: Find the email of the person with the following credit card number 4926535242672853'''
-print(df[df['Credit Card']==4926535242672853]['Email'])
+# print(df[df['Credit Card']==4926535242672853]['Email'])
 
-
+'''Q12: Number of people who have a credit card that expires in December 2025'''
+print(len(df[df['CC Exp Date'].str.contains('12/25')]))
 
 
 
