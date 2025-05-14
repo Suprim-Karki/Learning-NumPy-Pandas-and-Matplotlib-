@@ -43,8 +43,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['AM or PM'].value_counts())
 
 '''Q14: Top 5 most popular email providers'''
-print(df['Email'].str.split('@').str[1].value_counts().head(5))
+# print(df['Email'].str.split('@').str[1].value_counts().head(5))
 
+'''Q15: Top 5 most common job titles'''
+print(df['Job'].value_counts().head(5))
 
 
 
