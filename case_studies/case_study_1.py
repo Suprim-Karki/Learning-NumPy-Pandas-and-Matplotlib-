@@ -46,9 +46,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Email'].str.split('@').str[1].value_counts().head(5))
 
 '''Q15: Top 5 most common job titles'''
-print(df['Job'].value_counts().head(5))
+# print(df['Job'].value_counts().head(5))
 
-
+'''Q16: Number of people who have a credit card that expires in 2025 and have the job title "Lawyer"'''
+print(len(df[(df['CC Exp Date'].str.contains('25')) & (df['Job']=='Lawyer')]))
 
 
 
