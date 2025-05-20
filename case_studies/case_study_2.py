@@ -12,8 +12,10 @@ df = pd.read_csv("Salaries.csv")
 # print(df.shape)
 
 '''Q4: Display all information about the dataset.'''
-print(df.info())
+# print(df.info())
 
+'''Q5: Check for null values in the dataset.'''
+print(df.isnull().sum())
 
 
 
