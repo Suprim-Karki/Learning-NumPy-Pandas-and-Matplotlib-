@@ -22,7 +22,10 @@ df = pd.read_csv("Salaries.csv")
 # print(data)
 
 '''Q7: Get overall statistics of the dataset.'''
-print(df.describe())
+# print(df.describe())
+
+'''Q8: Find the occurance of Employee Name. Top 10.'''
+print(df['EmployeeName'].value_counts().head(10))
 
 
 
