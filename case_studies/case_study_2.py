@@ -15,7 +15,11 @@ df = pd.read_csv("Salaries.csv")
 # print(df.info())
 
 '''Q5: Check for null values in the dataset.'''
-print(df.isnull().sum())
+# print(df.isnull().sum())
+
+'''Q6: Drop Id, Notes, Agency and Status columns from the dataset.'''
+data = df.drop(['Id', 'Notes', 'Agency', 'Status'],axis=1)
+print(data)
 
 
 
