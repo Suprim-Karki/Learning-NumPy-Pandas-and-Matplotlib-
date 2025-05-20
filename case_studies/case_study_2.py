@@ -18,8 +18,11 @@ df = pd.read_csv("Salaries.csv")
 # print(df.isnull().sum())
 
 '''Q6: Drop Id, Notes, Agency and Status columns from the dataset.'''
-data = df.drop(['Id', 'Notes', 'Agency', 'Status'],axis=1)
-print(data)
+# data = df.drop(['Id', 'Notes', 'Agency', 'Status'],axis=1)
+# print(data)
+
+'''Q7: Get overall statistics of the dataset.'''
+print(df.describe())
 
 
 
