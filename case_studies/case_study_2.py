@@ -3,4 +3,7 @@ import pandas as pd
 df = pd.read_csv("Salaries.csv")
 
 '''Q1: Display top 10 rows of the dataset.'''
-print(df.head(10))
+# print(df.head(10))
+
+'''Q2: Display bottom 10 rows of the dataset.'''
+print(df.tail(10))
