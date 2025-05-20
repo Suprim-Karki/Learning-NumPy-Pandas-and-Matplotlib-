@@ -25,7 +25,10 @@ df = pd.read_csv("Salaries.csv")
 # print(df.describe())
 
 '''Q8: Find the occurance of Employee Name. Top 10.'''
-print(df['EmployeeName'].value_counts().head(10))
+# print(df['EmployeeName'].value_counts().head(10))
+
+'''Q9: Find the occurance of Job Title. Top 5.'''
+print(df['JobTitle'].value_counts().head())
 
 
 
