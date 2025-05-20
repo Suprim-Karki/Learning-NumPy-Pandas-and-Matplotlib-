@@ -6,4 +6,35 @@ df = pd.read_csv("Salaries.csv")
 # print(df.head(10))
 
 '''Q2: Display bottom 10 rows of the dataset.'''
-print(df.tail(10))
+# print(df.tail(10))
+
+'''Q3: Display the shape of the dataset.'''
+print(df.shape)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
