@@ -9,9 +9,10 @@ df = pd.read_csv("Salaries.csv")
 # print(df.tail(10))
 
 '''Q3: Display the shape of the dataset.'''
-print(df.shape)
+# print(df.shape)
 
-
+'''Q4: Display all information about the dataset.'''
+print(df.info())
 
 
 
