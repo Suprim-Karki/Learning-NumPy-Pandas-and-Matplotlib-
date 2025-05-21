@@ -40,9 +40,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(len(df[df['JobTitle'].str.contains("CAPTAIN",case=False)]))  #case insensative search
 
 '''Q13: Display all the names of employees from the fire department'''
-print(df[df['JobTitle'].str.contains('FIRE DEPARTMENT',case=False)]['EmployeeName'])
+# print(df[df['JobTitle'].str.contains('FIRE DEPARTMENT',case=False)]['EmployeeName'])
 
-
+'''Q14: Desribe base pay'''
+print(df['BasePay'].describe())
 
 
 
