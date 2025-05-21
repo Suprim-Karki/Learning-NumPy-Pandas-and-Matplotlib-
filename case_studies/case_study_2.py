@@ -31,10 +31,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df['JobTitle'].value_counts().head())
 
 '''Q10: Find the number of unique job titles'''
-print(df['JobTitle'].nunique())
+# print(df['JobTitle'].nunique())
 
-
-
+'''Q11: Total number of job titles that contain captain'''
+print(len(df[df['JobTitle'].str.contains("CAPTAIN")]))
 
 
 
