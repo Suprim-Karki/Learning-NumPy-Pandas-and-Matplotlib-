@@ -37,7 +37,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(len(df[df['JobTitle'].str.contains("CAPTAIN")]))  #case sensative search
 
 '''Q12: Total number of job titles that contain captain (case sensative)'''
-print(len(df[df['JobTitle'].str.contains("CAPTAIN",case=False)]))  #case insensative search
+# print(len(df[df['JobTitle'].str.contains("CAPTAIN",case=False)]))  #case insensative search
+
+'''Q13: Display all the names of employees from the fire department'''
+print(df[df['JobTitle'].str.contains('FIRE DEPARTMENT',case=False)]['EmployeeName'])
 
 
 
