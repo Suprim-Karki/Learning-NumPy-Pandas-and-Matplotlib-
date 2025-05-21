@@ -51,7 +51,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df)
 
 '''Q16: Show the rows having 3 missing values'''
-print(df.isnull().sum(axis=1)==3)
+# print(df.isnull().sum(axis=1)==3)
+
+'''Q17: Show the rows having 3 missing values'''
+print(df.drop(df[df.isnull().sum(axis=1)==3].index,axis=0))
 
 
 
