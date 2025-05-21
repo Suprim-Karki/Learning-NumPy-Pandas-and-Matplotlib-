@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("Salaries.csv")
+df = pd.read_csv("Salaries.csv",low_memory=False)
 
 '''Q1: Display top 10 rows of the dataset.'''
 # print(df.head(10))
@@ -28,9 +28,10 @@ df = pd.read_csv("Salaries.csv")
 # print(df['EmployeeName'].value_counts().head(10))
 
 '''Q9: Find the occurance of Job Title. Top 5.'''
-print(df['JobTitle'].value_counts().head())
+# print(df['JobTitle'].value_counts().head())
 
-
+'''Q10: Find the number of unique job titles'''
+print(df['JobTitle'].nunique())
 
 
 
