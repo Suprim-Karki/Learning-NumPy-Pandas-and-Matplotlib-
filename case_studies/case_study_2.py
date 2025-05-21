@@ -43,8 +43,12 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df[df['JobTitle'].str.contains('FIRE DEPARTMENT',case=False)]['EmployeeName'])
 
 '''Q14: Desribe base pay'''
-print(df['BasePay'].describe())
+# print(df['BasePay'].describe())
 
+'''Q15: Replace Not provided in employee name to NaN'''
+import numpy as np
+df=df['EmployeeName'].replace('Not provided',np.nan)
+print(df)
 
 
 
