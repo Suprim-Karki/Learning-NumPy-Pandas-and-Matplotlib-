@@ -54,7 +54,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df.isnull().sum(axis=1)==3)
 
 '''Q17: Show the rows having 3 missing values'''
-print(df.drop(df[df.isnull().sum(axis=1)==3].index,axis=0))
+# print(df.drop(df[df.isnull().sum(axis=1)==3].index,axis=0))
+
+'''Q18: Find the job title of Albert Pardini'''
+print(df[df['EmployeeName']=='ALBERT PARDINI']['JobTitle'])
 
 
 
