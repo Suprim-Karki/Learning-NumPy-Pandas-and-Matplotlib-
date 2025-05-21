@@ -46,10 +46,12 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df['BasePay'].describe())
 
 '''Q15: Replace Not provided in employee name to NaN'''
-import numpy as np
-df=df['EmployeeName'].replace('Not provided',np.nan)
-print(df)
+# import numpy as np
+# df['EmployeeName']=df['EmployeeName'].replace('Not provided',np.nan)
+# print(df)
 
+'''Q16: Show the rows having 3 missing values'''
+print(df.isnull().sum(axis=1)==3)
 
 
 
