@@ -57,9 +57,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df.drop(df[df.isnull().sum(axis=1)==3].index,axis=0))
 
 '''Q18: Find the job title of Albert Pardini'''
-print(df[df['EmployeeName']=='ALBERT PARDINI']['JobTitle'])
+# print(df[df['EmployeeName']=='ALBERT PARDINI']['JobTitle'])
 
-
+'''Q19: How much Albert Pardini make including benefits'''
+print(df[df['EmployeeName']=='ALBERT PARDINI']['TotalPayBenefits'])
 
 
 
