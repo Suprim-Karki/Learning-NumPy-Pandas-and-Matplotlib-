@@ -85,7 +85,9 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['BasePay'].mode()[0])
 
 '''Q27: Display the frequency of TotalPay being exactly zero.'''
-print((df['TotalPay'] == 0).sum())
+# print((df['TotalPay'] == 0).sum())
 
+'''Q28: Show all records where BasePay is missing but OvertimePay is provided.'''
+print(df[df['BasePay'].isnull() & df['OvertimePay'].notnull()])
 
 
