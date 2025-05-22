@@ -67,9 +67,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['BasePay'].mean())
 
 '''Q21: What is the maximum OvertimePay recorded?'''
-print(df['OvertimePay'].max())
+# print(df['OvertimePay'].max())
 
-
+'''Q22: Display the employee with the highest TotalPayBenefits.'''
+print(df[df['TotalPayBenefits'] == df['TotalPayBenefits'].max()])
 
 
 
