@@ -82,8 +82,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('JobTitle')['TotalPay'].mean().sort_values(ascending=False).head(5))
 
 '''Q26: What is the most common BasePay value?'''
-print(df['BasePay'].mode()[0])
+# print(df['BasePay'].mode()[0])
 
+'''Q27: Display the frequency of TotalPay being exactly zero.'''
+print((df['TotalPay'] == 0).sum())
 
 
 
