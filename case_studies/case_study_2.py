@@ -79,9 +79,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['Agency'].nunique())
 
 '''Q25: Find the average TotalPay for each job title (top 5 by average).'''
-print(df.groupby('JobTitle')['TotalPay'].mean().sort_values(ascending=False).head(5))
+# print(df.groupby('JobTitle')['TotalPay'].mean().sort_values(ascending=False).head(5))
 
-
+'''Q26: What is the most common BasePay value?'''
+print(df['BasePay'].mode()[0])
 
 
 
