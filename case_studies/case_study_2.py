@@ -70,9 +70,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['OvertimePay'].max())
 
 '''Q22: Display the employee with the highest TotalPayBenefits.'''
-print(df[df['TotalPayBenefits'] == df['TotalPayBenefits'].max()])
+# print(df[df['TotalPayBenefits'] == df['TotalPayBenefits'].max()])
 
-
+'''Q23: Display the employee with the lowest TotalPayBenefits (excluding 0 or negative).'''
+print(df[df['TotalPayBenefits'] > 0].sort_values(by='TotalPayBenefits').head(1))
 
 
 
