@@ -76,8 +76,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['TotalPayBenefits'] > 0].sort_values(by='TotalPayBenefits').head(1))
 
 '''Q24: Find out how many unique agencies are there in the dataset.'''
-print(df['Agency'].nunique())
+# print(df['Agency'].nunique())
 
+'''Q25: Find the average TotalPay for each job title (top 5 by average).'''
+print(df.groupby('JobTitle')['TotalPay'].mean().sort_values(ascending=False).head(5))
 
 
 
