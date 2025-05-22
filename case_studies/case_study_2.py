@@ -64,9 +64,10 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 
 '''Q20: What is the average BasePay of all employees?'''
 df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
-print(df['BasePay'].mean())
+# print(df['BasePay'].mean())
 
-
+'''Q21: What is the maximum OvertimePay recorded?'''
+print(df['OvertimePay'].max())
 
 
 
