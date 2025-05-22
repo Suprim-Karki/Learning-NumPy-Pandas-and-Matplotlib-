@@ -88,6 +88,7 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print((df['TotalPay'] == 0).sum())
 
 '''Q28: Show all records where BasePay is missing but OvertimePay is provided.'''
-print(df[df['BasePay'].isnull() & df['OvertimePay'].notnull()])
+# print(df[df['BasePay'].isnull() & df['OvertimePay'].notnull()])
 
-
+'''Q29: What is the correlation between BasePay and TotalPay?'''
+print(df[['BasePay', 'TotalPay']].corr())
