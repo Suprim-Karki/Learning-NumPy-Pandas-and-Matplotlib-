@@ -60,8 +60,11 @@ df = pd.read_csv("Salaries.csv",low_memory=False)
 # print(df[df['EmployeeName']=='ALBERT PARDINI']['JobTitle'])
 
 '''Q19: How much Albert Pardini make including benefits'''
-print(df[df['EmployeeName']=='ALBERT PARDINI']['TotalPayBenefits'])
+# print(df[df['EmployeeName']=='ALBERT PARDINI']['TotalPayBenefits'])
 
+'''Q20: What is the average BasePay of all employees?'''
+df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
+print(df['BasePay'].mean())
 
 
 
