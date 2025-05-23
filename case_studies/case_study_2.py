@@ -110,11 +110,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # avg_basepay = df['BasePay'].mean()
 # print((df['BasePay'] > avg_basepay).sum())
 
-
 '''Q35: What percentage of employees earned more in OvertimePay than in BasePay?'''
-print((df['OvertimePay'] > df['BasePay']).mean() * 100)
+# print((df['OvertimePay'] > df['BasePay']).mean() * 100)
 
-
+'''Q36: List all unique job titles containing the word "Manager".'''
+print(df[df['JobTitle'].str.contains('Manager', case=False)]['JobTitle'].unique())
 
 
 
