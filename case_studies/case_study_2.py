@@ -114,7 +114,9 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print((df['OvertimePay'] > df['BasePay']).mean() * 100)
 
 '''Q36: List all unique job titles containing the word "Manager".'''
-print(df[df['JobTitle'].str.contains('Manager', case=False)]['JobTitle'].unique())
+# print(df[df['JobTitle'].str.contains('Manager', case=False)]['JobTitle'].unique())
 
+'''Q37: Which employee has the highest OvertimePay?'''
+print(df[df['OvertimePay'] == df['OvertimePay'].max()][['EmployeeName', 'OvertimePay']])
 
 
