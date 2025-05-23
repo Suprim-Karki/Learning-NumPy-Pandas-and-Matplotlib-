@@ -91,4 +91,7 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['BasePay'].isnull() & df['OvertimePay'].notnull()])
 
 '''Q29: What is the correlation between BasePay and TotalPay?'''
-print(df[['BasePay', 'TotalPay']].corr())
+# print(df[['BasePay', 'TotalPay']].corr())
+
+'''Q30: What is the year with the highest average TotalPayBenefits?'''
+print(df.groupby('Year')['TotalPayBenefits'].mean().sort_values(ascending=False).head(1))
