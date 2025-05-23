@@ -120,5 +120,8 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['OvertimePay'] == df['OvertimePay'].max()][['EmployeeName', 'OvertimePay']])
 
 '''Q38: What is the distribution of employees across different years?'''
-print(df['Year'].value_counts().sort_index())
+# print(df['Year'].value_counts().sort_index())
 
+
+'''Q39: Among the employees with missing BasePay, what is the average TotalPayBenefits?'''
+print(df[df['BasePay'].isnull()]['TotalPayBenefits'].mean())
