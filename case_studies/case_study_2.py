@@ -103,8 +103,12 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(sum(df['JobTitle'].value_counts() == 1))
 
 '''Q33: Find the average OvertimePay for each year.'''
-print(df.groupby('Year')['OvertimePay'].mean())
+# print(df.groupby('Year')['OvertimePay'].mean())
 
+
+'''Q34: Find out how many employees have a BasePay above the overall average BasePay.'''
+avg_basepay = df['BasePay'].mean()
+print((df['BasePay'] > avg_basepay).sum())
 
 
 
