@@ -94,4 +94,17 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[['BasePay', 'TotalPay']].corr())
 
 '''Q30: What is the year with the highest average TotalPayBenefits?'''
-print(df.groupby('Year')['TotalPayBenefits'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('Year')['TotalPayBenefits'].mean().sort_values(ascending=False).head(1))
+
+'''Q31: Which job title has the highest median BasePay?'''
+print(df.groupby('JobTitle')['BasePay'].median().sort_values(ascending=False).head(1))
+
+
+
+
+
+
+
+
+
+
