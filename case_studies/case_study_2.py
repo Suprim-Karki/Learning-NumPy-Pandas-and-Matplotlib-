@@ -97,9 +97,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('Year')['TotalPayBenefits'].mean().sort_values(ascending=False).head(1))
 
 '''Q31: Which job title has the highest median BasePay?'''
-print(df.groupby('JobTitle')['BasePay'].median().sort_values(ascending=False).head(1))
+# print(df.groupby('JobTitle')['BasePay'].median().sort_values(ascending=False).head(1))
 
 
+'''Q32: Count how many job titles were represented by only one person in a year (i.e., rare roles).'''
+print(sum(df['JobTitle'].value_counts() == 1))
 
 
 
