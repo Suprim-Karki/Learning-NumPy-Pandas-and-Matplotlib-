@@ -117,6 +117,8 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['JobTitle'].str.contains('Manager', case=False)]['JobTitle'].unique())
 
 '''Q37: Which employee has the highest OvertimePay?'''
-print(df[df['OvertimePay'] == df['OvertimePay'].max()][['EmployeeName', 'OvertimePay']])
+# print(df[df['OvertimePay'] == df['OvertimePay'].max()][['EmployeeName', 'OvertimePay']])
 
+'''Q38: What is the distribution of employees across different years?'''
+print(df['Year'].value_counts().sort_index())
 
