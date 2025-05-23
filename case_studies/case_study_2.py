@@ -107,10 +107,12 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 
 
 '''Q34: Find out how many employees have a BasePay above the overall average BasePay.'''
-avg_basepay = df['BasePay'].mean()
-print((df['BasePay'] > avg_basepay).sum())
+# avg_basepay = df['BasePay'].mean()
+# print((df['BasePay'] > avg_basepay).sum())
 
 
+'''Q35: What percentage of employees earned more in OvertimePay than in BasePay?'''
+print((df['OvertimePay'] > df['BasePay']).mean() * 100)
 
 
 
