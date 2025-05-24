@@ -129,4 +129,24 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('Year')['TotalPayBenefits'].mean())
 
 '''Q41: Which agency has the highest average TotalPay?'''
-print(df.groupby('Agency')['TotalPay'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('Agency')['TotalPay'].mean().sort_values(ascending=False).head(1))
+
+'''Q42: How many employees have negative TotalPayBenefits?'''
+print((df['TotalPayBenefits'] < 0).sum())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
