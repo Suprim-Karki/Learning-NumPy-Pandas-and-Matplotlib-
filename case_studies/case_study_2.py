@@ -152,7 +152,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('Year')['TotalPayBenefits'].median())
 
 '''Q48: Are there any duplicate records in the dataset?'''
-print(df.duplicated().sum())
+# print(df.duplicated().sum())
+
+'''Q49: What is the correlation matrix for all numeric columns?'''
+print(df.corr(numeric_only=True))
 
 
 
