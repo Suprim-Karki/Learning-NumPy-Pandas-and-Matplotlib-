@@ -143,7 +143,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print((df['TotalPayBenefits'] > mean + 2*std).mean() * 100)
 
 '''Q45: Which job title has the highest average OvertimePay?'''
-print(df.groupby('JobTitle')['OvertimePay'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('JobTitle')['OvertimePay'].mean().sort_values(ascending=False).head(1))
+
+'''Q46: How many records have all pay-related fields (BasePay, OvertimePay, OtherPay) as NaN?'''
+print(df[['BasePay', 'OvertimePay', 'OtherPay']].isnull().all(axis=1).sum())
 
 
 
