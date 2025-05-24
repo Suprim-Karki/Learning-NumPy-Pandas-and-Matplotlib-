@@ -135,7 +135,12 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print((df['TotalPayBenefits'] < 0).sum())
 
 '''Q43: What is the standard deviation of BasePay by year?'''
-print(df.groupby('Year')['BasePay'].std())
+# print(df.groupby('Year')['BasePay'].std())
+
+'''Q44: What percentage of employees have TotalPayBenefits greater than the mean + 2 standard deviations?'''
+mean = df['TotalPayBenefits'].mean()
+std = df['TotalPayBenefits'].std()
+print((df['TotalPayBenefits'] > mean + 2*std).mean() * 100)
 
 
 
