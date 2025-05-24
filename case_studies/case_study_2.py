@@ -149,7 +149,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[['BasePay', 'OvertimePay', 'OtherPay']].isnull().all(axis=1).sum())
 
 '''Q47: What is the median TotalPayBenefits by year?'''
-print(df.groupby('Year')['TotalPayBenefits'].median())
+# print(df.groupby('Year')['TotalPayBenefits'].median())
+
+'''Q48: Are there any duplicate records in the dataset?'''
+print(df.duplicated().sum())
 
 
 
