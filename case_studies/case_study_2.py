@@ -138,10 +138,12 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('Year')['BasePay'].std())
 
 '''Q44: What percentage of employees have TotalPayBenefits greater than the mean + 2 standard deviations?'''
-mean = df['TotalPayBenefits'].mean()
-std = df['TotalPayBenefits'].std()
-print((df['TotalPayBenefits'] > mean + 2*std).mean() * 100)
+# mean = df['TotalPayBenefits'].mean()
+# std = df['TotalPayBenefits'].std()
+# print((df['TotalPayBenefits'] > mean + 2*std).mean() * 100)
 
+'''Q45: Which job title has the highest average OvertimePay?'''
+print(df.groupby('JobTitle')['OvertimePay'].mean().sort_values(ascending=False).head(1))
 
 
 
