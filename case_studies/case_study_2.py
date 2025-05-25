@@ -181,8 +181,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['BasePay'] > 100000]['OtherPay'].mean())
 
 '''Q57: Find the number of unique combinations of JobTitle and Year.'''
-print(df.groupby(['JobTitle', 'Year']).ngroups)
+# print(df.groupby(['JobTitle', 'Year']).ngroups)
 
+'''Q58: What is the maximum TotalPay recorded each year?'''
+print(df.groupby('Year')['TotalPay'].max())
 
 
 
