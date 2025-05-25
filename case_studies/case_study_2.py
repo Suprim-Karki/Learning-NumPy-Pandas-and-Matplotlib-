@@ -158,8 +158,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.corr(numeric_only=True))
 
 '''Q50: Find the total compensation (BasePay + OvertimePay + OtherPay) for each employee.'''
-df['TotalCompensation'] = df[['BasePay', 'OvertimePay', 'OtherPay']].sum(axis=1)
-print(df[['EmployeeName', 'TotalCompensation']])
+# df['TotalCompensation'] = df[['BasePay', 'OvertimePay', 'OtherPay']].sum(axis=1)
+# print(df[['EmployeeName', 'TotalCompensation']])
+
+'''Q51: Which year had the greatest number of records?'''
+# print(df['Year'].value_counts().idxmax())
 
 
 
