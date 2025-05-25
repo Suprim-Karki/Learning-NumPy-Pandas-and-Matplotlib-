@@ -165,9 +165,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['Year'].value_counts().idxmax())
 
 '''Q52: List all job titles that include both "Deputy" and "Director".'''
-print(df[df['JobTitle'].str.contains('Deputy', case=False) & df['JobTitle'].str.contains('Director', case=False)]['JobTitle'].unique())
+# print(df[df['JobTitle'].str.contains('Deputy', case=False) & df['JobTitle'].str.contains('Director', case=False)]['JobTitle'].unique())
 
-
+'''Q53: Find the number of employees whose TotalPay is exactly equal to BasePay.'''
+print((df['TotalPay'] == df['BasePay']).sum())
 
 
 
