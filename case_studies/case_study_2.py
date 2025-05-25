@@ -171,8 +171,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print((df['TotalPay'] == df['BasePay']).sum())
 
 '''Q54: Identify any records where TotalPay is less than BasePay (possible data issue).'''
-print(df[df['TotalPay'] < df['BasePay']])
+# print(df[df['TotalPay'] < df['BasePay']])
 
+'''Q55: What are the top 5 most frequent employee first names?'''
+df['FirstName'] = df['EmployeeName'].str.split().str[0]
+print(df['FirstName'].value_counts().head(5))
 
 
 
