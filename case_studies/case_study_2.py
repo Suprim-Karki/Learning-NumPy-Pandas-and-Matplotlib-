@@ -178,9 +178,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['FirstName'].value_counts().head(5))
 
 '''Q56: What is the average OtherPay for employees whose BasePay is above $100,000?'''
-print(df[df['BasePay'] > 100000]['OtherPay'].mean())
+# print(df[df['BasePay'] > 100000]['OtherPay'].mean())
 
-
+'''Q57: Find the number of unique combinations of JobTitle and Year.'''
+print(df.groupby(['JobTitle', 'Year']).ngroups)
 
 
 
