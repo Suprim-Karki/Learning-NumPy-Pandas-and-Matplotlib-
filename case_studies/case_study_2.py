@@ -168,9 +168,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['JobTitle'].str.contains('Deputy', case=False) & df['JobTitle'].str.contains('Director', case=False)]['JobTitle'].unique())
 
 '''Q53: Find the number of employees whose TotalPay is exactly equal to BasePay.'''
-print((df['TotalPay'] == df['BasePay']).sum())
+# print((df['TotalPay'] == df['BasePay']).sum())
 
-
+'''Q54: Identify any records where TotalPay is less than BasePay (possible data issue).'''
+print(df[df['TotalPay'] < df['BasePay']])
 
 
 
