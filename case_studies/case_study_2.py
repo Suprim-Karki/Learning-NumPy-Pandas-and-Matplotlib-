@@ -174,8 +174,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['TotalPay'] < df['BasePay']])
 
 '''Q55: What are the top 5 most frequent employee first names?'''
-df['FirstName'] = df['EmployeeName'].str.split().str[0]
-print(df['FirstName'].value_counts().head(5))
+# df['FirstName'] = df['EmployeeName'].str.split().str[0]
+# print(df['FirstName'].value_counts().head(5))
+
+'''Q56: What is the average OtherPay for employees whose BasePay is above $100,000?'''
+print(df[df['BasePay'] > 100000]['OtherPay'].mean())
 
 
 
