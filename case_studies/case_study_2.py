@@ -155,7 +155,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.duplicated().sum())
 
 '''Q49: What is the correlation matrix for all numeric columns?'''
-print(df.corr(numeric_only=True))
+# print(df.corr(numeric_only=True))
+
+'''Q50: Find the total compensation (BasePay + OvertimePay + OtherPay) for each employee.'''
+df['TotalCompensation'] = df[['BasePay', 'OvertimePay', 'OtherPay']].sum(axis=1)
+print(df[['EmployeeName', 'TotalCompensation']])
 
 
 
