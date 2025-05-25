@@ -184,7 +184,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby(['JobTitle', 'Year']).ngroups)
 
 '''Q58: What is the maximum TotalPay recorded each year?'''
-print(df.groupby('Year')['TotalPay'].max())
+# print(df.groupby('Year')['TotalPay'].max())
+
+'''Q59: How many employees have a name that includes "LEE"?'''
+print(df['EmployeeName'].str.contains('LEE', case=False).sum())
 
 
 
