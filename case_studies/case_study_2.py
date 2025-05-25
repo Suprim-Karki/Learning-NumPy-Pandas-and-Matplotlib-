@@ -164,6 +164,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 '''Q51: Which year had the greatest number of records?'''
 # print(df['Year'].value_counts().idxmax())
 
+'''Q52: List all job titles that include both "Deputy" and "Director".'''
+print(df[df['JobTitle'].str.contains('Deputy', case=False) & df['JobTitle'].str.contains('Director', case=False)]['JobTitle'].unique())
+
+
 
 
 
