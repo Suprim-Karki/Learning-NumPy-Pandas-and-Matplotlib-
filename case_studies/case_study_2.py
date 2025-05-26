@@ -199,7 +199,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('JobTitle')['TotalComp'].sum().sort_values(ascending=False).head(1))
 
 '''Q62: Identify top 5 job titles with the most missing BasePay entries.'''
-print(df[df['BasePay'].isnull()]['JobTitle'].value_counts().head(5))
+# print(df[df['BasePay'].isnull()]['JobTitle'].value_counts().head(5))
+
+'''Q63: Create a pivot table showing average TotalPay by Year and Agency.'''
+print(pd.pivot_table(df, values='TotalPay', index='Year', columns='Agency', aggfunc='mean'))
+
 
 
 
