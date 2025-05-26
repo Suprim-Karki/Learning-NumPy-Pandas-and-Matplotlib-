@@ -211,7 +211,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('JobTitle')['BasePay'].median().loc[lambda x: x > 150000])
 
 '''Q66: How does the average TotalPay differ between years for the job title "Police Officer"?'''
-print(df[df['JobTitle'].str.contains('Police Officer', case=False)].groupby('Year')['TotalPay'].mean())
+# print(df[df['JobTitle'].str.contains('Police Officer', case=False)].groupby('Year')['TotalPay'].mean())
+
+'''Q67: Identify top 3 agencies with the highest median TotalPay in 2014.'''
+print(df[df['Year'] == 2014].groupby('Agency')['TotalPay'].median().sort_values(ascending=False).head(3))
+
 
 
 
