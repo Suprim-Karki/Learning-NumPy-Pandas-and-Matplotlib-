@@ -190,9 +190,14 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df['EmployeeName'].str.contains('LEE', case=False).sum())
 
 '''Q60: What percentage of total BasePay was contributed by the top 10 highest-paid employees?'''
-top_10_total = df.nlargest(10, 'BasePay')['BasePay'].sum()
-overall_total = df['BasePay'].sum()
-print((top_10_total / overall_total) * 100)
+# top_10_total = df.nlargest(10, 'BasePay')['BasePay'].sum()
+# overall_total = df['BasePay'].sum()
+# print((top_10_total / overall_total) * 100)
+
+'''Q61: Which JobTitle has the highest total compensation (BasePay + OvertimePay + OtherPay)?'''
+df['TotalComp'] = df[['BasePay', 'OvertimePay', 'OtherPay']].sum(axis=1)
+print(df.groupby('JobTitle')['TotalComp'].sum().sort_values(ascending=False).head(1))
+
 
 
 
