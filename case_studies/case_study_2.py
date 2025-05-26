@@ -208,8 +208,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('JobTitle')['OtherPay'].median().sort_values(ascending=False).head(5))
 
 '''Q65: List all job titles where median BasePay is greater than $150,000.'''
-print(df.groupby('JobTitle')['BasePay'].median().loc[lambda x: x > 150000])
+# print(df.groupby('JobTitle')['BasePay'].median().loc[lambda x: x > 150000])
 
+'''Q66: How does the average TotalPay differ between years for the job title "Police Officer"?'''
+print(df[df['JobTitle'].str.contains('Police Officer', case=False)].groupby('Year')['TotalPay'].mean())
 
 
 
