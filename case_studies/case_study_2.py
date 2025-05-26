@@ -205,8 +205,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(pd.pivot_table(df, values='TotalPay', index='Year', columns='Agency', aggfunc='mean'))
 
 '''Q64: What is the median OtherPay for each job title? Show top 5.'''
-print(df.groupby('JobTitle')['OtherPay'].median().sort_values(ascending=False).head(5))
+# print(df.groupby('JobTitle')['OtherPay'].median().sort_values(ascending=False).head(5))
 
+'''Q65: List all job titles where median BasePay is greater than $150,000.'''
+print(df.groupby('JobTitle')['BasePay'].median().loc[lambda x: x > 150000])
 
 
 
