@@ -202,10 +202,10 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['BasePay'].isnull()]['JobTitle'].value_counts().head(5))
 
 '''Q63: Create a pivot table showing average TotalPay by Year and Agency.'''
-print(pd.pivot_table(df, values='TotalPay', index='Year', columns='Agency', aggfunc='mean'))
+# print(pd.pivot_table(df, values='TotalPay', index='Year', columns='Agency', aggfunc='mean'))
 
-
-
+'''Q64: What is the median OtherPay for each job title? Show top 5.'''
+print(df.groupby('JobTitle')['OtherPay'].median().sort_values(ascending=False).head(5))
 
 
 
