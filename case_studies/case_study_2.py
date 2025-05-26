@@ -187,7 +187,12 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df.groupby('Year')['TotalPay'].max())
 
 '''Q59: How many employees have a name that includes "LEE"?'''
-print(df['EmployeeName'].str.contains('LEE', case=False).sum())
+# print(df['EmployeeName'].str.contains('LEE', case=False).sum())
+
+'''Q60: What percentage of total BasePay was contributed by the top 10 highest-paid employees?'''
+top_10_total = df.nlargest(10, 'BasePay')['BasePay'].sum()
+overall_total = df['BasePay'].sum()
+print((top_10_total / overall_total) * 100)
 
 
 
