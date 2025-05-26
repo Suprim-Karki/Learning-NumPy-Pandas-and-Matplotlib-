@@ -214,8 +214,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print(df[df['JobTitle'].str.contains('Police Officer', case=False)].groupby('Year')['TotalPay'].mean())
 
 '''Q67: Identify top 3 agencies with the highest median TotalPay in 2014.'''
-print(df[df['Year'] == 2014].groupby('Agency')['TotalPay'].median().sort_values(ascending=False).head(3))
+# print(df[df['Year'] == 2014].groupby('Agency')['TotalPay'].median().sort_values(ascending=False).head(3))
 
+'''Q68: How many job titles contain numerals (like 'II', '3', etc.)?'''
+import re
+print(df['JobTitle'].apply(lambda x: bool(re.search(r'\d|[IVXLCDM]+', str(x)))).sum())
 
 
 
