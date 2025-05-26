@@ -195,10 +195,11 @@ df['BasePay'] = pd.to_numeric(df['BasePay'], errors='coerce')
 # print((top_10_total / overall_total) * 100)
 
 '''Q61: Which JobTitle has the highest total compensation (BasePay + OvertimePay + OtherPay)?'''
-df['TotalComp'] = df[['BasePay', 'OvertimePay', 'OtherPay']].sum(axis=1)
-print(df.groupby('JobTitle')['TotalComp'].sum().sort_values(ascending=False).head(1))
+# df['TotalComp'] = df[['BasePay', 'OvertimePay', 'OtherPay']].sum(axis=1)
+# print(df.groupby('JobTitle')['TotalComp'].sum().sort_values(ascending=False).head(1))
 
-
+'''Q62: Identify top 5 job titles with the most missing BasePay entries.'''
+print(df[df['BasePay'].isnull()]['JobTitle'].value_counts().head(5))
 
 
 
