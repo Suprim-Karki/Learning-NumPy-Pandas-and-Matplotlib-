@@ -238,11 +238,14 @@ import re
 # print(df[df['EmployeeName'].str.contains('SMITH', case=False)]['TotalPayBenefits'].mean())
 
 '''Q74: Compare median BasePay by gender if gender could be inferred from first names.'''
-Optional: Requires gender mapping logic; here’s the placeholder logic
-import gender_guesser.detector as gender
-d = gender.Detector()
-df['FirstName'] = df['EmployeeName'].str.split().str[0]
-df['Gender'] = df['FirstName'].apply(lambda x: d.get_gender(x) if pd.notnull(x) else 'unknown')
-print(df.groupby('Gender')['BasePay'].median())
+# import gender_guesser.detector as gender
+# d = gender.Detector()
+# df['FirstName'] = df['EmployeeName'].str.split().str[0]
+# df['Gender'] = df['FirstName'].apply(lambda x: d.get_gender(x) if pd.notnull(x) else 'unknown')
+# print(df.groupby('Gender')['BasePay'].median())
+
+'''Q75: How many employees have consistent BasePay over all years (if an employee appears in multiple years)?'''
+print(df.groupby('EmployeeName')['BasePay'].nunique().value_counts().get(1, 0))
+
 
 
