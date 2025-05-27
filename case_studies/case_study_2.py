@@ -229,7 +229,10 @@ import re
 # print(df.groupby('Year')['BasePay'].mean())
 
 '''Q71: Which job titles have the highest average pay volatility (std deviation of TotalPay)? Top 5'''
-print(df.groupby('JobTitle')['TotalPay'].std().sort_values(ascending=False).head(5))
+# print(df.groupby('JobTitle')['TotalPay'].std().sort_values(ascending=False).head(5))
+
+'''Q72: Which department (Agency) has the most job title diversity?'''
+print(df.groupby('Agency')['JobTitle'].nunique().sort_values(ascending=False).head(1))
 
 
 
