@@ -232,7 +232,9 @@ import re
 # print(df.groupby('JobTitle')['TotalPay'].std().sort_values(ascending=False).head(5))
 
 '''Q72: Which department (Agency) has the most job title diversity?'''
-print(df.groupby('Agency')['JobTitle'].nunique().sort_values(ascending=False).head(1))
+# print(df.groupby('Agency')['JobTitle'].nunique().sort_values(ascending=False).head(1))
 
+'''Q73: Find the average TotalPayBenefits for employees whose names contain "SMITH" (case-insensitive).'''
+print(df[df['EmployeeName'].str.contains('SMITH', case=False)]['TotalPayBenefits'].mean())
 
 
