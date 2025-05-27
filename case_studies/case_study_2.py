@@ -256,8 +256,14 @@ import re
 # print(stats.sort_values('gap', ascending=False).head(5))
 
 '''Q78: What is the average TotalPay of employees with over 10 years of repeated appearance (i.e., loyalty)?'''
-multi_year = df['EmployeeName'].value_counts()
-loyal_employees = multi_year[multi_year > 10].index
-print(df[df['EmployeeName'].isin(loyal_employees)]['TotalPay'].mean())
+# multi_year = df['EmployeeName'].value_counts()
+# loyal_employees = multi_year[multi_year > 10].index
+# print(df[df['EmployeeName'].isin(loyal_employees)]['TotalPay'].mean())
+
+'''Q79: What percentage of total salary (BasePay) was paid to the top 1% of earners?'''
+threshold = df['BasePay'].quantile(0.99)
+top_1_total = df[df['BasePay'] >= threshold]['BasePay'].sum()
+overall_total = df['BasePay'].sum()
+print((top_1_total / overall_total) * 100)
 
 
