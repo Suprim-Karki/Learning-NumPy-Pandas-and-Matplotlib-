@@ -226,6 +226,10 @@ import re
 # print(manager_avg, non_manager_avg)
 
 '''Q70: What is the trend of average BasePay over the years?'''
-print(df.groupby('Year')['BasePay'].mean())
+# print(df.groupby('Year')['BasePay'].mean())
+
+'''Q71: Which job titles have the highest average pay volatility (std deviation of TotalPay)? Top 5'''
+print(df.groupby('JobTitle')['TotalPay'].std().sort_values(ascending=False).head(5))
+
 
 
