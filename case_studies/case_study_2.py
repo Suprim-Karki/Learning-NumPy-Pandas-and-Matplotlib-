@@ -245,7 +245,9 @@ import re
 # print(df.groupby('Gender')['BasePay'].median())
 
 '''Q75: How many employees have consistent BasePay over all years (if an employee appears in multiple years)?'''
-print(df.groupby('EmployeeName')['BasePay'].nunique().value_counts().get(1, 0))
+# print(df.groupby('EmployeeName')['BasePay'].nunique().value_counts().get(1, 0))
 
+'''Q76: Show the 5 job titles with the most frequent appearance across multiple years.'''
+print(df.groupby('JobTitle')['Year'].nunique().sort_values(ascending=False).head(5))
 
 
