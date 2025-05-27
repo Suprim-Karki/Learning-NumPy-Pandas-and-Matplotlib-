@@ -221,8 +221,11 @@ import re
 # print(df['JobTitle'].apply(lambda x: bool(re.search(r'\d|[IVXLCDM]+', str(x)))).sum())
 
 '''Q69: Compare average BasePay of employees with and without "Manager" in their job title.'''
-manager_avg = df[df['JobTitle'].str.contains('Manager', case=False)]['BasePay'].mean()
-non_manager_avg = df[~df['JobTitle'].str.contains('Manager', case=False)]['BasePay'].mean()
-print(manager_avg, non_manager_avg)
+# manager_avg = df[df['JobTitle'].str.contains('Manager', case=False)]['BasePay'].mean()
+# non_manager_avg = df[~df['JobTitle'].str.contains('Manager', case=False)]['BasePay'].mean()
+# print(manager_avg, non_manager_avg)
+
+'''Q70: What is the trend of average BasePay over the years?'''
+print(df.groupby('Year')['BasePay'].mean())
 
 
