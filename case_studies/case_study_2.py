@@ -248,6 +248,10 @@ import re
 # print(df.groupby('EmployeeName')['BasePay'].nunique().value_counts().get(1, 0))
 
 '''Q76: Show the 5 job titles with the most frequent appearance across multiple years.'''
-print(df.groupby('JobTitle')['Year'].nunique().sort_values(ascending=False).head(5))
+# print(df.groupby('JobTitle')['Year'].nunique().sort_values(ascending=False).head(5))
 
+'''Q77: Which JobTitle has the largest gap between mean and median BasePay (pay inequality)?'''
+stats = df.groupby('JobTitle')['BasePay'].agg(['mean', 'median'])
+stats['gap'] = stats['mean'] - stats['median']
+print(stats.sort_values('gap', ascending=False).head(5))
 
