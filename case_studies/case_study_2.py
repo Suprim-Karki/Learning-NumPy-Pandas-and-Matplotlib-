@@ -282,8 +282,11 @@ import re
 # print((df['OtherPay'] > df['BasePay']).sum())
 
 '''Q84: What is the average TotalPayBenefits of the bottom 10% of earners?'''
-threshold = df['TotalPayBenefits'].quantile(0.10)
-print(df[df['TotalPayBenefits'] <= threshold]['TotalPayBenefits'].mean())
+# threshold = df['TotalPayBenefits'].quantile(0.10)
+# print(df[df['TotalPayBenefits'] <= threshold]['TotalPayBenefits'].mean())
+
+'''Q85: What is the total OvertimePay of employees earning over $100,000 in BasePay?'''
+print(df[df['BasePay'] > 100000]['OvertimePay'].sum())
 
 
 
