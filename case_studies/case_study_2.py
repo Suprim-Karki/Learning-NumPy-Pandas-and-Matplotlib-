@@ -273,7 +273,11 @@ import re
 # print((below_median_count / total_count) * 100)
 
 '''Q81: What is the average TotalPay for employees with ‘Supervisor’ in their JobTitle?'''
-print(df[df['JobTitle'].str.contains('Supervisor', case=False)]['TotalPay'].mean())
+# print(df[df['JobTitle'].str.contains('Supervisor', case=False)]['TotalPay'].mean())
+
+'''Q82: What is the correlation between OvertimePay and TotalPayBenefits?'''
+print(df[['OvertimePay', 'TotalPayBenefits']].corr().iloc[0, 1])
+
 
 
 
