@@ -276,8 +276,10 @@ import re
 # print(df[df['JobTitle'].str.contains('Supervisor', case=False)]['TotalPay'].mean())
 
 '''Q82: What is the correlation between OvertimePay and TotalPayBenefits?'''
-print(df[['OvertimePay', 'TotalPayBenefits']].corr().iloc[0, 1])
+# print(df[['OvertimePay', 'TotalPayBenefits']].corr().iloc[0, 1])
 
+'''Q83: How many employees earned more in OtherPay than BasePay?'''
+print((df['OtherPay'] > df['BasePay']).sum())
 
 
 
