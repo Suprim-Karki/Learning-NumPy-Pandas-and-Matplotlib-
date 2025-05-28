@@ -267,10 +267,13 @@ import re
 # print((top_1_total / overall_total) * 100)
 
 '''Q80: What percentage of employees earned below the median BasePay?'''
-median = df['BasePay'].median()
-below_median_count = (df['BasePay'] < median).sum()
-total_count = df['BasePay'].count()
-print((below_median_count / total_count) * 100)
+# median = df['BasePay'].median()
+# below_median_count = (df['BasePay'] < median).sum()
+# total_count = df['BasePay'].count()
+# print((below_median_count / total_count) * 100)
+
+'''Q81: What is the average TotalPay for employees with ‘Supervisor’ in their JobTitle?'''
+print(df[df['JobTitle'].str.contains('Supervisor', case=False)]['TotalPay'].mean())
 
 
 
