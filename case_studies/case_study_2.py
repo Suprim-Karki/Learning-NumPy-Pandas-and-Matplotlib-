@@ -286,7 +286,11 @@ import re
 # print(df[df['TotalPayBenefits'] <= threshold]['TotalPayBenefits'].mean())
 
 '''Q85: What is the total OvertimePay of employees earning over $100,000 in BasePay?'''
-print(df[df['BasePay'] > 100000]['OvertimePay'].sum())
+# print(df[df['BasePay'] > 100000]['OvertimePay'].sum())
+
+'''Q86: What percentage of employees have a TotalPay of exactly zero?'''
+print((df['TotalPay'] == 0).mean() * 100)
+
 
 
 
