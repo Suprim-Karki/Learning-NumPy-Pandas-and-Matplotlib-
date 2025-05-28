@@ -292,7 +292,11 @@ import re
 # print((df['TotalPay'] == 0).mean() * 100)
 
 '''Q87: What is the average BasePay for job titles containing the word "Technician"?'''
-print(df[df['JobTitle'].str.contains('Technician', case=False)]['BasePay'].mean())
+# print(df[df['JobTitle'].str.contains('Technician', case=False)]['BasePay'].mean())
+
+'''Q88: What is the maximum OtherPay given to any employee in the dataset?'''
+print(df['OtherPay'].max())
+
 
 
 
