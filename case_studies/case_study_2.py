@@ -289,7 +289,11 @@ import re
 # print(df[df['BasePay'] > 100000]['OvertimePay'].sum())
 
 '''Q86: What percentage of employees have a TotalPay of exactly zero?'''
-print((df['TotalPay'] == 0).mean() * 100)
+# print((df['TotalPay'] == 0).mean() * 100)
+
+'''Q87: What is the average BasePay for job titles containing the word "Technician"?'''
+print(df[df['JobTitle'].str.contains('Technician', case=False)]['BasePay'].mean())
+
 
 
 
