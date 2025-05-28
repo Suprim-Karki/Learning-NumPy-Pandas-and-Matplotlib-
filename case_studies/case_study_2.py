@@ -295,7 +295,11 @@ import re
 # print(df[df['JobTitle'].str.contains('Technician', case=False)]['BasePay'].mean())
 
 '''Q88: What is the maximum OtherPay given to any employee in the dataset?'''
-print(df['OtherPay'].max())
+# print(df['OtherPay'].max())
+
+'''Q89: What is the standard deviation of TotalPayBenefits across all employees?'''
+print(df['TotalPayBenefits'].std())
+
 
 
 
