@@ -279,7 +279,12 @@ import re
 # print(df[['OvertimePay', 'TotalPayBenefits']].corr().iloc[0, 1])
 
 '''Q83: How many employees earned more in OtherPay than BasePay?'''
-print((df['OtherPay'] > df['BasePay']).sum())
+# print((df['OtherPay'] > df['BasePay']).sum())
+
+'''Q84: What is the average TotalPayBenefits of the bottom 10% of earners?'''
+threshold = df['TotalPayBenefits'].quantile(0.10)
+print(df[df['TotalPayBenefits'] <= threshold]['TotalPayBenefits'].mean())
+
 
 
 
