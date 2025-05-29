@@ -322,8 +322,13 @@ import re
 # print(df.groupby('Year')['TotalPay'].std().sort_values(ascending=False).head(1))
 
 '''Q96: What are the 5 most common combinations of JobTitle and Agency?'''
-print(df.groupby(['JobTitle', 'Agency']).size().sort_values(ascending=False).head(5))
+# print(df.groupby(['JobTitle', 'Agency']).size().sort_values(ascending=False).head(5))
 
+'''Q97: How many employees had TotalPayBenefits within ±10% of the average TotalPayBenefits?'''
+avg = df['TotalPayBenefits'].mean()
+lower = avg * 0.9
+upper = avg * 1.1
+print(df[(df['TotalPayBenefits'] >= lower) & (df['TotalPayBenefits'] <= upper)].shape[0])
 
 
 
