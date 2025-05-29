@@ -301,8 +301,10 @@ import re
 # print(df['TotalPayBenefits'].std())
 
 '''Q90: What is the ratio of average OvertimePay to average BasePay?'''
-print(df['OvertimePay'].mean() / df['BasePay'].mean())
+# print(df['OvertimePay'].mean() / df['BasePay'].mean())
 
+'''Q91: What are the top 5 job titles with the highest average TotalPayBenefits in 2014?'''
+print(df[df['Year'] == 2014].groupby('JobTitle')['TotalPayBenefits'].mean().sort_values(ascending=False).head(5))
 
 
 
