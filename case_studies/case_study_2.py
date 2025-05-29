@@ -336,6 +336,8 @@ import re
 '''Q99: What is the total TotalPay for each year (sorted by year)?'''
 # print(df.groupby('Year')['TotalPay'].sum().sort_index())
 
+'''Q100: Identify all job titles where the minimum BasePay was zero.'''
+print(df.groupby('JobTitle')['BasePay'].min().loc[lambda x: x == 0])
 
 
 
