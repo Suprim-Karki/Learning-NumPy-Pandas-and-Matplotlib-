@@ -331,8 +331,10 @@ import re
 # print(df[(df['TotalPayBenefits'] >= lower) & (df['TotalPayBenefits'] <= upper)].shape[0])
 
 '''Q98: List employees whose OvertimePay is more than double their BasePay.'''
-print(df[df['OvertimePay'] > 2 * df['BasePay']][['EmployeeName', 'BasePay', 'OvertimePay']])
+# print(df[df['OvertimePay'] > 2 * df['BasePay']][['EmployeeName', 'BasePay', 'OvertimePay']])
 
+'''Q99: What is the total TotalPay for each year (sorted by year)?'''
+# print(df.groupby('Year')['TotalPay'].sum().sort_index())
 
 
 
