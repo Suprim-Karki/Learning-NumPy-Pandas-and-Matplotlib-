@@ -308,9 +308,12 @@ import re
 
 
 '''Q92: How many employees have exactly the same TotalPay across multiple years?'''
-same_pay = df.groupby('EmployeeName')['TotalPay'].nunique()
-print((same_pay == 1).sum())
+# same_pay = df.groupby('EmployeeName')['TotalPay'].nunique()
+# print((same_pay == 1).sum())
 
+
+'''Q93: What is the most common OtherPay amount (mode)?'''
+print(df['OtherPay'].mode()[0])
 
 
 
