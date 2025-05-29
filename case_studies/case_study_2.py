@@ -325,10 +325,13 @@ import re
 # print(df.groupby(['JobTitle', 'Agency']).size().sort_values(ascending=False).head(5))
 
 '''Q97: How many employees had TotalPayBenefits within ±10% of the average TotalPayBenefits?'''
-avg = df['TotalPayBenefits'].mean()
-lower = avg * 0.9
-upper = avg * 1.1
-print(df[(df['TotalPayBenefits'] >= lower) & (df['TotalPayBenefits'] <= upper)].shape[0])
+# avg = df['TotalPayBenefits'].mean()
+# lower = avg * 0.9
+# upper = avg * 1.1
+# print(df[(df['TotalPayBenefits'] >= lower) & (df['TotalPayBenefits'] <= upper)].shape[0])
+
+'''Q98: List employees whose OvertimePay is more than double their BasePay.'''
+print(df[df['OvertimePay'] > 2 * df['BasePay']][['EmployeeName', 'BasePay', 'OvertimePay']])
 
 
 
