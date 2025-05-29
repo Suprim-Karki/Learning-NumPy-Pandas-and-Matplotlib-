@@ -316,5 +316,7 @@ import re
 # print(df['OtherPay'].mode()[0])
 
 '''Q94: Show all records where BasePay is above 200,000 but TotalPayBenefits is below 100,000.'''
-print(df[(df['BasePay'] > 200000) & (df['TotalPayBenefits'] < 100000)])
+# print(df[(df['BasePay'] > 200000) & (df['TotalPayBenefits'] < 100000)])
 
+'''Q95: Which year had the highest standard deviation in TotalPay?'''
+print(df.groupby('Year')['TotalPay'].std().sort_values(ascending=False).head(1))
