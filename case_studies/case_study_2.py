@@ -304,9 +304,12 @@ import re
 # print(df['OvertimePay'].mean() / df['BasePay'].mean())
 
 '''Q91: What are the top 5 job titles with the highest average TotalPayBenefits in 2014?'''
-print(df[df['Year'] == 2014].groupby('JobTitle')['TotalPayBenefits'].mean().sort_values(ascending=False).head(5))
+# print(df[df['Year'] == 2014].groupby('JobTitle')['TotalPayBenefits'].mean().sort_values(ascending=False).head(5))
 
 
+'''Q92: How many employees have exactly the same TotalPay across multiple years?'''
+same_pay = df.groupby('EmployeeName')['TotalPay'].nunique()
+print((same_pay == 1).sum())
 
 
 
