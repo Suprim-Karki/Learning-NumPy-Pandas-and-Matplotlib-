@@ -298,7 +298,10 @@ import re
 # print(df['OtherPay'].max())
 
 '''Q89: What is the standard deviation of TotalPayBenefits across all employees?'''
-print(df['TotalPayBenefits'].std())
+# print(df['TotalPayBenefits'].std())
+
+'''Q90: What is the ratio of average OvertimePay to average BasePay?'''
+print(df['OvertimePay'].mean() / df['BasePay'].mean())
 
 
 
