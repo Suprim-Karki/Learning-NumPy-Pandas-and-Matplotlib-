@@ -313,8 +313,8 @@ import re
 
 
 '''Q93: What is the most common OtherPay amount (mode)?'''
-print(df['OtherPay'].mode()[0])
+# print(df['OtherPay'].mode()[0])
 
-
-
+'''Q94: Show all records where BasePay is above 200,000 but TotalPayBenefits is below 100,000.'''
+print(df[(df['BasePay'] > 200000) & (df['TotalPayBenefits'] < 100000)])
 
