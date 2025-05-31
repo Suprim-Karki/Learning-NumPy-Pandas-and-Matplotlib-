@@ -55,8 +55,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Language'].value_counts().head(1))
 
 '''Q18: Most common credit card provider'''
-print(df['CC Provider'].value_counts().head(1))
+# print(df['CC Provider'].value_counts().head(1))
 
+'''Q19: Number of people whose purchase price is exactly $99.99'''
+print(len(df[df['Purchase Price'] == 99.99]))
 
 
 
