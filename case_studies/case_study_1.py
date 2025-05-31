@@ -52,7 +52,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[(df['CC Exp Date'].str.contains('25')) & (df['Job']=='Lawyer')]))
 
 '''Q17: Most common language spoken by customers'''
-print(df['Language'].value_counts().head(1))
+# print(df['Language'].value_counts().head(1))
+
+'''Q18: Most common credit card provider'''
+print(df['CC Provider'].value_counts().head(1))
+
 
 
 
