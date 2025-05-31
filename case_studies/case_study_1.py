@@ -75,7 +75,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[(df['Purchase Price'] > 90) & (df['Email'].str.contains('hotmail.com'))]['Email'])
 
 '''Q24: Number of people with credit card numbers starting with "4" (likely Visa)'''
-print(len(df[df['Credit Card'].astype(str).str.startswith('4')]))
+# print(len(df[df['Credit Card'].astype(str).str.startswith('4')]))
+
+'''Q25: Most common hour of the day for purchases (if time column exists)'''
+df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+print(df['Hour'].value_counts().head(1))
+
 
 
 
