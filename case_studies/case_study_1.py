@@ -67,9 +67,13 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['CC Provider'] == 'American Express']['Purchase Price'].mean())
 
 '''Q22: Percentage of users who use Gmail'''
-gmail_count = df['Email'].str.contains('gmail.com').sum()
-total = len(df)
-print((gmail_count / total) * 100)
+# gmail_count = df['Email'].str.contains('gmail.com').sum()
+# total = len(df)
+# print((gmail_count / total) * 100)
+
+'''Q23: Emails of people who made a purchase over $90 and use Hotmail'''
+print(df[(df['Purchase Price'] > 90) & (df['Email'].str.contains('hotmail.com'))]['Email'])
+
 
 
 
