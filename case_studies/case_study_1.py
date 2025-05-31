@@ -61,7 +61,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Purchase Price'] == 99.99]))
 
 '''Q20: List of unique job titles'''
-print(df['Job'].unique())
+# print(df['Job'].unique())
+
+'''Q21: Average purchase price for people who use American Express'''
+print(df[df['CC Provider'] == 'American Express']['Purchase Price'].mean())
+
 
 
 
