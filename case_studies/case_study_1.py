@@ -64,7 +64,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Job'].unique())
 
 '''Q21: Average purchase price for people who use American Express'''
-print(df[df['CC Provider'] == 'American Express']['Purchase Price'].mean())
+# print(df[df['CC Provider'] == 'American Express']['Purchase Price'].mean())
+
+'''Q22: Percentage of users who use Gmail'''
+gmail_count = df['Email'].str.contains('gmail.com').sum()
+total = len(df)
+print((gmail_count / total) * 100)
 
 
 
