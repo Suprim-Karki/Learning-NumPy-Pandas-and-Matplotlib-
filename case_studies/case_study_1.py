@@ -72,7 +72,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print((gmail_count / total) * 100)
 
 '''Q23: Emails of people who made a purchase over $90 and use Hotmail'''
-print(df[(df['Purchase Price'] > 90) & (df['Email'].str.contains('hotmail.com'))]['Email'])
+# print(df[(df['Purchase Price'] > 90) & (df['Email'].str.contains('hotmail.com'))]['Email'])
+
+'''Q24: Number of people with credit card numbers starting with "4" (likely Visa)'''
+print(len(df[df['Credit Card'].astype(str).str.startswith('4')]))
 
 
 
