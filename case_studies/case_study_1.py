@@ -78,8 +78,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Credit Card'].astype(str).str.startswith('4')]))
 
 '''Q25: Most common hour of the day for purchases (if time column exists)'''
-df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
-print(df['Hour'].value_counts().head(1))
+# df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+# print(df['Hour'].value_counts().head(1))
+
+'''Q26: Number of people who have the word "Manager" in their job title'''
+print(len(df[df['Job'].str.contains('Manager', case=False)]))
+
 
 
 
