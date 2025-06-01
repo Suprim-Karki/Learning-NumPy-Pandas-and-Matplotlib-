@@ -103,4 +103,8 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['CC Exp Date'].str.split('/').str[1].value_counts())
 
 '''Q33: Number of people whose email username (before @) starts with 'a' '''
-print(len(df[df['Email'].str.split('@').str[0].str.startswith('a')]))
+# print(len(df[df['Email'].str.split('@').str[0].str.startswith('a')]))
+
+'''Q34: Number of people with an IP address ending in ".com" (if present)'''
+# print(len(df[df['IP Address'].str.endswith('.com')]))  # Might be 0 depending on data structure
+
