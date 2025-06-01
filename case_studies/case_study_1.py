@@ -109,4 +109,7 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['IP Address'].str.endswith('.com')]))  # Might be 0 depending on data structure
 
 '''Q35: Average purchase price for users who made purchases during AM'''
-print(df[df['AM or PM'] == 'AM']['Purchase Price'].mean())
+# print(df[df['AM or PM'] == 'AM']['Purchase Price'].mean())
+
+'''Q36: Find all people whose job title is exactly 2 words long'''
+print(df[df['Job'].str.strip().str.split().apply(len) == 2])
