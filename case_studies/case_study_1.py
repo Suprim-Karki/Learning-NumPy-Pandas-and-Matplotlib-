@@ -88,7 +88,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.contains('yahoo.com')]))
 
 '''Q28: Number of purchases made from IP addresses starting with "192."'''
-print(len(df[df['IP Address'].str.startswith('192.')]))
+# print(len(df[df['IP Address'].str.startswith('192.')]))
+
+'''Q29: Number of people whose job title ends with "Engineer"'''
+# print(len(df[df['Job'].str.lower().str.endswith('engineer')]))
 
 
 
