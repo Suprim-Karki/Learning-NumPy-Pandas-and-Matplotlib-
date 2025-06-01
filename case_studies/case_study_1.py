@@ -82,7 +82,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Hour'].value_counts().head(1))
 
 '''Q26: Number of people who have the word "Manager" in their job title'''
-print(len(df[df['Job'].str.contains('Manager', case=False)]))
+# print(len(df[df['Job'].str.contains('Manager', case=False)]))
+
+'''Q27: Number of people who use Yahoo as their email provider'''
+print(len(df[df['Email'].str.contains('yahoo.com')]))
 
 
 
