@@ -108,3 +108,5 @@ df=pd.read_csv("Ecommerce Purchases")
 '''Q34: Number of people with an IP address ending in ".com" (if present)'''
 # print(len(df[df['IP Address'].str.endswith('.com')]))  # Might be 0 depending on data structure
 
+'''Q35: Average purchase price for users who made purchases during AM'''
+print(df[df['AM or PM'] == 'AM']['Purchase Price'].mean())
