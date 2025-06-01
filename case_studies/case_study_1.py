@@ -93,7 +93,8 @@ df=pd.read_csv("Ecommerce Purchases")
 '''Q29: Number of people whose job title ends with "Engineer"'''
 # print(len(df[df['Job'].str.lower().str.endswith('engineer')]))
 
-
+'''Q30: Number of people whose language is English and have a purchase price above $80'''
+print(len(df[(df['Language'] == 'en') & (df['Purchase Price'] > 80)]))
 
 
 
