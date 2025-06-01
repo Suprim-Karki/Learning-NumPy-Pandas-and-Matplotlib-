@@ -100,6 +100,7 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['CC Provider'] == 'Mastercard']['Purchase Price'].sum())
 
 '''Q32: Count of credit cards expiring each year'''
-print(df['CC Exp Date'].str.split('/').str[1].value_counts())
+# print(df['CC Exp Date'].str.split('/').str[1].value_counts())
 
-
+'''Q33: Number of people whose email username (before @) starts with 'a' '''
+print(len(df[df['Email'].str.split('@').str[0].str.startswith('a')]))
