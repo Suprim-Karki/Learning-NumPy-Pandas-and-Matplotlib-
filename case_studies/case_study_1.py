@@ -94,9 +94,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Job'].str.lower().str.endswith('engineer')]))
 
 '''Q30: Number of people whose language is English and have a purchase price above $80'''
-print(len(df[(df['Language'] == 'en') & (df['Purchase Price'] > 80)]))
+# print(len(df[(df['Language'] == 'en') & (df['Purchase Price'] > 80)]))
 
-
+'''Q31: Total purchase amount made by people using Mastercard'''
+print(df[df['CC Provider'] == 'Mastercard']['Purchase Price'].sum())
 
 
 
