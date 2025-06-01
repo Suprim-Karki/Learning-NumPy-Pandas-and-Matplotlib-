@@ -97,8 +97,9 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[(df['Language'] == 'en') & (df['Purchase Price'] > 80)]))
 
 '''Q31: Total purchase amount made by people using Mastercard'''
-print(df[df['CC Provider'] == 'Mastercard']['Purchase Price'].sum())
+# print(df[df['CC Provider'] == 'Mastercard']['Purchase Price'].sum())
 
-
+'''Q32: Count of credit cards expiring each year'''
+print(df['CC Exp Date'].str.split('/').str[1].value_counts())
 
 
