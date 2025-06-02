@@ -112,4 +112,7 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['AM or PM'] == 'AM']['Purchase Price'].mean())
 
 '''Q36: Find all people whose job title is exactly 2 words long'''
-print(df[df['Job'].str.strip().str.split().apply(len) == 2])
+# print(df[df['Job'].str.strip().str.split().apply(len) == 2])
+
+'''Q37: Number of users whose email domain is ".edu"'''
+print(len(df[df['Email'].str.endswith('.edu')]))
