@@ -133,8 +133,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains('Consultant', case=False)]['Purchase Price'].mean())
 
 '''Q43: Count of users whose email starts with a digit'''
-print(len(df[df['Email'].str.split('@').str[0].str.match('^\d')]))
+# print(len(df[df['Email'].str.split('@').str[0].str.match('^\d')]))
 
+'''Q44: Number of users who purchased using credit cards that expire in November'''
+print(len(df[df['CC Exp Date'].str.startswith('11')]))
 
 
 
