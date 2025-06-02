@@ -130,7 +130,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Email'].str.split('@').str[1].value_counts().idxmin())
 
 '''Q42: Average purchase price for people whose job contains the word "Consultant"'''
-print(df[df['Job'].str.contains('Consultant', case=False)]['Purchase Price'].mean())
+# print(df[df['Job'].str.contains('Consultant', case=False)]['Purchase Price'].mean())
+
+'''Q43: Count of users whose email starts with a digit'''
+print(len(df[df['Email'].str.split('@').str[0].str.match('^\d')]))
 
 
 
