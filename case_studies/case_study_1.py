@@ -139,9 +139,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['CC Exp Date'].str.startswith('11')]))
 
 '''Q45: Find top 3 job titles among users who use Yahoo email'''
-print(df[df['Email'].str.contains('yahoo.com')]['Job'].value_counts().head(3))
+# print(df[df['Email'].str.contains('yahoo.com')]['Job'].value_counts().head(3))
 
-
+'''Q46: Number of users whose name contain a hyphen (e.g., Mary-Jane)'''
+print(len(df[df['Name'].str.contains('-')])) 
 
 
 
