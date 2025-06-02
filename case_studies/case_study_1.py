@@ -127,8 +127,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['CC Exp Date'].str.split('/').str[1].astype(int) % 2 == 1]))
 
 '''Q41: Find the domain with the least number of email users'''
-print(df['Email'].str.split('@').str[1].value_counts().idxmin())
+# print(df['Email'].str.split('@').str[1].value_counts().idxmin())
 
+'''Q42: Average purchase price for people whose job contains the word "Consultant"'''
+print(df[df['Job'].str.contains('Consultant', case=False)]['Purchase Price'].mean())
 
 
 
