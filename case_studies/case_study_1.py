@@ -115,4 +115,7 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.strip().str.split().apply(len) == 2])
 
 '''Q37: Number of users whose email domain is ".edu"'''
-print(len(df[df['Email'].str.endswith('.edu')]))
+# print(len(df[df['Email'].str.endswith('.edu')]))
+
+'''Q38: Maximum purchase price made using Visa'''
+print(df[df['Credit Card'].astype(str).str.startswith('4')]['Purchase Price'].max())
