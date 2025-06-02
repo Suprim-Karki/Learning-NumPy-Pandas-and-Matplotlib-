@@ -118,4 +118,25 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.endswith('.edu')]))
 
 '''Q38: Maximum purchase price made using Visa'''
-print(df[df['Credit Card'].astype(str).str.startswith('4')]['Purchase Price'].max())
+# print(df[df['Credit Card'].astype(str).str.startswith('4')]['Purchase Price'].max())
+
+'''Q39: Find users whose job title contains both "Senior" and "Engineer"'''
+print(df[df['Job'].str.contains('Senior', case=False) & df['Job'].str.contains('Engineer', case=False)])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
