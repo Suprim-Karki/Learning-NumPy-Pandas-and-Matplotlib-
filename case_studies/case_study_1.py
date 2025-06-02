@@ -124,8 +124,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains('Senior', case=False) & df['Job'].str.contains('Engineer', case=False)])
 
 '''Q40: Count of users who use a credit card that expires in a year ending with an odd number'''
-print(len(df[df['CC Exp Date'].str.split('/').str[1].astype(int) % 2 == 1]))
+# print(len(df[df['CC Exp Date'].str.split('/').str[1].astype(int) % 2 == 1]))
 
+'''Q41: Find the domain with the least number of email users'''
+print(df['Email'].str.split('@').str[1].value_counts().idxmin())
 
 
 
