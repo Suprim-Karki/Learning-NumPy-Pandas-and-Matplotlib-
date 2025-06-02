@@ -121,8 +121,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Credit Card'].astype(str).str.startswith('4')]['Purchase Price'].max())
 
 '''Q39: Find users whose job title contains both "Senior" and "Engineer"'''
-print(df[df['Job'].str.contains('Senior', case=False) & df['Job'].str.contains('Engineer', case=False)])
+# print(df[df['Job'].str.contains('Senior', case=False) & df['Job'].str.contains('Engineer', case=False)])
 
+'''Q40: Count of users who use a credit card that expires in a year ending with an odd number'''
+print(len(df[df['CC Exp Date'].str.split('/').str[1].astype(int) % 2 == 1]))
 
 
 
