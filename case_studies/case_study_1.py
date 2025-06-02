@@ -136,7 +136,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.split('@').str[0].str.match('^\d')]))
 
 '''Q44: Number of users who purchased using credit cards that expire in November'''
-print(len(df[df['CC Exp Date'].str.startswith('11')]))
+# print(len(df[df['CC Exp Date'].str.startswith('11')]))
+
+'''Q45: Find top 3 job titles among users who use Yahoo email'''
+print(df[df['Email'].str.contains('yahoo.com')]['Job'].value_counts().head(3))
+
 
 
 
