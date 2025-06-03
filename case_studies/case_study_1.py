@@ -142,7 +142,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Email'].str.contains('yahoo.com')]['Job'].value_counts().head(3))
 
 '''Q46: Number of users whose name contain a hyphen (e.g., Mary-Jane)'''
-print(len(df[df['Name'].str.contains('-')])) 
+# print(len(df[df['Name'].str.contains('-')])) 
+
+'''Q47: Number of users whose purchase price is a whole number (no decimal cents)'''
+# print(len(df[df['Purchase Price'] % 1 == 0]))
 
 
 
