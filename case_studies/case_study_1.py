@@ -160,9 +160,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Hour'] == 12]))
 
 '''Q51: Find users whose job title starts and ends with the same letter (case-insensitive)'''
-print(df[df['Job'].str.lower().str[0] == df['Job'].str.lower().str[-1]])
+# print(df[df['Job'].str.lower().str[0] == df['Job'].str.lower().str[-1]])
 
-
+'''Q52: Count of users whose email domain is exactly 5 characters long before ".com" or ".net" (e.g., "abcde.com")'''
+print(len(df[df['Email'].str.split('@').str[1].str.extract(r'^([a-zA-Z0-9]{5})\.(com|net)$').notnull().any(axis=1)]))
 
 
 
