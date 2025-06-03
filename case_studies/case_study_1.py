@@ -156,9 +156,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
 
 '''Q50: Number of purchases made during lunchtime (12 PM to 1 PM)'''
-df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
-print(len(df[df['Hour'] == 12]))
+# df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+# print(len(df[df['Hour'] == 12]))
 
+'''Q51: Find users whose job title starts and ends with the same letter (case-insensitive)'''
+print(df[df['Job'].str.lower().str[0] == df['Job'].str.lower().str[-1]])
 
 
 
