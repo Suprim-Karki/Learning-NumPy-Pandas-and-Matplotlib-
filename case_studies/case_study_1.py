@@ -147,6 +147,8 @@ df=pd.read_csv("Ecommerce Purchases")
 '''Q47: Number of users whose purchase price is a whole number (no decimal cents)'''
 # print(len(df[df['Purchase Price'] % 1 == 0]))
 
+'''Q48: List all unique email domains used by users (after @)'''
+print(df['Email'].str.split('@').str[1].unique())
 
 
 
