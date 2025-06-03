@@ -148,7 +148,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Purchase Price'] % 1 == 0]))
 
 '''Q48: List all unique email domains used by users (after @)'''
-print(df['Email'].str.split('@').str[1].unique())
+# print(df['Email'].str.split('@').str[1].unique())
+
+'''Q49: Number of users whose credit card number has a repeating digit sequence (e.g., "111", "2222")'''
+import re
+pattern = r"(.)\1{2,}"  # any digit repeated 3 or more times
+print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
 
 
 
