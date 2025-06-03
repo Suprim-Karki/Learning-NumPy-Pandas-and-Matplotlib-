@@ -151,11 +151,13 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Email'].str.split('@').str[1].unique())
 
 '''Q49: Number of users whose credit card number has a repeating digit sequence (e.g., "111", "2222")'''
-import re
-pattern = r"(.)\1{2,}"  # any digit repeated 3 or more times
-print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
+# import re
+# pattern = r"(.)\1{2,}"  # any digit repeated 3 or more times
+# print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
 
-
+'''Q50: Number of purchases made during lunchtime (12 PM to 1 PM)'''
+df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+print(len(df[df['Hour'] == 12]))
 
 
 
