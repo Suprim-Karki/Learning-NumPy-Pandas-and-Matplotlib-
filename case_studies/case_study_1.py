@@ -169,9 +169,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Job'].str.contains(r'\d')]))
 
 '''Q54: Find users who made purchases at exact hour 00:00 (midnight)'''
-df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
-df['Minute'] = pd.to_datetime(df['Time'], format='%H:%M').dt.minute
-print(df[(df['Hour'] == 0) & (df['Minute'] == 0)])
+# df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+# df['Minute'] = pd.to_datetime(df['Time'], format='%H:%M').dt.minute
+# print(df[(df['Hour'] == 0) & (df['Minute'] == 0)])
+
+'''Q55: Number of users whose names have exactly three words (e.g., "John Michael Smith")'''
+print(len(df[df['Name'].str.strip().str.split().apply(len) == 3]))
 
 
 
