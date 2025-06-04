@@ -174,8 +174,9 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[(df['Hour'] == 0) & (df['Minute'] == 0)])
 
 '''Q55: Number of users whose names have exactly three words (e.g., "John Michael Smith")'''
-print(len(df[df['Name'].str.strip().str.split().apply(len) == 3]))
+# print(len(df[df['Name'].str.strip().str.split().apply(len) == 3]))
 
-
+'''Q56: Top 3 most common last names in the dataset'''
+print(df['Name'].str.split().str[-1].value_counts().head(3))
 
 
