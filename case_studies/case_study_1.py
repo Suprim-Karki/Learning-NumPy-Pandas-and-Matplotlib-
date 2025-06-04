@@ -166,9 +166,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.split('@').str[1].str.extract(r'^([a-zA-Z0-9]{5})\.(com|net)$').notnull().any(axis=1)]))
 
 '''Q53: Number of users whose job title contains a digit (e.g., "Engineer2")'''
-print(len(df[df['Job'].str.contains(r'\d')]))
+# print(len(df[df['Job'].str.contains(r'\d')]))
 
-
+'''Q54: Find users who made purchases at exact hour 00:00 (midnight)'''
+df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+df['Minute'] = pd.to_datetime(df['Time'], format='%H:%M').dt.minute
+print(df[(df['Hour'] == 0) & (df['Minute'] == 0)])
 
 
 
