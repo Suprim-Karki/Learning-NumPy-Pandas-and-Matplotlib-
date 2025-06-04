@@ -163,8 +163,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.lower().str[0] == df['Job'].str.lower().str[-1]])
 
 '''Q52: Count of users whose email domain is exactly 5 characters long before ".com" or ".net" (e.g., "abcde.com")'''
-print(len(df[df['Email'].str.split('@').str[1].str.extract(r'^([a-zA-Z0-9]{5})\.(com|net)$').notnull().any(axis=1)]))
+# print(len(df[df['Email'].str.split('@').str[1].str.extract(r'^([a-zA-Z0-9]{5})\.(com|net)$').notnull().any(axis=1)]))
 
+'''Q53: Number of users whose job title contains a digit (e.g., "Engineer2")'''
+print(len(df[df['Job'].str.contains(r'\d')]))
 
 
 
