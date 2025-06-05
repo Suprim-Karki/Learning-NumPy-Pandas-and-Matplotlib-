@@ -180,7 +180,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Name'].str.split().str[-1].value_counts().head(3))
 
 '''Q57: Number of users who have more than one capital letter in their email username'''
-print(len(df[df['Email'].str.split('@').str[0].str.count(r'[A-Z]') > 1]))
+# print(len(df[df['Email'].str.split('@').str[0].str.count(r'[A-Z]') > 1]))
+
+'''Q58: Number of users whose job title has exactly 10 characters'''
+print(len(df[df['Job'].str.len() == 10]))
 
 
 
