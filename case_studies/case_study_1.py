@@ -186,9 +186,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Job'].str.len() == 10]))
 
 '''Q59: Count of users whose name includes both a first and last name starting with the same letter'''
-print(len(df[df['Name'].str.split().apply(lambda x: len(x) >= 2 and x[0][0].lower() == x[1][0].lower())]))
+# print(len(df[df['Name'].str.split().apply(lambda x: len(x) >= 2 and x[0][0].lower() == x[1][0].lower())]))
 
-
+'''Q60: Number of users who made a purchase price ending in .99'''
+print(len(df[df['Purchase Price'] % 1 == 0.99]))
 
 
 
