@@ -177,6 +177,33 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Name'].str.strip().str.split().apply(len) == 3]))
 
 '''Q56: Top 3 most common last names in the dataset'''
-print(df['Name'].str.split().str[-1].value_counts().head(3))
+# print(df['Name'].str.split().str[-1].value_counts().head(3))
+
+'''Q57: Number of users who have more than one capital letter in their email username'''
+print(len(df[df['Email'].str.split('@').str[0].str.count(r'[A-Z]') > 1]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
