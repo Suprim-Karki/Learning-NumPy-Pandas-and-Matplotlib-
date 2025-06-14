@@ -212,7 +212,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Name'].str.contains(r'\b[A-Z]\.[A-Z]\.', regex=True)]))
 
 '''Q67: Number of users whose credit card numbers contain exactly 16 digits'''
-print(len(df[df['Credit Card'].astype(str).str.len() == 16]))
+# print(len(df[df['Credit Card'].astype(str).str.len() == 16]))
+
+'''Q68: Number of users with email domains ending in ".org"'''
+print(len(df[df['Email'].str.endswith('.org')]))
 
 
 
