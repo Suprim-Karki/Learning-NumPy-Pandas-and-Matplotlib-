@@ -215,7 +215,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Credit Card'].astype(str).str.len() == 16]))
 
 '''Q68: Number of users with email domains ending in ".org"'''
-print(len(df[df['Email'].str.endswith('.org')]))
+# print(len(df[df['Email'].str.endswith('.org')]))
+
+'''Q69: Users whose job title includes a month name (e.g., "May Analyst")'''
+import calendar
+months = '|'.join(calendar.month_name[1:])
+print(df[df['Job'].str.contains(months, case=False, na=False)])
 
 
 
