@@ -218,10 +218,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.endswith('.org')]))
 
 '''Q69: Users whose job title includes a month name (e.g., "May Analyst")'''
-import calendar
-months = '|'.join(calendar.month_name[1:])
-print(df[df['Job'].str.contains(months, case=False, na=False)])
+# import calendar
+# months = '|'.join(calendar.month_name[1:])
+# print(df[df['Job'].str.contains(months, case=False, na=False)])
 
+'''Q70: Number of users whose name has all initials capitalized (e.g., "John D Smith")'''
+print(len(df[df['Name'].str.match(r'^([A-Z][a-z]+)(\s[A-Z][a-z]+)+$')]))
 
 
 
