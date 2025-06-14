@@ -209,7 +209,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df.groupby('Language')['Purchase Price'].mean())
 
 '''Q66: Number of users whose names contain initials (e.g., "J.D. Smith")'''
-print(len(df[df['Name'].str.contains(r'\b[A-Z]\.[A-Z]\.', regex=True)]))
+# print(len(df[df['Name'].str.contains(r'\b[A-Z]\.[A-Z]\.', regex=True)]))
+
+'''Q67: Number of users whose credit card numbers contain exactly 16 digits'''
+print(len(df[df['Credit Card'].astype(str).str.len() == 16]))
 
 
 
