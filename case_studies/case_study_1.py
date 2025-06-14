@@ -229,8 +229,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Email'].str.split('@').str[0].str.contains('_')]['Purchase Price'].mean())
 
 '''Q72: Number of users whose credit card number contains four identical consecutive digits (e.g., "4444")'''
-import re
-print(len(df[df['Credit Card'].astype(str).str.contains(r'(.)\1{3}', regex=True)]))
+# import re
+# print(len(df[df['Credit Card'].astype(str).str.contains(r'(.)\1{3}', regex=True)]))
+
+'''Q73: Top 5 most frequent combinations of job title and email provider'''
+print(df['Job'].str.cat(df['Email'].str.split('@').str[1], sep=' | ').value_counts().head(5))
 
 
 
