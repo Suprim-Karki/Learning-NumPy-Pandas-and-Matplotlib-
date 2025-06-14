@@ -200,7 +200,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['IP Address'].apply(is_palindrome)]))
 
 '''Q63: Top 5 most common email username prefixes (before '@')'''
-print(df['Email'].str.split('@').str[0].value_counts().head(5))
+# print(df['Email'].str.split('@').str[0].value_counts().head(5))
+
+'''Q64: Count of users with purchase prices rounded to the nearest $10'''
+print(len(df[df['Purchase Price'] % 10 == 0]))
 
 
 
