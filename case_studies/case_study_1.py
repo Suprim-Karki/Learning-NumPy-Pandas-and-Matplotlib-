@@ -206,7 +206,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Purchase Price'] % 10 == 0]))
 
 '''Q65: Average purchase price by language'''
-print(df.groupby('Language')['Purchase Price'].mean())
+# print(df.groupby('Language')['Purchase Price'].mean())
+
+'''Q66: Number of users whose names contain initials (e.g., "J.D. Smith")'''
+print(len(df[df['Name'].str.contains(r'\b[A-Z]\.[A-Z]\.', regex=True)]))
 
 
 
