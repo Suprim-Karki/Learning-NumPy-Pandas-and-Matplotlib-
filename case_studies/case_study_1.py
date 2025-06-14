@@ -203,7 +203,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Email'].str.split('@').str[0].value_counts().head(5))
 
 '''Q64: Count of users with purchase prices rounded to the nearest $10'''
-print(len(df[df['Purchase Price'] % 10 == 0]))
+# print(len(df[df['Purchase Price'] % 10 == 0]))
+
+'''Q65: Average purchase price by language'''
+print(df.groupby('Language')['Purchase Price'].mean())
 
 
 
