@@ -192,7 +192,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Purchase Price'] % 1 == 0.99]))
 
 '''Q61: Count of users whose job title contains special characters (e.g., &, @, #)'''
-print(len(df[df['Job'].str.contains(r'[&@#]')]))
+# print(len(df[df['Job'].str.contains(r'[&@#]')]))
+
+'''Q62: Number of users whose IP address contains a palindrome (e.g., "121.45.121.45")'''
+def is_palindrome(ip):
+    return ip.replace('.', '') == ip.replace('.', '')[::-1]
+print(len(df[df['IP Address'].apply(is_palindrome)]))
 
 
 
