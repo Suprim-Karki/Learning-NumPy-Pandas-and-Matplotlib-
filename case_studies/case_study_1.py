@@ -223,7 +223,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains(months, case=False, na=False)])
 
 '''Q70: Number of users whose name has all initials capitalized (e.g., "John D Smith")'''
-print(len(df[df['Name'].str.match(r'^([A-Z][a-z]+)(\s[A-Z][a-z]+)+$')]))
+# print(len(df[df['Name'].str.match(r'^([A-Z][a-z]+)(\s[A-Z][a-z]+)+$')]))
+
+'''Q71: Average purchase price for users whose email username includes an underscore ("_")'''
+print(df[df['Email'].str.split('@').str[0].str.contains('_')]['Purchase Price'].mean())
 
 
 
