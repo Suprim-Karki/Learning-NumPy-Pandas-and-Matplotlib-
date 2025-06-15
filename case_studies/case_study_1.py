@@ -248,7 +248,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['IP Address'].str.match(r'^(\d+)\.\1\.\1\.\1$')]))
 
 '''Q78: Number of users who made purchases at times ending in ":30"'''
-print(len(df[df['Time'].str.endswith(':30')]))
+# print(len(df[df['Time'].str.endswith(':30')]))
+
+'''Q79: Most common first name among users'''
+print(df['Name'].str.split().str[0].value_counts().head(1))
 
 
 
