@@ -254,7 +254,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Name'].str.split().str[0].value_counts().head(1))
 
 '''Q80: Number of users whose job title starts with a vowel'''
-print(len(df[df['Job'].str[0].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
+# print(len(df[df['Job'].str[0].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
+
+'''Q81: Find users who have both 'Data' and 'Analyst' in their job titles'''
+print(df[df['Job'].str.contains('Data', case=False) & df['Job'].str.contains('Analyst', case=False)])
+
 
 
 
