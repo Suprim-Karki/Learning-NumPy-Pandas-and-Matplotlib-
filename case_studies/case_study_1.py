@@ -233,7 +233,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Credit Card'].astype(str).str.contains(r'(.)\1{3}', regex=True)]))
 
 '''Q73: Top 5 most frequent combinations of job title and email provider'''
-print(df['Job'].str.cat(df['Email'].str.split('@').str[1], sep=' | ').value_counts().head(5))
+# print(df['Job'].str.cat(df['Email'].str.split('@').str[1], sep=' | ').value_counts().head(5))
+
+'''Q74: Number of users whose name includes a suffix like "Jr.", "Sr.", or "III"'''
+print(len(df[df['Name'].str.contains(r'\b(Jr\.|Sr\.|III)\b')]))
+
 
 
 
