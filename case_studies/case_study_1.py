@@ -236,7 +236,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df['Job'].str.cat(df['Email'].str.split('@').str[1], sep=' | ').value_counts().head(5))
 
 '''Q74: Number of users whose name includes a suffix like "Jr.", "Sr.", or "III"'''
-print(len(df[df['Name'].str.contains(r'\b(Jr\.|Sr\.|III)\b')]))
+# print(len(df[df['Name'].str.contains(r'\b(Jr\.|Sr\.|III)\b')]))
+
+'''Q75: Number of users who made purchases with even dollar amounts (no cents)'''
+print(len(df[df['Purchase Price'] % 1 == 0]))
 
 
 
