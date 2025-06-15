@@ -263,7 +263,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Job'].str.len() == 15]))
 
 '''Q83: Number of users whose email contains a hyphen in the username'''
-print(len(df[df['Email'].str.split('@').str[0].str.contains('-')]))
+# print(len(df[df['Email'].str.split('@').str[0].str.contains('-')]))
+
+'''Q84: Find users who made purchases in the evening (after 6 PM and before midnight)'''
+df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+print(len(df[(df['Hour'] >= 18) & (df['Hour'] < 24)]))
 
 
 
