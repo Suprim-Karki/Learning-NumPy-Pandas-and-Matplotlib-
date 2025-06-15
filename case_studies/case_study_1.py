@@ -239,7 +239,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Name'].str.contains(r'\b(Jr\.|Sr\.|III)\b')]))
 
 '''Q75: Number of users who made purchases with even dollar amounts (no cents)'''
-print(len(df[df['Purchase Price'] % 1 == 0]))
+# print(len(df[df['Purchase Price'] % 1 == 0]))
+
+'''Q76: Count of users whose email domain starts with a vowel'''
+print(len(df[df['Email'].str.split('@').str[1].str[0].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
+
+
 
 
 
