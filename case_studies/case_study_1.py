@@ -245,7 +245,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.split('@').str[1].str[0].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
 
 '''Q77: Find users whose IP address has the same digits repeated in all four parts (e.g., "111.111.111.111")'''
-print(len(df[df['IP Address'].str.match(r'^(\d+)\.\1\.\1\.\1$')]))
+# print(len(df[df['IP Address'].str.match(r'^(\d+)\.\1\.\1\.\1$')]))
+
+'''Q78: Number of users who made purchases at times ending in ":30"'''
+print(len(df[df['Time'].str.endswith(':30')]))
 
 
 
