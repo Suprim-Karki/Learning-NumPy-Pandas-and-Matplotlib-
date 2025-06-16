@@ -270,7 +270,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[(df['Hour'] >= 18) & (df['Hour'] < 24)]))
 
 '''Q85: Number of users whose name ends with a vowel'''
-print(len(df[df['Name'].str.strip().str[-1].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
+# print(len(df[df['Name'].str.strip().str[-1].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
+
+'''Q86: Number of users whose credit card number contains the sequence "1234"'''
+print(len(df[df['Credit Card'].astype(str).str.contains('1234')]))
 
 
 
