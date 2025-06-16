@@ -273,7 +273,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Name'].str.strip().str[-1].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
 
 '''Q86: Number of users whose credit card number contains the sequence "1234"'''
-print(len(df[df['Credit Card'].astype(str).str.contains('1234')]))
+# print(len(df[df['Credit Card'].astype(str).str.contains('1234')]))
+
+'''Q87: Find users who have "Analyst" in their job title but not "Data"'''
+print(df[df['Job'].str.contains('Analyst', case=False) & ~df['Job'].str.contains('Data', case=False)])
+
 
 
 
