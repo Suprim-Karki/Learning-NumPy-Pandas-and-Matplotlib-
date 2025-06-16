@@ -266,8 +266,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.split('@').str[0].str.contains('-')]))
 
 '''Q84: Find users who made purchases in the evening (after 6 PM and before midnight)'''
-df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
-print(len(df[(df['Hour'] >= 18) & (df['Hour'] < 24)]))
+# df['Hour'] = pd.to_datetime(df['Time'], format='%H:%M').dt.hour
+# print(len(df[(df['Hour'] >= 18) & (df['Hour'] < 24)]))
+
+'''Q85: Number of users whose name ends with a vowel'''
+print(len(df[df['Name'].str.strip().str[-1].str.lower().isin(['a', 'e', 'i', 'o', 'u'])]))
 
 
 
