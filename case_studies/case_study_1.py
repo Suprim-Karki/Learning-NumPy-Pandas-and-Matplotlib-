@@ -294,7 +294,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['IP Address'].str.replace('.', '').apply(lambda x: all(int(d)%2==0 for d in x))]))
 
 '''Q93: Number of users whose purchase price has exactly two decimal digits ending in '75' (e.g., $49.75)'''
-print(len(df[df['Purchase Price'].astype(str).str.endswith('75')]))
+# print(len(df[df['Purchase Price'].astype(str).str.endswith('75')]))
+
+'''Q94: Find users whose job titles contain both a hyphen and the word "Lead" (e.g., "Tech-Lead")'''
+print(df[df['Job'].str.contains('-', case=False) & df['Job'].str.contains('Lead', case=False)])
 
 
 
