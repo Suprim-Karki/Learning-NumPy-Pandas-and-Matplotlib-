@@ -282,7 +282,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.split('@').str[1].str.contains(r'\d')]))
 
 '''Q89: Number of users whose job title contains more than two words'''
-print(len(df[df['Job'].str.strip().str.split().apply(len) > 2]))
+# print(len(df[df['Job'].str.strip().str.split().apply(len) > 2]))
+
+'''Q90: Find users with job titles containing punctuation (e.g., commas, slashes, etc.)'''
+print(df[df['Job'].str.contains(r'[.,/\\\-]', regex=True)])
+
 
 
 
