@@ -279,7 +279,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains('Analyst', case=False) & ~df['Job'].str.contains('Data', case=False)])
 
 '''Q88: Number of users whose email domain includes a number (e.g., "mail123.com")'''
-print(len(df[df['Email'].str.split('@').str[1].str.contains(r'\d')]))
+# print(len(df[df['Email'].str.split('@').str[1].str.contains(r'\d')]))
+
+'''Q89: Number of users whose job title contains more than two words'''
+print(len(df[df['Job'].str.strip().str.split().apply(len) > 2]))
 
 
 
