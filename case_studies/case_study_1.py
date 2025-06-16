@@ -288,7 +288,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains(r'[.,/\\\-]', regex=True)])
 
 '''Q91: Count of users whose name contains a middle initial (e.g., "John A. Smith")'''
-print(len(df[df['Name'].str.contains(r'\b[A-Z]\.', regex=True)]))
+# print(len(df[df['Name'].str.contains(r'\b[A-Z]\.', regex=True)]))
+
+'''Q92: Number of users who have an IP address containing all even digits'''
+print(len(df[df['IP Address'].str.replace('.', '').apply(lambda x: all(int(d)%2==0 for d in x))]))
+
 
 
 
