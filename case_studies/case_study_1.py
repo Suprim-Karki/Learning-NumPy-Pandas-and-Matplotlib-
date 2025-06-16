@@ -276,9 +276,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Credit Card'].astype(str).str.contains('1234')]))
 
 '''Q87: Find users who have "Analyst" in their job title but not "Data"'''
-print(df[df['Job'].str.contains('Analyst', case=False) & ~df['Job'].str.contains('Data', case=False)])
+# print(df[df['Job'].str.contains('Analyst', case=False) & ~df['Job'].str.contains('Data', case=False)])
 
-
+'''Q88: Number of users whose email domain includes a number (e.g., "mail123.com")'''
+print(len(df[df['Email'].str.split('@').str[1].str.contains(r'\d')]))
 
 
 
