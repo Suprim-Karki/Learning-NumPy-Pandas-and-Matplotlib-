@@ -291,7 +291,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Name'].str.contains(r'\b[A-Z]\.', regex=True)]))
 
 '''Q92: Number of users who have an IP address containing all even digits'''
-print(len(df[df['IP Address'].str.replace('.', '').apply(lambda x: all(int(d)%2==0 for d in x))]))
+# print(len(df[df['IP Address'].str.replace('.', '').apply(lambda x: all(int(d)%2==0 for d in x))]))
+
+'''Q93: Number of users whose purchase price has exactly two decimal digits ending in '75' (e.g., $49.75)'''
+print(len(df[df['Purchase Price'].astype(str).str.endswith('75')]))
+
 
 
 
