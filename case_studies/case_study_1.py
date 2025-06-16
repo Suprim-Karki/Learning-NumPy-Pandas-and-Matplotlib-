@@ -285,7 +285,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Job'].str.strip().str.split().apply(len) > 2]))
 
 '''Q90: Find users with job titles containing punctuation (e.g., commas, slashes, etc.)'''
-print(df[df['Job'].str.contains(r'[.,/\\\-]', regex=True)])
+# print(df[df['Job'].str.contains(r'[.,/\\\-]', regex=True)])
+
+'''Q91: Count of users whose name contains a middle initial (e.g., "John A. Smith")'''
+print(len(df[df['Name'].str.contains(r'\b[A-Z]\.', regex=True)]))
 
 
 
