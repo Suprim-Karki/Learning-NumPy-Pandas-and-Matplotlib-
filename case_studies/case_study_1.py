@@ -308,7 +308,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Job'].str.contains(r'\b(I|II|III|IV|V|VI|VII|VIII|IX|X)\b', regex=True)]))
 
 '''Q97: Number of users whose email domain includes double letters (e.g., "gmail.com", "zoommeet.com")'''
-print(len(df[df['Email'].str.split('@').str[1].str.contains(r'(.)\1')]))
+# print(len(df[df['Email'].str.split('@').str[1].str.contains(r'(.)\1')]))
+
+'''Q98: Number of users who made a purchase with an amount that is a prime number'''
+from sympy import isprime
+print(len(df[df['Purchase Price'].apply(lambda x: isprime(int(x))) ]))
 
 
 
