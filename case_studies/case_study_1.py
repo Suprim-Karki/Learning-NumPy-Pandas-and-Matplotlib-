@@ -311,8 +311,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].str.split('@').str[1].str.contains(r'(.)\1')]))
 
 '''Q98: Number of users who made a purchase with an amount that is a prime number'''
-from sympy import isprime
-print(len(df[df['Purchase Price'].apply(lambda x: isprime(int(x))) ]))
+# from sympy import isprime
+# print(len(df[df['Purchase Price'].apply(lambda x: isprime(int(x))) ]))
+
+'''Q99: Number of users whose names start and end with the same letter'''
+print(len(df[df['Name'].str[0].str.lower() == df['Name'].str[-1].str.lower()]))
 
 
 
