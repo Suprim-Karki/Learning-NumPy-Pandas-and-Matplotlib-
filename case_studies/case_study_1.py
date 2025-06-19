@@ -333,7 +333,13 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Time'].str.endswith(':00') | df['Time'].str.endswith(':15') | df['Time'].str.endswith(':30') | df['Time'].str.endswith(':45')]))
 
 '''Q103: Count of users whose names have a repeated word (e.g., "John John Smith")'''
-print(len(df[df['Name'].str.split().apply(lambda x: len(x) != len(set(x)))]))
+# print(len(df[df['Name'].str.split().apply(lambda x: len(x) != len(set(x)))]))
+
+'''Q104: Find users whose IP address has alternating odd and even digits (e.g., 135.246.135.246)'''
+def is_alternating(ip):
+    digits = ''.join(filter(str.isdigit, ip))
+    return all((int(digits[i]) % 2) != (int(digits[i+1]) % 2) for i in range(len(digits)-1))
+print(len(df[df['IP Address'].apply(is_alternating)]))
 
 
 
