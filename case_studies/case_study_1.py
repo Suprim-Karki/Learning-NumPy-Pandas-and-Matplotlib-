@@ -318,7 +318,16 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Name'].str[0].str.lower() == df['Name'].str[-1].str.lower()]))
 
 '''Q100: Find users who have at least one digit in both their job title and email username'''
-print(df[df['Job'].str.contains(r'\d') & df['Email'].str.split('@').str[0].str.contains(r'\d')])
+# print(df[df['Job'].str.contains(r'\d') & df['Email'].str.split('@').str[0].str.contains(r'\d')])
+
+
+'''Q101: Number of users whose email username contains more vowels than consonants'''
+def more_vowels(email):
+    username = email.split('@')[0].lower()
+    vowels = sum(1 for ch in username if ch in 'aeiou')
+    consonants = sum(1 for ch in username if ch.isalpha() and ch not in 'aeiou')
+    return vowels > consonants
+print(len(df[df['Email'].apply(more_vowels)]))
 
 
 
