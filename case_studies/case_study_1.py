@@ -300,9 +300,13 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(df[df['Job'].str.contains('-', case=False) & df['Job'].str.contains('Lead', case=False)])
 
 '''Q95: Number of users whose credit card numbers contain ascending or descending sequences (e.g., '1234', '4321')'''
-import re
-pattern = r'(0123|1234|2345|3456|4567|5678|6789|9876|8765|7654|6543|5432|4321|3210)'
-print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
+# import re
+# pattern = r'(0123|1234|2345|3456|4567|5678|6789|9876|8765|7654|6543|5432|4321|3210)'
+# print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
+
+'''Q96: Number of users whose job title includes a Roman numeral (e.g., "Analyst II", "Manager IV")'''
+print(len(df[df['Job'].str.contains(r'\b(I|II|III|IV|V|VI|VII|VIII|IX|X)\b', regex=True)]))
+
 
 
 
