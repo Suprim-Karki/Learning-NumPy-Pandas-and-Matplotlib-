@@ -297,7 +297,12 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Purchase Price'].astype(str).str.endswith('75')]))
 
 '''Q94: Find users whose job titles contain both a hyphen and the word "Lead" (e.g., "Tech-Lead")'''
-print(df[df['Job'].str.contains('-', case=False) & df['Job'].str.contains('Lead', case=False)])
+# print(df[df['Job'].str.contains('-', case=False) & df['Job'].str.contains('Lead', case=False)])
+
+'''Q95: Number of users whose credit card numbers contain ascending or descending sequences (e.g., '1234', '4321')'''
+import re
+pattern = r'(0123|1234|2345|3456|4567|5678|6789|9876|8765|7654|6543|5432|4321|3210)'
+print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
 
 
 
