@@ -322,12 +322,16 @@ df=pd.read_csv("Ecommerce Purchases")
 
 
 '''Q101: Number of users whose email username contains more vowels than consonants'''
-def more_vowels(email):
-    username = email.split('@')[0].lower()
-    vowels = sum(1 for ch in username if ch in 'aeiou')
-    consonants = sum(1 for ch in username if ch.isalpha() and ch not in 'aeiou')
-    return vowels > consonants
-print(len(df[df['Email'].apply(more_vowels)]))
+# def more_vowels(email):
+#     username = email.split('@')[0].lower()
+#     vowels = sum(1 for ch in username if ch in 'aeiou')
+#     consonants = sum(1 for ch in username if ch.isalpha() and ch not in 'aeiou')
+#     return vowels > consonants
+# print(len(df[df['Email'].apply(more_vowels)]))
+
+'''Q102: Users who made purchases during exact quarter-hour marks (e.g., ":00", ":15", ":30", ":45")'''
+print(len(df[df['Time'].str.endswith(':00') | df['Time'].str.endswith(':15') | df['Time'].str.endswith(':30') | df['Time'].str.endswith(':45')]))
+
 
 
 
