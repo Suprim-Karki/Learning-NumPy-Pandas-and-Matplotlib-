@@ -330,7 +330,10 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Email'].apply(more_vowels)]))
 
 '''Q102: Users who made purchases during exact quarter-hour marks (e.g., ":00", ":15", ":30", ":45")'''
-print(len(df[df['Time'].str.endswith(':00') | df['Time'].str.endswith(':15') | df['Time'].str.endswith(':30') | df['Time'].str.endswith(':45')]))
+# print(len(df[df['Time'].str.endswith(':00') | df['Time'].str.endswith(':15') | df['Time'].str.endswith(':30') | df['Time'].str.endswith(':45')]))
+
+'''Q103: Count of users whose names have a repeated word (e.g., "John John Smith")'''
+print(len(df[df['Name'].str.split().apply(lambda x: len(x) != len(set(x)))]))
 
 
 
