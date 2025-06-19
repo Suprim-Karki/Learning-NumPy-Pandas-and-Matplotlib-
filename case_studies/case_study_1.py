@@ -305,7 +305,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Credit Card'].astype(str).str.contains(pattern)]))
 
 '''Q96: Number of users whose job title includes a Roman numeral (e.g., "Analyst II", "Manager IV")'''
-print(len(df[df['Job'].str.contains(r'\b(I|II|III|IV|V|VI|VII|VIII|IX|X)\b', regex=True)]))
+# print(len(df[df['Job'].str.contains(r'\b(I|II|III|IV|V|VI|VII|VIII|IX|X)\b', regex=True)]))
+
+'''Q97: Number of users whose email domain includes double letters (e.g., "gmail.com", "zoommeet.com")'''
+print(len(df[df['Email'].str.split('@').str[1].str.contains(r'(.)\1')]))
+
 
 
 
