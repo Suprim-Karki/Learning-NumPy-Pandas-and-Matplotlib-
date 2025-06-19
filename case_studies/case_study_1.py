@@ -315,7 +315,11 @@ df=pd.read_csv("Ecommerce Purchases")
 # print(len(df[df['Purchase Price'].apply(lambda x: isprime(int(x))) ]))
 
 '''Q99: Number of users whose names start and end with the same letter'''
-print(len(df[df['Name'].str[0].str.lower() == df['Name'].str[-1].str.lower()]))
+# print(len(df[df['Name'].str[0].str.lower() == df['Name'].str[-1].str.lower()]))
+
+'''Q100: Find users who have at least one digit in both their job title and email username'''
+print(df[df['Job'].str.contains(r'\d') & df['Email'].str.split('@').str[0].str.contains(r'\d')])
+
 
 
 
