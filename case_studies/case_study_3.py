@@ -7,5 +7,8 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.head(10))
 
 '''Q2: What are the column names and how many are there?'''
-print(df.columns)
-print("Total columns:", len(df.columns))
+# print(df.columns)
+# print("Total columns:", len(df.columns))
+
+'''Q3: Display the number of rows and columns (shape).'''
+print(df.shape)
