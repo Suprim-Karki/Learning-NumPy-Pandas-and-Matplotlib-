@@ -17,4 +17,7 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['income'].value_counts())
 
 '''Q5: What is the average age of people in the dataset?'''
-print(df['age'].mean())
+# print(df['age'].mean())
+
+'''Q6: Find the top 5 most common occupations.'''
+print(df['occupation'].value_counts().head(5))
