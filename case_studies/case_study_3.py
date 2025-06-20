@@ -26,4 +26,8 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['hours-per-week'].max())
 
 '''Q8: How many people work more than 60 hours per week?'''
-print((df['hours-per-week'] > 60).sum())
+# print((df['hours-per-week'] > 60).sum())
+
+'''Q9: What percentage of individuals earning >50K are female?'''
+print((df[(df['sex'] == 'Female') & (df['income'] == '>50K')].shape[0] /
+       df[df['income'] == '>50K'].shape[0]) * 100)
