@@ -11,4 +11,7 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print("Total columns:", len(df.columns))
 
 '''Q3: Display the number of rows and columns (shape).'''
-print(df.shape)
+# print(df.shape)
+
+'''Q4: Count how many entries fall in each income category (<=50K or >50K).'''
+print(df['income'].value_counts())
