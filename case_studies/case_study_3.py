@@ -23,4 +23,7 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['occupation'].value_counts().head(5))
 
 '''Q7: What is the maximum number of hours worked per week?'''
-print(df['hours-per-week'].max())
+# print(df['hours-per-week'].max())
+
+'''Q8: How many people work more than 60 hours per week?'''
+print((df['hours-per-week'] > 60).sum())
