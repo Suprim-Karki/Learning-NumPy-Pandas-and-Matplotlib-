@@ -20,4 +20,7 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['age'].mean())
 
 '''Q6: Find the top 5 most common occupations.'''
-print(df['occupation'].value_counts().head(5))
+# print(df['occupation'].value_counts().head(5))
+
+'''Q7: What is the maximum number of hours worked per week?'''
+print(df['hours-per-week'].max())
