@@ -36,7 +36,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby(['occupation', 'gender']).size().unstack(fill_value=0))
 
 '''Q11: What is the distribution of education levels in the dataset?'''
-print(df['education'].value_counts())
+# print(df['education'].value_counts())
+
+'''Q12: What is the average educational number for each education category?'''
+print(df.groupby('education')['educational-num'].mean().sort_values(ascending=False))
 
 
 
