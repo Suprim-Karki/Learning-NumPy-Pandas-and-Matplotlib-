@@ -54,7 +54,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('workclass')['age'].mean().sort_values(ascending=False))
 
 '''Q17: Which relationship type has the highest average education level?'''
-print(df.groupby('relationship')['educational-num'].mean().sort_values(ascending=False))
+# print(df.groupby('relationship')['educational-num'].mean().sort_values(ascending=False))
+
+'''Q18: What is the minimum and maximum value of `fnlwgt`?'''
+print("Min fnlwgt:", df['fnlwgt'].min())
+print("Max fnlwgt:", df['fnlwgt'].max())
 
 
 
