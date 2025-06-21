@@ -48,7 +48,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['occupation'].nunique())
 
 '''Q15: What is the most common combination of race and gender?'''
-print(df.groupby(['race', 'gender']).size().sort_values(ascending=False).head(1))
+# print(df.groupby(['race', 'gender']).size().sort_values(ascending=False).head(1))
+
+'''Q16: Show the average age for each workclass.'''
+print(df.groupby('workclass')['age'].mean().sort_values(ascending=False))
 
 
 
