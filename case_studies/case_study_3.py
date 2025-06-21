@@ -57,8 +57,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('relationship')['educational-num'].mean().sort_values(ascending=False))
 
 '''Q18: What is the minimum and maximum value of `fnlwgt`?'''
-print("Min fnlwgt:", df['fnlwgt'].min())
-print("Max fnlwgt:", df['fnlwgt'].max())
+# print("Min fnlwgt:", df['fnlwgt'].min())
+# print("Max fnlwgt:", df['fnlwgt'].max())
+
+'''Q19: Count how many entries are missing or marked as '?' in the workclass column.'''
+print((df['workclass'] == '?').sum())
 
 
 
