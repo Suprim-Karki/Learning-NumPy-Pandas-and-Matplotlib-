@@ -45,7 +45,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['marital-status'].value_counts().head(5))
 
 '''Q14: How many unique occupations are present in the dataset?'''
-print(df['occupation'].nunique())
+# print(df['occupation'].nunique())
+
+'''Q15: What is the most common combination of race and gender?'''
+print(df.groupby(['race', 'gender']).size().sort_values(ascending=False).head(1))
 
 
 
