@@ -33,4 +33,47 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 #        df[df['income'] == '>50K'].shape[0]) * 100)
 
 '''Q10: What is the gender distribution within each occupation?'''
-print(df.groupby(['occupation', 'gender']).size().unstack(fill_value=0))
+# print(df.groupby(['occupation', 'gender']).size().unstack(fill_value=0))
+
+'''Q11: What is the distribution of education levels in the dataset?'''
+print(df['education'].value_counts())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
