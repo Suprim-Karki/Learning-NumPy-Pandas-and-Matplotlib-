@@ -29,5 +29,8 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((df['hours-per-week'] > 60).sum())
 
 '''Q9: What percentage of individuals earning >50K are female?'''
-print((df[(df['sex'] == 'Female') & (df['income'] == '>50K')].shape[0] /
-       df[df['income'] == '>50K'].shape[0]) * 100)
+# print((df[(df['sex'] == 'Female') & (df['income'] == '>50K')].shape[0] /
+#        df[df['income'] == '>50K'].shape[0]) * 100)
+
+'''Q10: What is the gender distribution within each occupation?'''
+print(df.groupby(['occupation', 'gender']).size().unstack(fill_value=0))
