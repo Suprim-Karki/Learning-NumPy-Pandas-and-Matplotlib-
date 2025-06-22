@@ -71,7 +71,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(edu_income.sort_values(ascending=False))
 
 '''Q22: What is the average age of females vs males?'''
-print(df.groupby('sex')['age'].mean())
+# print(df.groupby('sex')['age'].mean())
+
+'''Q23: How many people are self-employed? (Self-emp-not-inc and Self-emp-inc)'''
+print(df[df['workclass'].isin(['Self-emp-not-inc', 'Self-emp-inc'])].shape[0])
 
 
 
