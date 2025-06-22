@@ -77,7 +77,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['workclass'].isin(['Self-emp-not-inc', 'Self-emp-inc'])].shape[0])
 
 '''Q24: What is the distribution of hours worked per week for people earning >50K vs <=50K?'''
-print(df.groupby('income')['hours-per-week'].describe())
+# print(df.groupby('income')['hours-per-week'].describe())
+
+'''Q25: List the 5 most common native countries in the dataset.'''
+print(df['native-country'].value_counts().head(5))
 
 
 
