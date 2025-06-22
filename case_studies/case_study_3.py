@@ -61,7 +61,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print("Max fnlwgt:", df['fnlwgt'].max())
 
 '''Q19: Count how many entries are missing or marked as '?' in the workclass column.'''
-print((df['workclass'] == '?').sum())
+# print((df['workclass'] == '?').sum())
+
+'''Q20: What is the average hours-per-week grouped by income category (<=50K and >50K)?'''
+print(df.groupby('income')['hours-per-week'].mean())
 
 
 
