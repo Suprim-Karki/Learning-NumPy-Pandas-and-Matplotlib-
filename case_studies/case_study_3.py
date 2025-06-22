@@ -93,7 +93,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('race')['educational-num'].mean().sort_values(ascending=False))
 
 '''Q29: What is the most common workclass for people under the age of 30?'''
-print(df[df['age'] < 30]['workclass'].value_counts().head(1))
+# print(df[df['age'] < 30]['workclass'].value_counts().head(1))
+
+'''Q30: Among those who work the maximum hours per week, what percentage earn >50K?'''
+max_hours = df['hours-per-week'].max()
+over_50k = df[(df['hours-per-week'] == max_hours) & (df['income'] == '>50K')].shape[0]
+total = df[df['hours-per-week'] == max_hours].shape[0]
+print((over_50k / total) * 100 if total else 0)
 
 
 
