@@ -74,7 +74,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('sex')['age'].mean())
 
 '''Q23: How many people are self-employed? (Self-emp-not-inc and Self-emp-inc)'''
-print(df[df['workclass'].isin(['Self-emp-not-inc', 'Self-emp-inc'])].shape[0])
+# print(df[df['workclass'].isin(['Self-emp-not-inc', 'Self-emp-inc'])].shape[0])
+
+'''Q24: What is the distribution of hours worked per week for people earning >50K vs <=50K?'''
+print(df.groupby('income')['hours-per-week'].describe())
 
 
 
