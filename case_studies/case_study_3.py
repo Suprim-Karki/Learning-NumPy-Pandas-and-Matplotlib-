@@ -90,7 +90,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(occupation_income.dropna().sort_values(ascending=False).head(5))
 
 '''Q28: How does average education number vary across different races?'''
-print(df.groupby('race')['educational-num'].mean().sort_values(ascending=False))
+# print(df.groupby('race')['educational-num'].mean().sort_values(ascending=False))
+
+'''Q29: What is the most common workclass for people under the age of 30?'''
+print(df[df['age'] < 30]['workclass'].value_counts().head(1))
 
 
 
