@@ -86,9 +86,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('occupation')['hours-per-week'].mean().sort_values(ascending=False))
 
 '''Q27: Which occupation has the highest proportion of people earning >50K?'''
-occupation_income = df[df['income'] == '>50K']['occupation'].value_counts() / df['occupation'].value_counts()
-print(occupation_income.dropna().sort_values(ascending=False).head(5))
+# occupation_income = df[df['income'] == '>50K']['occupation'].value_counts() / df['occupation'].value_counts()
+# print(occupation_income.dropna().sort_values(ascending=False).head(5))
 
+'''Q28: How does average education number vary across different races?'''
+print(df.groupby('race')['educational-num'].mean().sort_values(ascending=False))
 
 
 
