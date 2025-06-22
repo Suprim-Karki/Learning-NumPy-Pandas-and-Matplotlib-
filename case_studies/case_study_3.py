@@ -80,7 +80,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('income')['hours-per-week'].describe())
 
 '''Q25: List the 5 most common native countries in the dataset.'''
-print(df['native-country'].value_counts().head(5))
+# print(df['native-country'].value_counts().head(5))
+
+'''Q26: What is the average hours worked per week for each occupation?'''
+print(df.groupby('occupation')['hours-per-week'].mean().sort_values(ascending=False))
 
 
 
