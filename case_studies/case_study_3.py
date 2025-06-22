@@ -67,8 +67,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('income')['hours-per-week'].mean())
 
 '''Q21: Which education level has the highest percentage of individuals earning >50K?'''
-edu_income = df[df['income'] == '>50K']['education'].value_counts(normalize=True) * 100
-print(edu_income.sort_values(ascending=False))
+# edu_income = df[df['income'] == '>50K']['education'].value_counts(normalize=True) * 100
+# print(edu_income.sort_values(ascending=False))
+
+'''Q22: What is the average age of females vs males?'''
+print(df.groupby('sex')['age'].mean())
+
 
 
 
