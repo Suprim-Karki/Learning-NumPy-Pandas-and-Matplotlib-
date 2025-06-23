@@ -123,7 +123,8 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 '''Q36: What is the average fnlwgt for each education level?'''
 # print(df.groupby('education')['fnlwgt'].mean().sort_values(ascending=False))
 
-
+'''Q37: How many individuals are both divorced and earning <=50K?'''
+print(df[(df['marital-status'] == 'Divorced') & (df['income'] == '<=50K')].shape[0])
 
 
 
