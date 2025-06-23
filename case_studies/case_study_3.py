@@ -114,6 +114,9 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 '''Q33: How does average age vary by marital status?'''
 # print(df.groupby('marital-status')['age'].mean().sort_values(ascending=False))
 
+'''Q34: What is the distribution of relationship types among people earning >50K?'''
+print(df[df['income'] == '>50K']['relationship'].value_counts())
+
 
 
 
