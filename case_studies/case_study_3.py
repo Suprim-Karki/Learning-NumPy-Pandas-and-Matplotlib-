@@ -127,9 +127,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['marital-status'] == 'Divorced') & (df['income'] == '<=50K')].shape[0])
 
 '''Q38: What percentage of government workers (workclass starts with "Gov") earn >50K?'''
-gov_workers = df[df['workclass'].str.startswith('Gov')]
-print((gov_workers[gov_workers['income'] == '>50K'].shape[0] / gov_workers.shape[0]) * 100 if gov_workers.shape[0] else 0)
+# gov_workers = df[df['workclass'].str.startswith('Gov')]
+# print((gov_workers[gov_workers['income'] == '>50K'].shape[0] / gov_workers.shape[0]) * 100 if gov_workers.shape[0] else 0)
 
+'''Q39: Among people with Doctorate degrees, what is the most common occupation?'''
+print(df[df['education'] == 'Doctorate']['occupation'].value_counts().head(1))
 
 
 
