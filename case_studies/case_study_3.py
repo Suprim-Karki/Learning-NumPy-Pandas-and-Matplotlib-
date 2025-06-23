@@ -102,7 +102,14 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((over_50k / total) * 100 if total else 0)
 
 '''Q31: What is the average age of individuals with a Bachelor's degree?'''
-print(df[df['education'] == 'Bachelors']['age'].mean())
+# print(df[df['education'] == 'Bachelors']['age'].mean())
+
+'''Q32: Which native country has the highest average income (>50K percentage)?'''
+# country_income = df[df['income'] == '>50K']['native-country'].value_co/
+
+'''Q32: Which native country has the highest average income (>50K percentage)?'''
+country_income = df[df['income'] == '>50K']['native-country'].value_counts() / df['native-country'].value_counts()
+print(country_income.dropna().sort_values(ascending=False).head(5))
 
 
 
