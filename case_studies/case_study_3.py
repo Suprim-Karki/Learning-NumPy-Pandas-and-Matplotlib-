@@ -131,7 +131,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((gov_workers[gov_workers['income'] == '>50K'].shape[0] / gov_workers.shape[0]) * 100 if gov_workers.shape[0] else 0)
 
 '''Q39: Among people with Doctorate degrees, what is the most common occupation?'''
-print(df[df['education'] == 'Doctorate']['occupation'].value_counts().head(1))
+# print(df[df['education'] == 'Doctorate']['occupation'].value_counts().head(1))
+
+'''Q40: How does income level relate to marital status? (i.e., count of income groups per marital status)'''
+print(df.groupby(['marital-status', 'income']).size().unstack())
 
 
 
