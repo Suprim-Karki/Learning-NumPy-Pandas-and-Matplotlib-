@@ -124,7 +124,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('education')['fnlwgt'].mean().sort_values(ascending=False))
 
 '''Q37: How many individuals are both divorced and earning <=50K?'''
-print(df[(df['marital-status'] == 'Divorced') & (df['income'] == '<=50K')].shape[0])
+# print(df[(df['marital-status'] == 'Divorced') & (df['income'] == '<=50K')].shape[0])
+
+'''Q38: What percentage of government workers (workclass starts with "Gov") earn >50K?'''
+gov_workers = df[df['workclass'].str.startswith('Gov')]
+print((gov_workers[gov_workers['income'] == '>50K'].shape[0] / gov_workers.shape[0]) * 100 if gov_workers.shape[0] else 0)
+
 
 
 
