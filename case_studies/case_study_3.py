@@ -108,8 +108,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # country_income = df[df['income'] == '>50K']['native-country'].value_co/
 
 '''Q32: Which native country has the highest average income (>50K percentage)?'''
-country_income = df[df['income'] == '>50K']['native-country'].value_counts() / df['native-country'].value_counts()
-print(country_income.dropna().sort_values(ascending=False).head(5))
+# country_income = df[df['income'] == '>50K']['native-country'].value_counts() / df['native-country'].value_counts()
+# print(country_income.dropna().sort_values(ascending=False).head(5))
+
+'''Q33: How does average age vary by marital status?'''
+# print(df.groupby('marital-status')['age'].mean().sort_values(ascending=False))
 
 
 
