@@ -171,7 +171,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print("US:", us, "Non-US:", non_us)
 
 '''Q49: What is the average age of individuals who never married?'''
-print(df[df['marital-status'] == 'Never-married']['age'].mean())
+# print(df[df['marital-status'] == 'Never-married']['age'].mean())
+
+'''Q50: Among individuals earning >50K, what are the top 3 native countries (excluding US)?'''
+print(df[(df['income'] == '>50K') & (df['native-country'] != 'United-States')]['native-country'].value_counts().head(3))
 
 
 
