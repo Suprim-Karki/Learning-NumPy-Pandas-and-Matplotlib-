@@ -137,7 +137,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby(['marital-status', 'income']).size().unstack())
 
 '''Q41: What is the average number of hours worked per week by education level?'''
-print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False))
+# print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False))
+
+'''Q42: Among married individuals, what percentage earn >50K?'''
+married = df[df['marital-status'].str.contains('Married')]
+percentage = (married[married['income'] == '>50K'].shape[0] / married.shape[0]) * 100
+print(percentage)
 
 
 
