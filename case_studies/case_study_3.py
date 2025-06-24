@@ -158,10 +158,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(race_income.dropna().sort_values(ascending=False))
 
 '''Q46: What percentage of individuals with only HS-grad education earn >50K?'''
-hs = df[df['education'] == 'HS-grad']
-percentage = (hs[hs['income'] == '>50K'].shape[0] / hs.shape[0]) * 100
-print(percentage)
+# hs = df[df['education'] == 'HS-grad']
+# percentage = (hs[hs['income'] == '>50K'].shape[0] / hs.shape[0]) * 100
+# print(percentage)
 
+'''Q47: What is the most common workclass among individuals aged 60 and above?'''
+print(df[df['age'] >= 60]['workclass'].value_counts().head(1))
 
 
 
