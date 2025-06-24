@@ -134,7 +134,33 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['education'] == 'Doctorate']['occupation'].value_counts().head(1))
 
 '''Q40: How does income level relate to marital status? (i.e., count of income groups per marital status)'''
-print(df.groupby(['marital-status', 'income']).size().unstack())
+# print(df.groupby(['marital-status', 'income']).size().unstack())
+
+'''Q41: What is the average number of hours worked per week by education level?'''
+print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
