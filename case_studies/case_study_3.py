@@ -145,7 +145,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(percentage)
 
 '''Q43: What are the top 3 occupations for females earning >50K?'''
-print(df[(df['sex'] == 'Female') & (df['income'] == '>50K')]['occupation'].value_counts().head(3))
+# print(df[(df['sex'] == 'Female') & (df['income'] == '>50K')]['occupation'].value_counts().head(3))
+
+'''Q44: What is the distribution of people by age group (e.g., 18-25, 26-35, etc.)?'''
+bins = [17, 25, 35, 45, 55, 65, 100]
+labels = ['18-25', '26-35', '36-45', '46-55', '56-65', '66+']
+df['age-group'] = pd.cut(df['age'], bins=bins, labels=labels)
+print(df['age-group'].value_counts().sort_index())
 
 
 
