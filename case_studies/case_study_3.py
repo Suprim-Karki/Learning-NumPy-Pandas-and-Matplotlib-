@@ -140,9 +140,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False))
 
 '''Q42: Among married individuals, what percentage earn >50K?'''
-married = df[df['marital-status'].str.contains('Married')]
-percentage = (married[married['income'] == '>50K'].shape[0] / married.shape[0]) * 100
-print(percentage)
+# married = df[df['marital-status'].str.contains('Married')]
+# percentage = (married[married['income'] == '>50K'].shape[0] / married.shape[0]) * 100
+# print(percentage)
+
+'''Q43: What are the top 3 occupations for females earning >50K?'''
+print(df[(df['sex'] == 'Female') & (df['income'] == '>50K')]['occupation'].value_counts().head(3))
+
 
 
 
