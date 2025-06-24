@@ -163,7 +163,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(percentage)
 
 '''Q47: What is the most common workclass among individuals aged 60 and above?'''
-print(df[df['age'] >= 60]['workclass'].value_counts().head(1))
+# print(df[df['age'] >= 60]['workclass'].value_counts().head(1))
+
+'''Q48: Compare average hours worked per week for people from the US vs non-US countries.'''
+us = df[df['native-country'] == 'United-States']['hours-per-week'].mean()
+non_us = df[df['native-country'] != 'United-States']['hours-per-week'].mean()
+print("US:", us, "Non-US:", non_us)
 
 
 
