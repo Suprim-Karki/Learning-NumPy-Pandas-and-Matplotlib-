@@ -154,8 +154,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['age-group'].value_counts().sort_index())
 
 '''Q45: Which race has the highest percentage of individuals earning >50K?'''
-race_income = df[df['income'] == '>50K']['race'].value_counts() / df['race'].value_counts()
-print(race_income.dropna().sort_values(ascending=False))
+# race_income = df[df['income'] == '>50K']['race'].value_counts() / df['race'].value_counts()
+# print(race_income.dropna().sort_values(ascending=False))
+
+'''Q46: What percentage of individuals with only HS-grad education earn >50K?'''
+hs = df[df['education'] == 'HS-grad']
+percentage = (hs[hs['income'] == '>50K'].shape[0] / hs.shape[0]) * 100
+print(percentage)
 
 
 
