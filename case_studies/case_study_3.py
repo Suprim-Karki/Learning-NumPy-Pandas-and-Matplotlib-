@@ -189,7 +189,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0) * 100)
 
 '''Q55: Among people working more than 50 hours per week, which occupation is most common?'''
-print(df[df['hours-per-week'] > 50]['occupation'].value_counts().head(1))
+# print(df[df['hours-per-week'] > 50]['occupation'].value_counts().head(1))
+
+'''Q56: What is the gender ratio (Male to Female) in the dataset?'''
+males = df[df['sex'] == 'Male'].shape[0]
+females = df[df['sex'] == 'Female'].shape[0]
+print("Male to Female ratio:", males / females if females else 'Undefined')
+
 
 
 
