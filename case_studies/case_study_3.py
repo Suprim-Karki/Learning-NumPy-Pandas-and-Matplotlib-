@@ -180,7 +180,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('income')['age'].mean())
 
 '''Q52: Which education level has the highest average hours-per-week?'''
-print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False).head(1))
+
+'''Q53: How many females are employed in the private sector?'''
+print(df[(df['sex'] == 'Female') & (df['workclass'] == 'Private')].shape[0])
 
 
 
