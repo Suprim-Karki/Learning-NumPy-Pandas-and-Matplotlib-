@@ -200,9 +200,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['age'] >= 30) & (df['age'] <= 50)]['marital-status'].value_counts().head(1))
 
 '''Q58: What percentage of people with capital gain > 0 earn >50K?'''
-gainers = df[df['capital-gain'] > 0]
-print((gainers[gainers['income'] == '>50K'].shape[0] / gainers.shape[0]) * 100 if gainers.shape[0] else 0)
+# gainers = df[df['capital-gain'] > 0]
+# print((gainers[gainers['income'] == '>50K'].shape[0] / gainers.shape[0]) * 100 if gainers.shape[0] else 0)
 
+'''Q59: What is the average capital loss grouped by education level?'''
+print(df.groupby('education')['capital-loss'].mean().sort_values(ascending=False))
 
 
 
