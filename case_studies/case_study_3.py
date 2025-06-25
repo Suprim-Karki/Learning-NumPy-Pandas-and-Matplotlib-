@@ -197,7 +197,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print("Male to Female ratio:", males / females if females else 'Undefined')
 
 '''Q57: What is the most common marital status among people aged 30 to 50?'''
-print(df[(df['age'] >= 30) & (df['age'] <= 50)]['marital-status'].value_counts().head(1))
+# print(df[(df['age'] >= 30) & (df['age'] <= 50)]['marital-status'].value_counts().head(1))
+
+'''Q58: What percentage of people with capital gain > 0 earn >50K?'''
+gainers = df[df['capital-gain'] > 0]
+print((gainers[gainers['income'] == '>50K'].shape[0] / gainers.shape[0]) * 100 if gainers.shape[0] else 0)
 
 
 
