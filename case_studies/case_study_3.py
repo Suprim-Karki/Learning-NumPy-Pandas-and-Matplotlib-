@@ -192,9 +192,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['hours-per-week'] > 50]['occupation'].value_counts().head(1))
 
 '''Q56: What is the gender ratio (Male to Female) in the dataset?'''
-males = df[df['sex'] == 'Male'].shape[0]
-females = df[df['sex'] == 'Female'].shape[0]
-print("Male to Female ratio:", males / females if females else 'Undefined')
+# males = df[df['sex'] == 'Male'].shape[0]
+# females = df[df['sex'] == 'Female'].shape[0]
+# print("Male to Female ratio:", males / females if females else 'Undefined')
+
+'''Q57: What is the most common marital status among people aged 30 to 50?'''
+print(df[(df['age'] >= 30) & (df['age'] <= 50)]['marital-status'].value_counts().head(1))
 
 
 
