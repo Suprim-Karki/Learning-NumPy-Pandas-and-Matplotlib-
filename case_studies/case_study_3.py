@@ -204,7 +204,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((gainers[gainers['income'] == '>50K'].shape[0] / gainers.shape[0]) * 100 if gainers.shape[0] else 0)
 
 '''Q59: What is the average capital loss grouped by education level?'''
-print(df.groupby('education')['capital-loss'].mean().sort_values(ascending=False))
+# print(df.groupby('education')['capital-loss'].mean().sort_values(ascending=False))
+
+'''Q60: Which occupation has the highest average age?'''
+print(df.groupby('occupation')['age'].mean().sort_values(ascending=False).head(1))
 
 
 
