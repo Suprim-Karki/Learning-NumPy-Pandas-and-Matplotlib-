@@ -177,7 +177,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['income'] == '>50K') & (df['native-country'] != 'United-States')]['native-country'].value_counts().head(3))
 
 '''Q51: What is the average age of individuals with income <=50K vs >50K?'''
-print(df.groupby('income')['age'].mean())
+# print(df.groupby('income')['age'].mean())
+
+'''Q52: Which education level has the highest average hours-per-week?'''
+print(df.groupby('education')['hours-per-week'].mean().sort_values(ascending=False).head(1))
+
 
 
 
