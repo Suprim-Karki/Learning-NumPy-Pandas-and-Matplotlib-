@@ -186,7 +186,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['sex'] == 'Female') & (df['workclass'] == 'Private')].shape[0])
 
 '''Q54: What is the income distribution across different age groups?'''
-print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0) * 100)
+# print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0) * 100)
+
+'''Q55: Among people working more than 50 hours per week, which occupation is most common?'''
+print(df[df['hours-per-week'] > 50]['occupation'].value_counts().head(1))
 
 
 
