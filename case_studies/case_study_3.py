@@ -207,8 +207,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('education')['capital-loss'].mean().sort_values(ascending=False))
 
 '''Q60: Which occupation has the highest average age?'''
-print(df.groupby('occupation')['age'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('occupation')['age'].mean().sort_values(ascending=False).head(1))
 
+'''Q61: What is the most common native country among females?'''
+print(df[df['sex'] == 'Female']['native-country'].value_counts().head(1))
 
 
 
