@@ -219,7 +219,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((df['capital-loss'] > 1000).sum())
 
 '''Q64: What is the most common relationship status among those aged under 25?'''
-print(df[df['age'] < 25]['relationship'].value_counts().head(1))
+# print(df[df['age'] < 25]['relationship'].value_counts().head(1))
+
+'''Q65: What is the total number of unique native countries represented in the dataset?'''
+print(df['native-country'].nunique())
 
 
 
