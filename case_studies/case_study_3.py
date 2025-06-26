@@ -216,7 +216,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['education'] == 'Masters']['hours-per-week'].mean())
 
 '''Q63: How many people have a capital loss greater than 1000?'''
-print((df['capital-loss'] > 1000).sum())
+# print((df['capital-loss'] > 1000).sum())
+
+'''Q64: What is the most common relationship status among those aged under 25?'''
+print(df[df['age'] < 25]['relationship'].value_counts().head(1))
 
 
 
