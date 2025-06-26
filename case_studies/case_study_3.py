@@ -210,7 +210,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('occupation')['age'].mean().sort_values(ascending=False).head(1))
 
 '''Q61: What is the most common native country among females?'''
-print(df[df['sex'] == 'Female']['native-country'].value_counts().head(1))
+# print(df[df['sex'] == 'Female']['native-country'].value_counts().head(1))
+
+'''Q62: Among people with a Master's degree, what is the average number of hours worked per week?'''
+print(df[df['education'] == 'Masters']['hours-per-week'].mean())
 
 
 
