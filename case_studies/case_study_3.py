@@ -231,9 +231,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['marital-status'] == 'Widowed') & (df['age'] > 60)].shape[0])
 
 '''Q68: What is the distribution of income by education level?'''
-print(df.groupby('education')['income'].value_counts(normalize=True).unstack().fillna(0) * 100)
+# print(df.groupby('education')['income'].value_counts(normalize=True).unstack().fillna(0) * 100)
 
-
+'''Q69: Which gender has the higher average capital gain?'''
+print(df.groupby('sex')['capital-gain'].mean())
 
 
 
