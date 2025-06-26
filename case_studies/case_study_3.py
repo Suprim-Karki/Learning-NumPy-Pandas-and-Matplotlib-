@@ -225,7 +225,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df['native-country'].nunique())
 
 '''Q66: Among people earning <=50K, which workclass is most represented?'''
-print(df[df['income'] == '<=50K']['workclass'].value_counts().head(1))
+# print(df[df['income'] == '<=50K']['workclass'].value_counts().head(1))
+
+'''Q67: How many people are both widowed and above age 60?'''
+print(df[(df['marital-status'] == 'Widowed') & (df['age'] > 60)].shape[0])
 
 
 
