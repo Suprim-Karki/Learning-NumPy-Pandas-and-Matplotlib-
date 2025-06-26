@@ -222,7 +222,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['age'] < 25]['relationship'].value_counts().head(1))
 
 '''Q65: What is the total number of unique native countries represented in the dataset?'''
-print(df['native-country'].nunique())
+# print(df['native-country'].nunique())
+
+'''Q66: Among people earning <=50K, which workclass is most represented?'''
+print(df[df['income'] == '<=50K']['workclass'].value_counts().head(1))
+
 
 
 
