@@ -237,7 +237,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('sex')['capital-gain'].mean())
 
 '''Q70: Among people working part-time (<30 hours/week), what is the most common occupation?'''
-print(df[df['hours-per-week'] < 30]['occupation'].value_counts().head(1))
+# print(df[df['hours-per-week'] < 30]['occupation'].value_counts().head(1))
+
+'''Q71: What is the most common race among individuals earning >50K?'''
+print(df[df['income'] == '>50K']['race'].value_counts().head(1))
 
 
 
