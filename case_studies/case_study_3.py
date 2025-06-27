@@ -248,7 +248,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((non_us.shape[0] / total.shape[0]) * 100 if total.shape[0] else 0)
 
 '''Q73: What is the average educational number for people aged 50 and above?'''
-print(df[df['age'] >= 50]['educational-num'].mean())
+# print(df[df['age'] >= 50]['educational-num'].mean())
+
+'''Q74: Among people with zero capital gain, what is the average age?'''
+print(df[df['capital-gain'] == 0]['age'].mean())
 
 
 
