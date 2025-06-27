@@ -263,7 +263,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('relationship')['hours-per-week'].mean().sort_values(ascending=False))
 
 '''Q78: Among people earning >50K, what is the most common education level?'''
-print(df[df['income'] == '>50K']['education'].value_counts().head(1))
+# print(df[df['income'] == '>50K']['education'].value_counts().head(1))
+
+'''Q79: What is the total number of people who are either separated or widowed?'''
+print(df[df['marital-status'].isin(['Separated', 'Widowed'])].shape[0])
 
 
 
