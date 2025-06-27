@@ -266,7 +266,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['income'] == '>50K']['education'].value_counts().head(1))
 
 '''Q79: What is the total number of people who are either separated or widowed?'''
-print(df[df['marital-status'].isin(['Separated', 'Widowed'])].shape[0])
+# print(df[df['marital-status'].isin(['Separated', 'Widowed'])].shape[0])
+
+'''Q80: Among those aged between 18 and 30, what is the gender distribution?'''
+print(df[(df['age'] >= 18) & (df['age'] <= 30)]['sex'].value_counts())
 
 
 
