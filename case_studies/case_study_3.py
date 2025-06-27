@@ -243,9 +243,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['income'] == '>50K']['race'].value_counts().head(1))
 
 '''Q72: What percentage of people earning <=50K are from non-US countries?'''
-non_us = df[(df['income'] == '<=50K') & (df['native-country'] != 'United-States')]
-total = df[df['income'] == '<=50K']
-print((non_us.shape[0] / total.shape[0]) * 100 if total.shape[0] else 0)
+# non_us = df[(df['income'] == '<=50K') & (df['native-country'] != 'United-States')]
+# total = df[df['income'] == '<=50K']
+# print((non_us.shape[0] / total.shape[0]) * 100 if total.shape[0] else 0)
+
+'''Q73: What is the average educational number for people aged 50 and above?'''
+print(df[df['age'] >= 50]['educational-num'].mean())
+
 
 
 
