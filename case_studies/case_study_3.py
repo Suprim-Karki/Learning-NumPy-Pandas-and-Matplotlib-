@@ -253,8 +253,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 '''Q74: Among people with zero capital gain, what is the average age?'''
 # print(df[df['capital-gain'] == 0]['age'].mean())
 
-'''Q75: Which age group has the highest percentage of individuals earning >50K?'''
-print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0)['>50K'].sort_values(ascending=False).head(1))
+'''Q75: How many individuals are both Female and Never-married?'''
+# print(df[(df['sex'] == 'Female') & (df['marital-status'] == 'Never-married')].shape[0])
+
+'''Q76: Which age group has the highest percentage of individuals earning >50K?'''
+# print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0)['>50K'].sort_values(ascending=False).head(1))
 
 
 
