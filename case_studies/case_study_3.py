@@ -260,7 +260,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0)['>50K'].sort_values(ascending=False).head(1))
 
 '''Q77: What is the average number of hours worked by people with different relationship statuses?'''
-print(df.groupby('relationship')['hours-per-week'].mean().sort_values(ascending=False))
+# print(df.groupby('relationship')['hours-per-week'].mean().sort_values(ascending=False))
+
+'''Q78: Among people earning >50K, what is the most common education level?'''
+print(df[df['income'] == '>50K']['education'].value_counts().head(1))
 
 
 
