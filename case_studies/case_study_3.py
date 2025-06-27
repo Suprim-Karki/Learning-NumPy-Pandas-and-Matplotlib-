@@ -259,6 +259,8 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 '''Q76: Which age group has the highest percentage of individuals earning >50K?'''
 # print(df.groupby('age-group')['income'].value_counts(normalize=True).unstack().fillna(0)['>50K'].sort_values(ascending=False).head(1))
 
+'''Q77: What is the average number of hours worked by people with different relationship statuses?'''
+print(df.groupby('relationship')['hours-per-week'].mean().sort_values(ascending=False))
 
 
 
