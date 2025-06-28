@@ -286,9 +286,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('marital-status')['age'].median().sort_values(ascending=False))
 
 '''Q85: What percentage of individuals with capital-loss > 0 are retired (relationship = Not-in-family or Other-relative)?'''
-cap_loss = df[df['capital-loss'] > 0]
-retired = cap_loss[cap_loss['relationship'].isin(['Not-in-family', 'Other-relative'])]
-print((retired.shape[0] / cap_loss.shape[0]) * 100 if cap_loss.shape[0] else 0)
+# cap_loss = df[df['capital-loss'] > 0]
+# retired = cap_loss[cap_loss['relationship'].isin(['Not-in-family', 'Other-relative'])]
+# print((retired.shape[0] / cap_loss.shape[0]) * 100 if cap_loss.shape[0] else 0)
+
+'''Q86: Among individuals with 'Assoc-acdm' education, what is the average income in hours-per-week?'''
+print(df[df['education'] == 'Assoc-acdm'].groupby('income')['hours-per-week'].mean())
 
 
 
