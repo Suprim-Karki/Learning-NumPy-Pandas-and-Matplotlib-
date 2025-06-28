@@ -269,7 +269,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['marital-status'].isin(['Separated', 'Widowed'])].shape[0])
 
 '''Q80: Among those aged between 18 and 30, what is the gender distribution?'''
-print(df[(df['age'] >= 18) & (df['age'] <= 30)]['sex'].value_counts())
+# print(df[(df['age'] >= 18) & (df['age'] <= 30)]['sex'].value_counts())
+
+'''Q81: What percentage of individuals over age 40 have a Bachelor's degree?'''
+over_40 = df[df['age'] > 40]
+percentage = (over_40[over_40['education'] == 'Bachelors'].shape[0] / over_40.shape[0]) * 100
+print(percentage)
 
 
 
