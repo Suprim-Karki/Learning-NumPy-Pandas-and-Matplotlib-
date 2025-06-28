@@ -291,7 +291,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((retired.shape[0] / cap_loss.shape[0]) * 100 if cap_loss.shape[0] else 0)
 
 '''Q86: Among individuals with 'Assoc-acdm' education, what is the average income in hours-per-week?'''
-print(df[df['education'] == 'Assoc-acdm'].groupby('income')['hours-per-week'].mean())
+# print(df[df['education'] == 'Assoc-acdm'].groupby('income')['hours-per-week'].mean())
+
+'''Q87: What is the most common occupation among people from India?'''
+print(df[df['native-country'] == 'India']['occupation'].value_counts().head(1))
 
 
 
