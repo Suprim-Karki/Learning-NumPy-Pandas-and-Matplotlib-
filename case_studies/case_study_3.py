@@ -277,7 +277,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(percentage)
 
 '''Q82: What is the most common workclass for individuals with a Doctorate?'''
-print(df[df['education'] == 'Doctorate']['workclass'].value_counts().head(1))
+# print(df[df['education'] == 'Doctorate']['workclass'].value_counts().head(1))
+
+'''Q83: Among people working more than 70 hours/week, how many are earning <=50K?'''
+print(df[(df['hours-per-week'] > 70) & (df['income'] == '<=50K')].shape[0])
 
 
 
