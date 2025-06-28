@@ -294,7 +294,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['education'] == 'Assoc-acdm'].groupby('income')['hours-per-week'].mean())
 
 '''Q87: What is the most common occupation among people from India?'''
-print(df[df['native-country'] == 'India']['occupation'].value_counts().head(1))
+# print(df[df['native-country'] == 'India']['occupation'].value_counts().head(1))
+
+'''Q88: Among divorced individuals, what is the gender distribution?'''
+print(df[df['marital-status'] == 'Divorced']['sex'].value_counts())
 
 
 
