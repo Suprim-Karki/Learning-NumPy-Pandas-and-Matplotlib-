@@ -280,7 +280,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['education'] == 'Doctorate']['workclass'].value_counts().head(1))
 
 '''Q83: Among people working more than 70 hours/week, how many are earning <=50K?'''
-print(df[(df['hours-per-week'] > 70) & (df['income'] == '<=50K')].shape[0])
+# print(df[(df['hours-per-week'] > 70) & (df['income'] == '<=50K')].shape[0])
+
+'''Q84: What is the median age for each marital status group?'''
+print(df.groupby('marital-status')['age'].median().sort_values(ascending=False))
 
 
 
