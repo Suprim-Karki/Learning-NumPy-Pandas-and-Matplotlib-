@@ -297,7 +297,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['native-country'] == 'India']['occupation'].value_counts().head(1))
 
 '''Q88: Among divorced individuals, what is the gender distribution?'''
-print(df[df['marital-status'] == 'Divorced']['sex'].value_counts())
+# print(df[df['marital-status'] == 'Divorced']['sex'].value_counts())
+
+'''Q89: How many people with capital-gain > 5000 work in the private sector?'''
+print(df[(df['capital-gain'] > 5000) & (df['workclass'] == 'Private')].shape[0])
 
 
 
