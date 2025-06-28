@@ -300,7 +300,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['marital-status'] == 'Divorced']['sex'].value_counts())
 
 '''Q89: How many people with capital-gain > 5000 work in the private sector?'''
-print(df[(df['capital-gain'] > 5000) & (df['workclass'] == 'Private')].shape[0])
+# print(df[(df['capital-gain'] > 5000) & (df['workclass'] == 'Private')].shape[0])
+
+'''Q90: What is the most common education level among people aged 65 and older?'''
+print(df[df['age'] >= 65]['education'].value_counts().head(1))
 
 
 
