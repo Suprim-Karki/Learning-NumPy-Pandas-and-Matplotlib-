@@ -283,7 +283,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['hours-per-week'] > 70) & (df['income'] == '<=50K')].shape[0])
 
 '''Q84: What is the median age for each marital status group?'''
-print(df.groupby('marital-status')['age'].median().sort_values(ascending=False))
+# print(df.groupby('marital-status')['age'].median().sort_values(ascending=False))
+
+'''Q85: What percentage of individuals with capital-loss > 0 are retired (relationship = Not-in-family or Other-relative)?'''
+cap_loss = df[df['capital-loss'] > 0]
+retired = cap_loss[cap_loss['relationship'].isin(['Not-in-family', 'Other-relative'])]
+print((retired.shape[0] / cap_loss.shape[0]) * 100 if cap_loss.shape[0] else 0)
 
 
 
