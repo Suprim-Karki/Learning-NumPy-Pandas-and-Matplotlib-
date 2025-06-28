@@ -272,9 +272,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['age'] >= 18) & (df['age'] <= 30)]['sex'].value_counts())
 
 '''Q81: What percentage of individuals over age 40 have a Bachelor's degree?'''
-over_40 = df[df['age'] > 40]
-percentage = (over_40[over_40['education'] == 'Bachelors'].shape[0] / over_40.shape[0]) * 100
-print(percentage)
+# over_40 = df[df['age'] > 40]
+# percentage = (over_40[over_40['education'] == 'Bachelors'].shape[0] / over_40.shape[0]) * 100
+# print(percentage)
+
+'''Q82: What is the most common workclass for individuals with a Doctorate?'''
+print(df[df['education'] == 'Doctorate']['workclass'].value_counts().head(1))
 
 
 
