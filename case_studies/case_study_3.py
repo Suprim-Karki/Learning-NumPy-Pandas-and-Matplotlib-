@@ -322,9 +322,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((some_college[some_college['income'] == '>50K'].shape[0] / some_college.shape[0]) * 100)
 
 '''Q96: What is the gender breakdown of people aged 18 to 25 with income <=50K?'''
-print(df[(df['age'] >= 18) & (df['age'] <= 25) & (df['income'] == '<=50K')]['sex'].value_counts())
+# print(df[(df['age'] >= 18) & (df['age'] <= 25) & (df['income'] == '<=50K')]['sex'].value_counts())
 
-
+'''Q97: Among individuals who never married, what is the average capital loss?'''
+print(df[df['marital-status'] == 'Never-married']['capital-loss'].mean())
 
 
 
