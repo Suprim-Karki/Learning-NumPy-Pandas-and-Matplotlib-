@@ -318,8 +318,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['workclass'] == 'Self-emp-not-inc']['capital-gain'].mean())
 
 '''Q95: Among individuals with 'Some-college' education, what percentage earn >50K?'''
-some_college = df[df['education'] == 'Some-college']
-print((some_college[some_college['income'] == '>50K'].shape[0] / some_college.shape[0]) * 100)
+# some_college = df[df['education'] == 'Some-college']
+# print((some_college[some_college['income'] == '>50K'].shape[0] / some_college.shape[0]) * 100)
+
+'''Q96: What is the gender breakdown of people aged 18 to 25 with income <=50K?'''
+print(df[(df['age'] >= 18) & (df['age'] <= 25) & (df['income'] == '<=50K')]['sex'].value_counts())
+
 
 
 
