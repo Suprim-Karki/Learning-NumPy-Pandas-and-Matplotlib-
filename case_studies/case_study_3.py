@@ -309,7 +309,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['income'] == '>50K') & (df['hours-per-week'] < 30)].shape[0])
 
 '''Q92: Among those who work exactly 40 hours per week, what is the most common occupation?'''
-print(df[df['hours-per-week'] == 40]['occupation'].value_counts().head(1))
+# print(df[df['hours-per-week'] == 40]['occupation'].value_counts().head(1))
+
+'''Q93: What is the distribution of marital status among people with Master's degrees?'''
+print(df[df['education'] == 'Masters']['marital-status'].value_counts())
 
 
 
