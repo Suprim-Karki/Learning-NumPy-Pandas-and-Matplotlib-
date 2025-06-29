@@ -315,7 +315,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['education'] == 'Masters']['marital-status'].value_counts())
 
 '''Q94: Among people who are Self-emp-not-inc, what is the average capital gain?'''
-print(df[df['workclass'] == 'Self-emp-not-inc']['capital-gain'].mean())
+# print(df[df['workclass'] == 'Self-emp-not-inc']['capital-gain'].mean())
+
+'''Q95: Among individuals with 'Some-college' education, what percentage earn >50K?'''
+some_college = df[df['education'] == 'Some-college']
+print((some_college[some_college['income'] == '>50K'].shape[0] / some_college.shape[0]) * 100)
 
 
 
