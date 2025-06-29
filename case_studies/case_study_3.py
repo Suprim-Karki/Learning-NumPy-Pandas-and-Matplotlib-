@@ -328,7 +328,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['marital-status'] == 'Never-married']['capital-loss'].mean())
 
 '''Q98: How many people with educational-num > 12 earn >50K?'''
-print(df[(df['educational-num'] > 12) & (df['income'] == '>50K')].shape[0])
+# print(df[(df['educational-num'] > 12) & (df['income'] == '>50K')].shape[0])
+
+'''Q99: What is the most common relationship type for people from Mexico?'''
+print(df[df['native-country'] == 'Mexico']['relationship'].value_counts().head(1))
 
 
 
