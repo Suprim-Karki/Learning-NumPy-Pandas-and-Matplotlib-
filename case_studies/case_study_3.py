@@ -306,7 +306,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['age'] >= 65]['education'].value_counts().head(1))
 
 '''Q91: Among individuals earning >50K, how many are working part-time (<30 hours/week)?'''
-print(df[(df['income'] == '>50K') & (df['hours-per-week'] < 30)].shape[0])
+# print(df[(df['income'] == '>50K') & (df['hours-per-week'] < 30)].shape[0])
+
+'''Q92: Among those who work exactly 40 hours per week, what is the most common occupation?'''
+print(df[df['hours-per-week'] == 40]['occupation'].value_counts().head(1))
 
 
 
