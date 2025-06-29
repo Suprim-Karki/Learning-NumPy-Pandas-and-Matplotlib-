@@ -303,7 +303,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['capital-gain'] > 5000) & (df['workclass'] == 'Private')].shape[0])
 
 '''Q90: What is the most common education level among people aged 65 and older?'''
-print(df[df['age'] >= 65]['education'].value_counts().head(1))
+# print(df[df['age'] >= 65]['education'].value_counts().head(1))
+
+'''Q91: Among individuals earning >50K, how many are working part-time (<30 hours/week)?'''
+print(df[(df['income'] == '>50K') & (df['hours-per-week'] < 30)].shape[0])
 
 
 
