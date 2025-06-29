@@ -312,7 +312,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['hours-per-week'] == 40]['occupation'].value_counts().head(1))
 
 '''Q93: What is the distribution of marital status among people with Master's degrees?'''
-print(df[df['education'] == 'Masters']['marital-status'].value_counts())
+# print(df[df['education'] == 'Masters']['marital-status'].value_counts())
+
+'''Q94: Among people who are Self-emp-not-inc, what is the average capital gain?'''
+print(df[df['workclass'] == 'Self-emp-not-inc']['capital-gain'].mean())
 
 
 
