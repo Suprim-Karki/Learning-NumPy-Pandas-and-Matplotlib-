@@ -325,7 +325,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['age'] >= 18) & (df['age'] <= 25) & (df['income'] == '<=50K')]['sex'].value_counts())
 
 '''Q97: Among individuals who never married, what is the average capital loss?'''
-print(df[df['marital-status'] == 'Never-married']['capital-loss'].mean())
+# print(df[df['marital-status'] == 'Never-married']['capital-loss'].mean())
+
+'''Q98: How many people with educational-num > 12 earn >50K?'''
+print(df[(df['educational-num'] > 12) & (df['income'] == '>50K')].shape[0])
 
 
 
