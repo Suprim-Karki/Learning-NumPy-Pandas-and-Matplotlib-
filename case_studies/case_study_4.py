@@ -14,4 +14,7 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.shape)
 
 '''Q4: How many unique app categories are there?'''
-print(df['Category'].nunique())
+# print(df['Category'].nunique())
+
+'''Q5: What are the top 5 most common app categories?'''
+print(df['Category'].value_counts().head(5))
