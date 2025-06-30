@@ -26,6 +26,9 @@ df = pd.read_csv("googleplaystore.csv")
 # print((df['Rating'] > 4.5).sum())
 
 '''Q8: Which app has the highest number of reviews?'''
-print(df.loc[df['Reviews'].astype(str).str.replace('.', '', regex=False).str.isnumeric(), 'Reviews'] = df['Reviews'].astype(str).str.replace(',', '', regex=False))
-df['Reviews'] = df['Reviews'].astype(float)
-print(df.loc[df['Reviews'].idxmax()])
+# print(df.loc[df['Reviews'].astype(str).str.replace('.', '', regex=False).str.isnumeric(), 'Reviews'] = df['Reviews'].astype(str).str.replace(',', '', regex=False))
+# df['Reviews'] = df['Reviews'].astype(float)
+# print(df.loc[df['Reviews'].idxmax()])
+
+'''Q9: What is the most common type of app (Free/Paid)?'''
+print(df['Type'].value_counts())
