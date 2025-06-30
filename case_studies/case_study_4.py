@@ -20,4 +20,7 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df['Category'].value_counts().head(5))
 
 '''Q6: What is the average app rating?'''
-print(df['Rating'].mean())
+# print(df['Rating'].mean())
+
+'''Q7: How many apps have a rating above 4.5?'''
+print((df['Rating'] > 4.5).sum())
