@@ -17,4 +17,7 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df['Category'].nunique())
 
 '''Q5: What are the top 5 most common app categories?'''
-print(df['Category'].value_counts().head(5))
+# print(df['Category'].value_counts().head(5))
+
+'''Q6: What is the average app rating?'''
+print(df['Rating'].mean())
