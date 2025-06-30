@@ -7,5 +7,8 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.head(10))
 
 '''Q2: What are the column names and how many are there?'''
-print(df.columns)
-print("Total columns:", len(df.columns))
+# print(df.columns)
+# print("Total columns:", len(df.columns))
+
+'''Q3: What is the shape of the dataset (rows and columns)?'''
+print(df.shape)
