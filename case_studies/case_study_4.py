@@ -11,4 +11,7 @@ df = pd.read_csv("googleplaystore.csv")
 # print("Total columns:", len(df.columns))
 
 '''Q3: What is the shape of the dataset (rows and columns)?'''
-print(df.shape)
+# print(df.shape)
+
+'''Q4: How many unique app categories are there?'''
+print(df['Category'].nunique())
