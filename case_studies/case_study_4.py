@@ -38,6 +38,9 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df_clean['Size'].head())
 
 '''Q11: How many apps have over 1 million installs?'''
-df['Installs'] = df['Installs'].str.replace('[+,]', '', regex=True)
-df['Installs'] = pd.to_numeric(df['Installs'], errors='coerce')
-print((df['Installs'] > 1000000).sum())
+# df['Installs'] = df['Installs'].str.replace('[+,]', '', regex=True)
+# df['Installs'] = pd.to_numeric(df['Installs'], errors='coerce')
+# print((df['Installs'] > 1000000).sum())
+
+'''Q12: What are the top 5 apps by number of installs?'''
+print(df.sort_values(by='Installs', ascending=False).head(5)[['App', 'Installs']])
