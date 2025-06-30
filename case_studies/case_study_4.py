@@ -31,4 +31,8 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.loc[df['Reviews'].idxmax()])
 
 '''Q9: What is the most common type of app (Free/Paid)?'''
-print(df['Type'].value_counts())
+# print(df['Type'].value_counts())
+
+'''Q10: What is the average size of apps (excluding "Varies with device")?'''
+df_clean = df[~df['Size'].str.contains('Varies', na=False)]
+print(df_clean['Size'].head())
