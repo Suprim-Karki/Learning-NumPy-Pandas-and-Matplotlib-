@@ -334,8 +334,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['native-country'] == 'Mexico']['relationship'].value_counts().head(1))
 
 '''Q100: Among individuals who work more than 50 hours/week and have a capital loss > 0, what is the most common marital status?'''
-print(df[(df['hours-per-week'] > 50) & (df['capital-loss'] > 0)]['marital-status'].value_counts().head(1))
+# print(df[(df['hours-per-week'] > 50) & (df['capital-loss'] > 0)]['marital-status'].value_counts().head(1))
 
+'''Q101: Among those earning >50K, what is the average capital gain by education level?'''
+print(df[df['income'] == '>50K'].groupby('education')['capital-gain'].mean().sort_values(ascending=False))
 
 
 
