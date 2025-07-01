@@ -356,8 +356,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('sex')['capital-gain'].describe())
 
 '''Q107: Which occupation has the highest average capital loss?'''
-print(df.groupby('occupation')['capital-loss'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('occupation')['capital-loss'].mean().sort_values(ascending=False).head(1))
 
+'''Q108: What is the most common workclass among people with capital gain > 0?'''
+print(df[df['capital-gain'] > 0]['workclass'].value_counts().head(1))
 
 
 
