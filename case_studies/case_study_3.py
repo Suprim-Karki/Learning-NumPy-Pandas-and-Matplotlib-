@@ -340,8 +340,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['income'] == '>50K'].groupby('education')['capital-gain'].mean().sort_values(ascending=False))
 
 '''Q102: What is the proportion of individuals from each native country who are earning >50K?'''
-country_income_ratio = df[df['income'] == '>50K']['native-country'].value_counts() / df['native-country'].value_counts()
-print(country_income_ratio.dropna().sort_values(ascending=False))
+# country_income_ratio = df[df['income'] == '>50K']['native-country'].value_counts() / df['native-country'].value_counts()
+# print(country_income_ratio.dropna().sort_values(ascending=False))
+
+'''Q103: What is the most common age for individuals earning >50K?'''
+print(df[df['income'] == '>50K']['age'].value_counts().head(1))
 
 
 
