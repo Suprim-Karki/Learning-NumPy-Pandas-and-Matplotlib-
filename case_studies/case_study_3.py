@@ -337,9 +337,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['hours-per-week'] > 50) & (df['capital-loss'] > 0)]['marital-status'].value_counts().head(1))
 
 '''Q101: Among those earning >50K, what is the average capital gain by education level?'''
-print(df[df['income'] == '>50K'].groupby('education')['capital-gain'].mean().sort_values(ascending=False))
+# print(df[df['income'] == '>50K'].groupby('education')['capital-gain'].mean().sort_values(ascending=False))
 
-
+'''Q102: What is the proportion of individuals from each native country who are earning >50K?'''
+country_income_ratio = df[df['income'] == '>50K']['native-country'].value_counts() / df['native-country'].value_counts()
+print(country_income_ratio.dropna().sort_values(ascending=False))
 
 
 
