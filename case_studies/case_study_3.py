@@ -353,7 +353,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['education'] == 'HS-grad'].groupby('income')['age'].mean())
 
 '''Q106: How does capital gain distribution differ between men and women?'''
-print(df.groupby('sex')['capital-gain'].describe())
+# print(df.groupby('sex')['capital-gain'].describe())
+
+'''Q107: Which occupation has the highest average capital loss?'''
+print(df.groupby('occupation')['capital-loss'].mean().sort_values(ascending=False).head(1))
 
 
 
