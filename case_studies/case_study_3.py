@@ -347,8 +347,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['income'] == '>50K']['age'].value_counts().head(1))
 
 '''Q104: What is the average hours-per-week for each gender in each income group?'''
-print(df.groupby(['sex', 'income'])['hours-per-week'].mean())
+# print(df.groupby(['sex', 'income'])['hours-per-week'].mean())
 
+'''Q105: Among people with education level 'HS-grad', what is the average age by income group?'''
+print(df[df['education'] == 'HS-grad'].groupby('income')['age'].mean())
 
 
 
