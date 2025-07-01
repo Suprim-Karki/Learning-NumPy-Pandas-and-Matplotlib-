@@ -359,7 +359,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('occupation')['capital-loss'].mean().sort_values(ascending=False).head(1))
 
 '''Q108: What is the most common workclass among people with capital gain > 0?'''
-print(df[df['capital-gain'] > 0]['workclass'].value_counts().head(1))
+# print(df[df['capital-gain'] > 0]['workclass'].value_counts().head(1))
+
+'''Q109: What is the most common native country for people with capital loss > 0?'''
+print(df[df['capital-loss'] > 0]['native-country'].value_counts().head(1))
+
 
 
 
