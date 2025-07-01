@@ -350,7 +350,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby(['sex', 'income'])['hours-per-week'].mean())
 
 '''Q105: Among people with education level 'HS-grad', what is the average age by income group?'''
-print(df[df['education'] == 'HS-grad'].groupby('income')['age'].mean())
+# print(df[df['education'] == 'HS-grad'].groupby('income')['age'].mean())
+
+'''Q106: How does capital gain distribution differ between men and women?'''
+print(df.groupby('sex')['capital-gain'].describe())
 
 
 
