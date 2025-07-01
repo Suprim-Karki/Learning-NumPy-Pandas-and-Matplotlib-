@@ -344,7 +344,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(country_income_ratio.dropna().sort_values(ascending=False))
 
 '''Q103: What is the most common age for individuals earning >50K?'''
-print(df[df['income'] == '>50K']['age'].value_counts().head(1))
+# print(df[df['income'] == '>50K']['age'].value_counts().head(1))
+
+'''Q104: What is the average hours-per-week for each gender in each income group?'''
+print(df.groupby(['sex', 'income'])['hours-per-week'].mean())
 
 
 
