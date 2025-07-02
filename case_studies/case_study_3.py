@@ -381,9 +381,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print((mexico[mexico['income'] == '>50K'].shape[0] / mexico.shape[0]) * 100 if mexico.shape[0] else 0)
 
 '''Q115: Among individuals aged 50+, which education level has the highest percentage earning >50K?'''
-older = df[df['age'] >= 50]
-edu_ratio = older[older['income'] == '>50K']['education'].value_counts() / older['education'].value_counts()
-print(edu_ratio.dropna().sort_values(ascending=False).head(1))
+# older = df[df['age'] >= 50]
+# edu_ratio = older[older['income'] == '>50K']['education'].value_counts() / older['education'].value_counts()
+# print(edu_ratio.dropna().sort_values(ascending=False).head(1))
+
+'''Q116: Which gender works the most hours on average in the private sector?'''
+print(df[df['workclass'] == 'Private'].groupby('sex')['hours-per-week'].mean())
 
 
 
