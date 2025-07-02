@@ -395,10 +395,11 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df.groupby('marital-status')['capital-gain'].mean().sort_values(ascending=False))
 
 '''Q119: What percentage of people from non-US countries have a Bachelor's degree?'''
-non_us = df[df['native-country'] != 'United-States']
-print((non_us[non_us['education'] == 'Bachelors'].shape[0] / non_us.shape[0]) * 100 if non_us.shape[0] else 0)
+# non_us = df[df['native-country'] != 'United-States']
+# print((non_us[non_us['education'] == 'Bachelors'].shape[0] / non_us.shape[0]) * 100 if non_us.shape[0] else 0)
 
-
+'''Q120: Among individuals earning <=50K, what is the average hours-per-week by race?'''
+print(df[df['income'] == '<=50K'].groupby('race')['hours-per-week'].mean().sort_values(ascending=False))
 
 
 
