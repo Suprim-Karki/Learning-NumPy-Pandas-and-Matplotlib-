@@ -377,9 +377,13 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['age'] < 30) & (df['hours-per-week'] == 40)].shape[0])
 
 '''Q114: What percentage of people from Mexico earn >50K?'''
-mexico = df[df['native-country'] == 'Mexico']
-print((mexico[mexico['income'] == '>50K'].shape[0] / mexico.shape[0]) * 100 if mexico.shape[0] else 0)
+# mexico = df[df['native-country'] == 'Mexico']
+# print((mexico[mexico['income'] == '>50K'].shape[0] / mexico.shape[0]) * 100 if mexico.shape[0] else 0)
 
+'''Q115: Among individuals aged 50+, which education level has the highest percentage earning >50K?'''
+older = df[df['age'] >= 50]
+edu_ratio = older[older['income'] == '>50K']['education'].value_counts() / older['education'].value_counts()
+print(edu_ratio.dropna().sort_values(ascending=False).head(1))
 
 
 
