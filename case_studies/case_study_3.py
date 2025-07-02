@@ -365,7 +365,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['capital-loss'] > 0]['native-country'].value_counts().head(1))
 
 '''Q110: How many people aged over 70 earn >50K?'''
-print(df[(df['age'] > 70) & (df['income'] == '>50K')].shape[0])
+# print(df[(df['age'] > 70) & (df['income'] == '>50K')].shape[0])
+
+'''Q111: What is the distribution of workclass among people aged between 25 and 35 with income <=50K?'''
+print(df[(df['age'] >= 25) & (df['age'] <= 35) & (df['income'] == '<=50K')]['workclass'].value_counts())
+
+
 
 
 
