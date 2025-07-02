@@ -389,8 +389,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['workclass'] == 'Private'].groupby('sex')['hours-per-week'].mean())
 
 '''Q117: What is the average age of individuals with income >50K grouped by occupation?'''
-print(df[df['income'] == '>50K'].groupby('occupation')['age'].mean().sort_values(ascending=False))
+# print(df[df['income'] == '>50K'].groupby('occupation')['age'].mean().sort_values(ascending=False))
 
+'''Q118: How does the average capital gain vary across different marital statuses?'''
+print(df.groupby('marital-status')['capital-gain'].mean().sort_values(ascending=False))
 
 
 
