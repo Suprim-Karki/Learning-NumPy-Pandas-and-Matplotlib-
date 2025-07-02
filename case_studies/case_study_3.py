@@ -374,7 +374,12 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[df['income'] == '<=50K'].groupby('sex')['educational-num'].mean())
 
 '''Q113: How many individuals aged under 30 are working full-time (40 hours/week)?'''
-print(df[(df['age'] < 30) & (df['hours-per-week'] == 40)].shape[0])
+# print(df[(df['age'] < 30) & (df['hours-per-week'] == 40)].shape[0])
+
+'''Q114: What percentage of people from Mexico earn >50K?'''
+mexico = df[df['native-country'] == 'Mexico']
+print((mexico[mexico['income'] == '>50K'].shape[0] / mexico.shape[0]) * 100 if mexico.shape[0] else 0)
+
 
 
 
