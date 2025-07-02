@@ -371,9 +371,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['age'] >= 25) & (df['age'] <= 35) & (df['income'] == '<=50K')]['workclass'].value_counts())
 
 '''Q112: Among people earning <=50K, what is the average educational-num by gender?'''
-print(df[df['income'] == '<=50K'].groupby('sex')['educational-num'].mean())
+# print(df[df['income'] == '<=50K'].groupby('sex')['educational-num'].mean())
 
-
+'''Q113: How many individuals aged under 30 are working full-time (40 hours/week)?'''
+print(df[(df['age'] < 30) & (df['hours-per-week'] == 40)].shape[0])
 
 
 
