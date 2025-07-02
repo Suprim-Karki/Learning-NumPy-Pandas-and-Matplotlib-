@@ -368,9 +368,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(df[(df['age'] > 70) & (df['income'] == '>50K')].shape[0])
 
 '''Q111: What is the distribution of workclass among people aged between 25 and 35 with income <=50K?'''
-print(df[(df['age'] >= 25) & (df['age'] <= 35) & (df['income'] == '<=50K')]['workclass'].value_counts())
+# print(df[(df['age'] >= 25) & (df['age'] <= 35) & (df['income'] == '<=50K')]['workclass'].value_counts())
 
-
+'''Q112: Among people earning <=50K, what is the average educational-num by gender?'''
+print(df[df['income'] == '<=50K'].groupby('sex')['educational-num'].mean())
 
 
 
