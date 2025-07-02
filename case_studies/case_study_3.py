@@ -386,7 +386,10 @@ df = pd.read_csv("adult.csv", encoding='latin1', sep=',', engine='python', error
 # print(edu_ratio.dropna().sort_values(ascending=False).head(1))
 
 '''Q116: Which gender works the most hours on average in the private sector?'''
-print(df[df['workclass'] == 'Private'].groupby('sex')['hours-per-week'].mean())
+# print(df[df['workclass'] == 'Private'].groupby('sex')['hours-per-week'].mean())
+
+'''Q117: What is the average age of individuals with income >50K grouped by occupation?'''
+print(df[df['income'] == '>50K'].groupby('occupation')['age'].mean().sort_values(ascending=False))
 
 
 
