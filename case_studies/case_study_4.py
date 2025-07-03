@@ -55,7 +55,10 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df['Category'].value_counts().head(1))
 
 '''Q16: What is the most common content rating?'''
-print(df['Content Rating'].value_counts())
+# print(df['Content Rating'].value_counts())
+
+'''Q17: What is the average rating for Free vs Paid apps?'''
+print(df.groupby('Type')['Rating'].mean())
 
 
 
