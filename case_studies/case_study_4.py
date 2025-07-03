@@ -52,7 +52,11 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.groupby('Category')['Rating'].mean().sort_values(ascending=False))
 
 '''Q15: Which category has the most apps?'''
-print(df['Category'].value_counts().head(1))
+# print(df['Category'].value_counts().head(1))
+
+'''Q16: What is the most common content rating?'''
+print(df['Content Rating'].value_counts())
+
 
 
 
