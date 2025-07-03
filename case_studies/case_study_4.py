@@ -64,7 +64,12 @@ df = pd.read_csv("googleplaystore.csv")
 # print((df['Rating'] == 5.0).sum())
 
 '''Q19: Which category has the highest average number of installs?'''
-print(df.groupby('Category')['Installs'].mean().sort_values(ascending=False).head(1))
+# print(df.groupby('Category')['Installs'].mean().sort_values(ascending=False).head(1))
+
+'''Q20: What is the most expensive app in the dataset?'''
+df['Price'] = df['Price'].str.replace('$', '', regex=False)
+df['Price'] = pd.to_numeric(df['Price'], errors='coerce')
+print(df.loc[df['Price'].idxmax()])
 
 
 
