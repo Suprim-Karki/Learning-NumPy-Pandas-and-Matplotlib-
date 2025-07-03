@@ -46,4 +46,7 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.sort_values(by='Installs', ascending=False).head(5)[['App', 'Installs']])
 
 '''Q13: What is the distribution of app types across categories?'''
-print(df.groupby(['Category', 'Type']).size().unstack(fill_value=0))
+# print(df.groupby(['Category', 'Type']).size().unstack(fill_value=0))
+
+'''Q14: What is the average rating for each category?'''
+print(df.groupby('Category')['Rating'].mean().sort_values(ascending=False))
