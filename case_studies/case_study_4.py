@@ -58,7 +58,10 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df['Content Rating'].value_counts())
 
 '''Q17: What is the average rating for Free vs Paid apps?'''
-print(df.groupby('Type')['Rating'].mean())
+# print(df.groupby('Type')['Rating'].mean())
+
+'''Q18: How many apps are rated 5.0?'''
+print((df['Rating'] == 5.0).sum())
 
 
 
