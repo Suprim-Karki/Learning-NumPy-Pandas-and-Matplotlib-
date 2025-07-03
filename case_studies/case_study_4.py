@@ -43,4 +43,7 @@ df = pd.read_csv("googleplaystore.csv")
 # print((df['Installs'] > 1000000).sum())
 
 '''Q12: What are the top 5 apps by number of installs?'''
-print(df.sort_values(by='Installs', ascending=False).head(5)[['App', 'Installs']])
+# print(df.sort_values(by='Installs', ascending=False).head(5)[['App', 'Installs']])
+
+'''Q13: What is the distribution of app types across categories?'''
+print(df.groupby(['Category', 'Type']).size().unstack(fill_value=0))
