@@ -72,7 +72,10 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.loc[df['Price'].idxmax()])
 
 '''Q21: Among paid apps, what is the average price?'''
-print(df[df['Type'] == 'Paid']['Price'].mean())
+# print(df[df['Type'] == 'Paid']['Price'].mean())
+
+'''Q22: How many apps are listed as "Everyone 10+" in content rating?'''
+print((df['Content Rating'] == 'Everyone 10+').sum())
 
 
 
