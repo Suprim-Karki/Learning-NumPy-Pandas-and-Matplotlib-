@@ -61,8 +61,10 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df.groupby('Type')['Rating'].mean())
 
 '''Q18: How many apps are rated 5.0?'''
-print((df['Rating'] == 5.0).sum())
+# print((df['Rating'] == 5.0).sum())
 
+'''Q19: Which category has the highest average number of installs?'''
+print(df.groupby('Category')['Installs'].mean().sort_values(ascending=False).head(1))
 
 
 
