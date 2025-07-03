@@ -75,7 +75,10 @@ df = pd.read_csv("googleplaystore.csv")
 # print(df[df['Type'] == 'Paid']['Price'].mean())
 
 '''Q22: How many apps are listed as "Everyone 10+" in content rating?'''
-print((df['Content Rating'] == 'Everyone 10+').sum())
+# print((df['Content Rating'] == 'Everyone 10+').sum())
+
+'''Q23: Which category has the highest average app price?'''
+print(df.groupby('Category')['Price'].mean().sort_values(ascending=False).head(1))
 
 
 
